@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BUN 账户行非结构性信息</title>
+    <link rel="stylesheet" type="text/css" href="/css/sub.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.custom.js"></script>
+    <script type="text/javascript" src="/js/jquery.selectbox.js"></script>
+    <script type="text/javascript" src="/js/sub.js"></script>
+</head>
+
+<body onresize="cpt();" id="bun">
+    <div class="top">
+        <ul>
+            <li class="file"></li>
+            <li class="duplicate"></li>
+            <li class="print"></li>
+            <li class="search"></li>
+            <li class="line"></li>
+            <li class="setting"></li>
+            <li class="fullScreen"></li>
+            <li class="save"></li>
+            <li class="remove"></li>
+            <li class="line"></li>
+            <li class="fresh"></li>
+            <li class="help"></li>
+            <li class="info"></li>
+        </ul>
+    </div>
+
+    <div class="top2"><span></span></div>
+
+    <div class="left">
+        <div class="slide">
+            <div class="slide_click"></div>
+        </div>
+        <div id="leftTable">
+            <div>
+        <table>
+            <tr>
+                <th>BIL识别码</th>
+                <th>等级</th>
+                <th>交易对方</th>
+            </tr>
+        </table>
+        </div>
+        <div class="page">
+            当前行号:<span>0</span>    <span>0/0</span>页  每页显示20条
+            <!--<button class="prev unavailable"><</button>
+            <button class="currentNO">1</button>
+            <button class="next unavailable">></button>-->
+        </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <table class="table1">
+            <tr>
+      <th>产品解决系统</th>
+      <td><input type="text" class="frontMark" /><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select></td>
+                <th></th>
+                <td></td>
+            </tr>
+            <tr>
+      <th>合同发起人</th>
+      <td colspan="3"><select name="Items" class="inSelect">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSelectShort">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><input type="text" /><input type="button" class="button-info" /></td>
+            </tr>
+            <tr>
+      <th>交易对方</th>
+      <td colspan="3"><select name="Items" class="inSelect">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSelectShort">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><input type="text" /><input type="button" class="button-info" /></td>
+            </tr>
+            <tr>
+                <th>支付生效</th>
+                <td><input type="checkbox" checked="checked" /></td>
+                <th></th>
+                <td></td>
+            </tr>
+        </table>
+        <div class="shadow"></div>
+        
+        <div id="tabs">
+	        <ul>
+		        <li><a href="#tabs-1" title="非结构信息系统">非结构信息</a></li>
+		        <li><a href="#tabs-2" title="日期及参考号">日期&参考号</a></li>
+	        </ul>
+	        <div id="tabs-1">
+	        </div>
+	        <div id="tabs-2"></div>
+        </div>        
+        <div class="shadow"></div>
+        <div class="tabs">
+	        <ul>
+		        <li class="tabs-active"><a href="#tabs-1">维护监控</a></li>
+	        </ul>
+	        <div class="tab-1">
+                <table class="table1">
+                    <tr>
+                        <th>创新</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>最近更新</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>当前状态</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>关键词更改</th>
+                        <td></td>
+                        <th>词条内容更改</th>
+                        <td></td>
+                    </tr>
+                </table>
+	        </div>
+        </div>        
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+/* Drop down styles*/
+div.selectbox-wrapper {
+    position: absolute;
+    background-color: white;
+    border: 1px solid gray;
+    margin-top: -10px;
+    padding: 0px;
+    text-align: left;
+    max-height: 200px;
+    overflow: auto;
+    z-index: 1000;
+}
+
+/*Drop down list styles*/
+div.selectbox-wrapper ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+/* Selected item in dropdown list*/
+div.selectbox-wrapper ul li.selected {
+    background: url(../images/bank-icons.png) -1px -230px no-repeat;
+    color: white;
+}
+
+/* Hover state for dropdown list */
+div.selectbox-wrapper ul li.current {
+    background-color: #CDD8E4;
+}
+
+/* Drop down list items style*/
+div.selectbox-wrapper ul li {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 2px;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+/* Look and feel of select box */
+.selectbox {
+    padding-left: 2px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1em; /* Resize Font*/
+    width: 186px; /* Resize Width */
+    height: 30px;
+    display: inline-block;
+    text-align: left;
+    background: url(../images/bank-icons.png) -30px -380px no-repeat;
+    cursor: pointer;
+    border: none;
+    color: #333;
+}
+
+.inSearch.selectbox {
+    background: url(../images/bank-icons.png) -30px -410px no-repeat;
+}
+
+.inSelectShort.selectbox {
+    width: 113px;
+    background: url(../images/bank-icons.png) left -470px no-repeat;
+}
+
+.inSearchShort.selectbox {
+    width: 113px;
+    background: url(../images/bank-icons.png) left -500px no-repeat;
+}
+
+.inHelp.selectbox {
+    width: 187px;
+    background: url(../images/bank-icons.png) left -440px no-repeat;
+}
+
+.margin-left-none.selectbox {
+    margin-left: -10px;
+}

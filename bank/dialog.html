@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>海讯银行系统</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mydialog').dialog({
+                title: "系统信息",
+                width: 452,
+                minHeight: 270,
+                modal: true,
+                resizable: false,
+                draggable: false,
+                buttons: {
+                    "确定": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            $(window).resize(function () {
+                $('#mydialog').dialog("close").dialog("open");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="mydialog">
+        <p>
+            These items will be permanently deleted and cannot be recovered. Are you sure?
+        </p>
+    </div>
+</body>
+</html>

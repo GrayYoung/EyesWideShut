@@ -1,0 +1,782 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海讯银行系统</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.custom.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+<div class="top">
+  <div class="logo"></div>
+  <div class="user">
+    <button class="userPicture"></button>
+    你好！<span>Admin</span>
+    <button class="exit"></button>
+    <a href="#">退出系统</a> </div>
+</div>
+<div class="menu" role="">
+  <ul class="fr">
+    <li><span id="ge"></span>
+      <p><b>GE 通用核心</b>通用核心主要功能及介绍......</p>
+      <ul class="sec">
+        <li> OPO  操作对象
+          <ul class="thr">
+            <li> PAC  参数和代码系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/opo/pac/cit.html">CIT 佣金、收费及利息种类</a> </li>
+                <li> <a url="pieces/ge/opo/pac/pst.html">PST 预期类别</a> </li>
+                <li> <a url="pieces/ge/opo/pac/itm.html">ITM 国际贸易术语</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> MAS  菜单、授权、安全、审批系统
+          <ul class="thr">
+            <li> UIS  用户信息系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/mas/uis/cpa.html">CPA  修改密码</a> </li>
+                <li> <a url="pieces/ge/mas/uis/cup.html">CUP  修改用户密码</a> </li>
+                <li> <a url="pieces/ge/mas/uis/usr.html">USR  用户</a> </li>
+              </ul>
+            </li>
+            <li> AUT  授权系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/mas/aut/upr.html">UPR 用户档案系统</a> </li>
+                <li> <a url="pieces/ge/mas/aut/upa.html">UPA 各应用程序用户档案授权</a> </li>
+                <li> <a url="pieces/ge/mas/aut/aua.html">AUA 用户间档案授权户</a> </li>
+                <li> <a url="pieces/ge/mas/aut/ufb.html">UFB 每笔业务交易的用户档案授权</a> </li>
+                <li> <a url="pieces/ge/mas/aut/alf.html">ALF 每笔业务交易的授权限额</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> FDP  公用缓存数据库
+          <ul class="thr">
+            <li> GEO  地理系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/geo/cry.html">CRY  国家</a> </li>
+                <li> <a url="pieces/ge/fdp/geo/loc.html">LOC  位置</a> </li>
+                <li> <a url="pieces/ge/fdp/geo/pof.html">POF  邮局</a> </li>
+                <li> <a url="pieces/ge/fdp/geo/mup.html">MUP  自治区</a> </li>
+                <li> <a url="pieces/ge/fdp/geo/reg.html">REG  区域</a> </li>
+                <li> <a url="pieces/ge/fdp/geo/bqg.html">BQG 地理双边协议查询</a> </li>
+              </ul>
+            </li>
+            <li> BAI  银行信息系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/bai/cbk.html">CBK  账户行数据库</a> </li>
+                <li> <a url="pieces/ge/fdp/bai/bun.html">BUN  账户行非结构性信息</a> </li>
+                <li> <a url="pieces/ge/fdp/bai/bqb.html">BQB  账户行双边协议查询</a> </li>
+                <li> <a url="pieces/ge/fdp/bai/rrm.html">RRM  SWIFT关系管理</a> </li>
+              </ul>
+            </li>
+            <li> CUI  客户信息系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/cui/cus.html">CUS  客户数据库</a> </li>
+                <li> <a url="pieces/ge/fdp/cui/cun.html">CUN  客户自由格式信息系统</a> </li>
+                <li> <a url="pieces/ge/fdp/cui/bqc.html">BQC  客户双边协议查询</a> </li>
+              </ul>
+            </li>
+            <li> IOS  内部组织系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/ios/scn.html">SCN  章节代码</a> </li>
+                <li> <a url="pieces/ge/fdp/ios/plc.html">PLC  利润损失中心</a> </li>
+                <li> <a url="pieces/ge/fdp/ios/bro.html">BRO  分支行数据库</a> </li>
+              </ul>
+            </li>
+            <li> BPR  交易各方及关系系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/bpr/ocb.html">OCB  金融机构首选账户行</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/osp.html">OSP  金融机构首选串行支付协议</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/bsp.html">BSP  帐户行首选连续支付协议</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/csp.html">CSP  国家特定的串行支付协议</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/orb.html">ORB  金融机构首选汇款行</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/brb.html">BRB  账户行首选汇款行</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/lvp.html">LVP  小额支付协议</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/epl.html">EPL  外部系数交易方识别</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/crl.html">CRL  公司关系系数</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/vpo.html">VPO  操作部门原始有效操作方</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/apc.html">APC  交易双方许可产品</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/art.html">ART  机构评级系统</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/eag.html">EAG  外部交易对方协议</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/plg.html">PLG  抵押</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/pav.html">PAV  前期建议</a> </li>
+                <li> <a url="pieces/ge/fdp/bpr/spt.html">SPT  经第三方SEPA付款</a> </li>
+              </ul>
+            </li>
+            <li> MAG  通讯协议系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/mag/ack.html">ACK  确认生成</a> </li>
+                <li> <a url="pieces/ge/fdp/mag/adv.html">ADV  业务生成通知</a> </li>
+                <li> <a url="pieces/ge/fdp/mag/adr.html">ADR  还款通知</a> </li>
+                <li> <a url="pieces/ge/fdp/mag/fec.html">FEC  外汇确认业务</a> </li>
+                <li> <a url="pieces/ge/fdp/mag/ldf.html">LDF  @LDFProd</a> </li>
+              </ul>
+            </li>
+            <li> ARO  报表协议系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/aro/asp.html">ASP  对账单生成</a> </li>
+              </ul>
+            </li>
+            <li> MCT  多次贷记转帐
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/mct/mco.html">MCO  多笔客户贷记转出</a> </li>
+                <li> <a url="pieces/ge/fdp/mct/mci.html">MCI  多笔客户贷记转入</a> </li>
+                <li> <a url="pieces/ge/fdp/mct/mfo.html">MFO  多次一般金融机构对外转帐</a> </li>
+                <li> <a url="pieces/ge/fdp/mct/mfi.html">MFI  多次一般金融机构对内转帐</a> </li>
+                <li> <a url="pieces/ge/fdp/mct/moo.html">MOO  多次金融机构自有账户对外转帐</a> </li>
+                <li> <a url="pieces/ge/fdp/mct/moi.html">MOI  多次金融机构自有账户对内转帐</a> </li>
+              </ul>
+            </li>
+            <li> RFT  转帐请求
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/rft/rto.html">RTO  客户贷记转出请求</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rtr.html">RTR  客户对外转帐请求（收款人）</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rfo.html">RFO  金融机构对外转帐请求</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rfr.html">RFR  金融机构对外转帐请求（收款人）</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rti.html">RTI  客户贷记转入请求</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rts.html">RTS  客户贷记转入请求（付款人）</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rfi.html">RFI  金融机构对内转帐请求</a> </li>
+                <li> <a url="pieces/ge/fdp/rft/rfs.html">RFS  金融机构对内转帐请求（付款人）</a> </li>
+              </ul>
+            </li>
+            <li> MDT  多笔借记转帐
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/mdt/ddo.html">DDO  直接借机支出</a> </li>
+                <li> <a url="pieces/ge/fdp/mdt/ddi.html">DDI  直接借记收入</a> </li>
+              </ul>
+            </li>
+            <li> PTR  团队职责系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/ptr/rol.html">ROL  主要职责</a> </li>
+                <li> <a url="pieces/ge/fdp/ptr/sro.html">SRO  次要职责</a> </li>
+              </ul>
+            </li>
+            <li> PCT  公共代码及表格系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fdp/pct/itc.html">ITC  行业类别代码</a> </li>
+                <li> <a url="pieces/ge/fdp/pct/sec.html">SEC  部门代码</a> </li>
+                <li> <a url="pieces/ge/fdp/pct/seg.html">SEG  部门组别</a> </li>
+                <li> <a url="pieces/ge/fdp/pct/trc.html">TRC  交易代码</a> </li>
+                <li> <a url="pieces/ge/fdp/pct/cat.html">CAT  科目代码</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> ASC  账户、排序代码及清理代码认证系统
+          <ul class="thr">
+            <li> ANS  账户识别系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/asc/ans/cac.html">CAC  客户账户系统</a> </li>
+                <li> <a url="pieces/ge/asc/ans/bac.html">BAC  银行间账户系统</a> </li>
+              </ul>
+            </li>
+            <li> IAC  内部账户系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/asc/iac/gia.html">GIA  总帐内部账户系统</a> </li>
+              </ul>
+            </li>
+            <li> ACN  其他金融机构
+              <ul class="fou">
+                <li> <a url="pieces/ge/asc/acn/acc.html">ACC  客户在其他金融机构的账户</a> </li>
+                <li> <a url="pieces/ge/asc/acn/acb.html">ACB  金融机构在其他金融机构的账户</a> </li>
+              </ul>
+            </li>
+            <li> FIN  金融机构识别
+              <ul class="fou">
+                <li> <a url="pieces/ge/asc/fin/fic.html">FIC  国家清算中心客户代码</a> </li>
+                <li> <a url="pieces/ge/asc/fin/fib.html">FIB  金融机构在国家清算中心的清算代码</a> </li>
+              </ul>
+            </li>
+            <li> CHI  清算中心识别
+              <ul class="fou">
+                <li> <a url="pieces/ge/asc/chi/sei.html">SEI  支付指令</a> </li>
+                <li> <a url="pieces/ge/asc/chi/chb.html">CHB  金融机构本国清算中心代码</a> </li>
+              </ul>
+            </li>
+            <li> PSA  优先结算会计
+              <ul class="fou">
+                <li> <a url="pieces/ge/asc/psa/psc.html">PSC  客户间优先结算账户</a> </li>
+                <li> <a url="pieces/ge/asc/psa/psb.html">PSB  金融机构优先结算账户</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> PSP  价格结构及定价系统
+          <ul class="thr">
+            <li> COF  佣金和收费系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/psp/cof/ccs.html">CCS  佣金和收费计算系统</a> </li>
+                <li> <a url="pieces/ge/psp/cof/cfd.html">CFD  佣金和收费描述</a> </li>
+              </ul>
+            </li>
+            <li> INR  利息系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/psp/inr/irp.html">IRP  每个时期的利率参考</a> </li>
+                <li> <a url="pieces/ge/psp/inr/irc.html">IRC  每种货币参考利率</a> </li>
+              </ul>
+            </li>
+            <li> CEX  货币和汇率系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/psp/ces/cur.html">CUR  货币数据库</a> </li>
+                <li> <a url="pieces/ge/psp/ces/exr.html">EXR  现即期汇率系统</a> </li>
+                <li> <a url="pieces/ge/psp/ces/xsm.html">XSM  汇率差价和边际系统</a> </li>
+                <li> <a url="pieces/ge/psp/ces/xpi.html">XPI  汇差系统</a> </li>
+                <li> <a url="pieces/ge/psp/ces/exq.html">EXQ  套汇查询</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> FUO  功能对象
+          <ul class="thr">
+            <li> FUT  功能技术对象
+              <ul class="fou">
+                <li> <a url="pieces/ge/fuo/fut/bhs.html">BHS  银行假日系统</a> </li>
+              </ul>
+            </li>
+            <li> FIT  固定指令、信息和文本系统
+              <ul class="fou">
+                <li> <a url="pieces/ge/fuo/fit/fig.html">FIG 固 定指令、信息和文本系统组</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> MMA  信息管理及行政系统
+          <ul class="thr">
+            <li> QER  查询
+              <ul class="thr">
+                <li> <a url="pieces/ge/mma/qer/mmm.html">MMM  - MMA 监控</a> </li>
+                <li> OTG  输出的消息
+                  <ul class="fou">
+                    <li> <a url="pieces/ge/mma/qer/otg/osq.html">OSQ  SWIFT 消息输出队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/otg.html">OTQ  电传消息输出队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/ofg.html">OFQ  传真消息输出队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/omq.html">OMQ  电子邮件输出队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/okq.html">OKQ  客户电子消息输出管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/oeq.html">OEQ  EDIFact 消息输出队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/ohq.html">OHQ  清算消息输出队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/otg/oaq.html">OAQ  会计分录输出队列管理系统</a> </li>
+                  </ul>
+                </li>
+                <li> INC  输入的消息
+                  <ul class="fou">
+                    <li> <a url="pieces/ge/mma/qer/inc/isq.html">ISQ  SWIFT 消息输入队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/inc/itq.html">ITQ  电传消息输入队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/inc/ifq.html">IFQ  传真消息输入队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/inc/imq.html">IMQ  电子邮件输入队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/inc/ikq.html">IKQ  客户电子消息输入管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/inc/ihq.html">IHQ  清算消息输入队列管理系统</a> </li>
+                    <li> <a url="pieces/ge/mma/qer/inc/aiq.html">AIQ  会计分录输入队列管理系统</a> </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li> MNT  维护
+              <ul class="thr">
+                <li> OTG  输出的消息
+                  <ul class="fou">
+                    <li> <a url="pieces/ge/mma/mnt/otg/swo.html">SWO 更改状态 SWIFT 金融机构识别系统</a> </li>
+                    <li> <a url="pieces/ge/mma/mnt/otg/txo.html">TXO 更改状态 电传</a> </li>
+                    <li> <a url="pieces/ge/mma/mnt/otg/bko.html">BKO 更改状态 会计分录</a> </li>
+                    <li> <a url="pieces/ge/mma/mnt/otg/emo.html">EMO 更改状态 电子邮件</a> </li>
+                  </ul>
+                </li>
+                <li> INC  输入的消息
+                  <ul class="fou">
+                    <li> <a url="pieces/ge/mma/mnt/inc/swi.html">SWI  更改状态 SWIFT 金融机构识别系统</a> </li>
+                    <li> <a url="pieces/ge/mma/mnt/inc/eri.html">ERI  更改状态汇率</a> </li>
+                    <li> <a url="pieces/ge/mma/mnt/inc/emi.html">EMI  更改状态 电子邮件</a> </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li> MMO  消息监控和调度控制台
+              <ul class="fou">
+                <li> <a url="pieces/ge/mma/mmo/mmo.html">MMO  消息监控和调度控制台</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> TEC  技术对象
+          <ul class="thr">
+            <li> OPR  操作路径
+              <ul class="fou">
+                <li> <a url="pieces/ge/tec/opr/smo.html">SMO  服务器监控</a> </li>
+                <li> <a url="pieces/ge/tec/opr/cmo.html">CMO  事件查看器</a> </li>
+                <li> <a url="pieces/ge/tec/opr/tmo.html">TMO  TMB 监控</a> </li>
+                <li> <a url="pieces/ge/tec/opr/pre.html">PRE  执行报告</a> </li>
+                <li> <a url="pieces/ge/tec/opr/jma.html">JMA  工作调度与控制经理</a> </li>
+                <li> <a url="pieces/ge/tec/opr/slv.html">SLV  服务器日志浏览</a> </li>
+                <li> <a url="pieces/ge/tec/opr/ewl.html">EWL  异常、出错及警告日志</a> </li>
+              </ul>
+            </li>
+            <li> PPR  打印控制中心
+              <ul class="fou">
+                <li> <a url="pieces/ge/tec/ppr/ppj.html">PPJ  打印监控</a> </li>
+                <li> <a url="pieces/ge/tec/ppr/pqm.html">PQM  打印队列</a> </li>
+                <li> <a url="pieces/ge/tec/ppr/psm.html">PSM  打印服务管理员</a> </li>
+              </ul>
+            </li>
+            <li> MER 消息中转中心
+              <ul class="fou">
+                <li> <a url="pieces/ge/tec/mer/pro.html">PRO 打印中转中心分定义</a> </li>
+                <li> <a url="pieces/ge/tec/mer/pgr.html">PGR 打印组定义</a> </li>
+                <li> <a url="pieces/ge/tec/mer/upg.html">UPG  用户打印组定义</a> </li>
+              </ul>
+            </li>
+            <li> <a url="pieces/ge/tec/cpa.html">CPA 修改用户密码</a> </li>
+            <li> <a url="pieces/ge/tec/ctp.html">CTP 控制面板</a> </li>
+            <li> <a url="pieces/ge/tec/mop.html">MOP 菜单选项</a> </li>
+            <li> <a url="pieces/ge/tec/out.html">OUT 退出</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><span id="cp"></span>
+      <p><b>CP 支付系统心</b>通用核心主要功能及介绍，中国海监编队周密预案的前提下......</p>
+      <ul class="sec">
+        <li> CT  客户登记转出
+          <ul class="thr">
+            <li> <a url="pieces/cp/ct/wkm.html">WKM  工作监控</a> </li>
+            <li> <a url="pieces/cp/ct/isp.html">ISP  业务发起</a> </li>
+            <li> <a url="pieces/cp/ct/ams.html">AMS  常规命令修改</a> </li>
+            <li> <a url="pieces/cp/ct/cls.html">CLS  定期支付指令关闭</a> </li>
+            <li> <a url="pieces/cp/ct/qac.html">QAC  查询、应&答及取消</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ct/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ct/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ct/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> MNT  维护
+              <ul class="fou">
+                <li> <a url="pieces/cp/ct/mnt/bpg.html">BPG 业务产品组</a> </li>
+                <li> <a url="pieces/cp/ct/mnt/bpl.html">BPL 业务产品描述</a> </li>
+                <li> <a url="pieces/cp/ct/mnt/btt.html">BTT 转帐类别</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ct/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ct/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> CI  客户贷记转入
+          <ul class="thr">
+            <li> <a url="pieces/cp/ci/wkm.html">WKM  工作监控</a> </li>
+            <li> <a url="pieces/cp/ci/isp.html">ISP  业务发起</a> </li>
+            <li> <a url="pieces/cp/ci/ams.html">AMS  常规命令修改</a> </li>
+            <li> <a url="pieces/cp/ci/cls.html">CLS  定期支付指令关闭</a> </li>
+            <li> <a url="pieces/cp/ci/qac.html">QAC  查询、应&答及取消</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ci/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ci/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ci/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> MNT  维护
+              <ul class="fou">
+                <li> <a url="pieces/cp/ci/mnt/bpg.html">BPG 业务产品组</a> </li>
+                <li> <a url="pieces/cp/ci/mnt/bpl.html">BPL 业务产品描述</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ci/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ci/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> BT  金融机构划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/bt/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/bt/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/bt/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/bt/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/bt/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/bt/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> CB  分支机构登记处
+          <ul class="thr">
+            <li> <a url="pieces/cp/cb/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/cb/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/cb/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/cb/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/cb/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/cb/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> MO  转出多客户贷记划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/mo/mmo.html">MMO  大额支付监控</a> </li>
+            <li> <a url="pieces/cp/mo/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/mo/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/mo/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/mo/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/mo/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/mo/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> XO  转出EBA
+          <ul class="thr">
+            <li> <a url="pieces/cp/xo/bmo.html">BMO  批量付款监视器</a> </li>
+            <li> <a url="pieces/cp/xo/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/xo/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/xo/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/xo/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> OC  资金转出
+          <ul class="thr">
+            <li> <a url="pieces/cp/oc/bmo.html">BMO  批量付款监视器</a> </li>
+            <li> <a url="pieces/cp/oc/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/oc/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/oc/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/oc/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> MI  多次客户贷记转入
+          <ul class="thr">
+            <li> <a url="pieces/cp/mi/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/mi/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/mi/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/mi/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/mi/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/mi/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> XI  转入EBA第二步付款
+          <ul class="thr">
+            <li> <a url="pieces/cp/xi/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/xi/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/xi/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/xi/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> IC  转入的基金划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/ic/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ic/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ic/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ic/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ic/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ic/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> BO  转出的多个金融机构划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/bo/mmo.html">MMO  大额支付监控</a> </li>
+            <li> <a url="pieces/cp/bo/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/bo/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/bo/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/bo/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/bo/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/bo/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> BI  转入的多个金融机构划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/bi/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/bi/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/bi/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/bi/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/bi/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/bi/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> CD  转出的国内转移
+          <ul class="thr">
+            <li> <a url="pieces/cp/cd/isp.html">ISP  业务发起</a> </li>
+            <li> <a url="pieces/cp/cd/qac.html">QAC  查询、应&答及取消</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/cd/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/cd/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/cd/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/cd/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/cd/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> RT  客户贷方转移的转入请求
+          <ul class="thr">
+            <li> <a url="pieces/cp/rt/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/rt/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/rt/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/rt/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/rt/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/rt/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> RO  客户贷方转移的转出请求
+          <ul class="thr">
+            <li> <a url="pieces/cp/ro/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ro/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ro/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ro/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ro/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ro/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> XA  协定汇率
+          <ul class="fou">
+            <li><a url="pieces/cp/xa/cla.html">CLA  关闭</a></li>
+          </ul>
+        </li>
+        <li> IR  客户贷方转移的转出请求的图片注册
+          <ul class="thr">
+            <li> <a url="pieces/cp/ir/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ir/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ir/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ir/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ir/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ir/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> AE  登记会计分录
+          <ul class="thr">
+            <li> <a url="pieces/cp/ae/tra.html">TRA 交易</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ae/inq/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ae/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ae/inq/his.html">HIS  历史交易</a> </li>
+                <li> <a url="pieces/cp/ae/inq/htr.html">HTR  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ae/rep/nae.html">NAE  未审批业务交易事件</a> </li>
+                <li> <a url="pieces/cp/ae/rep/his.html">HIS  历史交易</a> </li>
+                <li> <a url="pieces/cp/ae/rep/htr.html">HTR  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> EI  转入的SEPA贷记划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/ei/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/ei/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/ei/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/ei/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> EO  转出的SEPA贷记划拨
+          <ul class="thr">
+            <li> <a url="pieces/cp/eo/mmo.html">MMO  大额支付监控</a> </li>
+            <li> <a url="pieces/cp/eo/isp.html">ISP  业务发起</a> </li>
+            <li> INQ  问询
+              <ul class="fou">
+                <li> <a url="pieces/cp/eo/inq/mei.html">MEI  消息问询</a> </li>
+                <li> <a url="pieces/cp/eo/inq/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+            <li> REP  报告
+              <ul class="fou">
+                <li> <a url="pieces/cp/eo/rep/his.html">HIS  历史交易</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> CV  Cover Matching
+          <ul class="fou">
+            <li> <a url="pieces/cp/cv/isa.html">ISA  业务发起</a> </li>
+            <li> <a url="pieces/cp/cv/ama.html">AMA  修改</a> </li>
+            <li> <a url="pieces/cp/cv/iss.html">ISS 发出声明</a> </li>
+            <li> <a url="pieces/cp/cv/rca.html">RCA  对账</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><span id="cfe"></span>
+      <p><b>CFE 客户前段系统</b>通用核心主要功能及介绍，中国海监编队周密预案的前提下......</p>
+      <ul class="sec">
+        <li> DI  进口信用证
+          <ul class="fou">
+            <li> <a url="pieces/gef/ed/ris.html">RIS  发行</a> </li>
+            <li> <a url="pieces/gef/ed/ram.html">RAM  修改</a> </li>
+            <li> <a url="pieces/gef/ed/rit.html">RIT  发行要求的模板</a> </li>
+            <li> <a url="pieces/gef/ed/mei.html">MEI  消息问询</a> </li>
+          </ul>
+        </li>
+        <li> ED  出口信用证
+          <ul class="fou">
+            <li> <a url="pieces/gef/ed/inq.html">INQ  Inquiries</a> </li>
+            <li> <a url="pieces/gef/ed/ram.html">RAM  Request for Amendment</a> </li>
+            <li> <a url="pieces/gef/ed/stl.html">STL  Settlement</a> </li>
+            <li> <a url="pieces/gef/ed/ftf.html">FTF  Free Text Function</a> </li>
+          </ul>
+        </li>
+        <li> EC  出口集合
+          <ul class="fou">
+            <li> <a url="pieces/gef/ec/ris.html">RIS  发行</a> </li>
+            <li> <a url="pieces/gef/ec/iss.html">ISS  业务发起</a> </li>
+            <li> <a url="pieces/gef/ec/ram.html">RAM  修改</a> </li>
+            <li> <a url="pieces/gef/ec/rit.html">RIT  发行要求的模板</a> </li>
+            <li> <a url="pieces/gef/ec/ist.html">IST  发行的模板</a> </li>
+          </ul>
+        </li>
+        <li> CX  进口集合
+          <ul class="fou">
+            <li> <a url="pieces/gef/cx/inq.html">INQ  Inquiries</a> </li>
+            <li> <a url="pieces/gef/cx/ram.html">RAM  Request for Amendment</a> </li>
+            <li> <a url="pieces/gef/cx/aac.html">AAC  Advice of Acceptance</a> </li>
+            <li> <a url="pieces/gef/cx/stl.html">STL  Settlement</a> </li>
+            <li> <a url="pieces/gef/cx/ftf.html">FTF  Free Text Function</a> </li>
+          </ul>
+        </li>
+        <li> GC  客户担保
+          <ul class="fou">
+            <li> <a url="pieces/gef/gc/ris.html">RIS  发行</a> </li>
+            <li> <a url="pieces/gef/gc/ram.html">RAM  修改</a> </li>
+            <li> <a url="pieces/gef/gc/rit.html">RIT  发行要求的模板</a> </li>
+          </ul>
+        </li>
+        <li> OP 应付帐款
+          <ul class="fou">
+            <li> <a url="pieces/gef/gc/isr.html">ISR  发行</a> </li>
+            <li> <a url="pieces/gef/gc/dus.html">DUS  PTT.GE.SOR.DueeList</a> </li>
+            <li> <a url="pieces/gef/gc/mei.html">MEI  消息问询</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><span id="hm"></span>
+      <p><b>HM 历史记录</b>您最近使用过的功能</p>
+    </li>
+  </ul>
+</div>
+<div class="main">
+  <iframe src="" frameborder="0" allowtransparency="true" width="100%" height="100%"></iframe>
+</div>
+<div class="foot"> <img src="images/coprright.jpg" /> </div>
+</body>
+</html>

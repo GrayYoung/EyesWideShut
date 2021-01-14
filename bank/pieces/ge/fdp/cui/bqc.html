@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BQC 客户双边协议查询</title>
+<link rel="stylesheet" type="text/css" href="/css/sub.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.custom.js"></script>
+    <script type="text/javascript" src="/js/jquery.selectbox.js"></script>
+    <script type="text/javascript" src="/js/sub.js"></script>
+</head>
+
+<body onresize="cpt();" id="bqc">
+<div class="top">
+  <ul>
+    <li class="file"></li>
+    <li class="duplicate"></li>
+    <li class="print"></li>
+    <li class="search"></li>
+    <li class="line"></li>
+    <li class="setting"></li>
+    <li class="fullScreen"></li>
+    <li class="save"></li>
+    <li class="remove"></li>
+    <li class="line"></li>
+    <li class="fresh"></li>
+    <li class="help"></li>
+    <li class="info"></li>
+  </ul>
+</div>
+<div class="top2">
+  <span></span>
+</div>
+<div class="right noleft">
+  <table class="table1">
+    <tr>
+      <th>产品解决系统</th>
+      <td><input type="text" class="frontMark" /><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select></td>
+      <th>对象方案设计</th>
+      <td><input type="text" class="frontMark" /><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select></td>
+    </tr>
+    <tr>
+      <th>合同发起人</th>
+      <td colspan="3"><select name="Items" class="inSelect">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSelectShort">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><input type="text" /><input type="button" class="button-info" /></td>
+    </tr>
+    <tr>
+      <th>交易对方</th>
+      <td colspan="3"><select name="Items" class="inSelect">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSelectShort">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><select name="Items" class="inSearch">
+		                <option value="option1">option1</option>
+		                <option value="option2">option2</option>
+		                <option value="option3">option3</option>
+		                <option value="option4">option4</option>	
+	                </select><input type="text" /><input type="button" class="button-info" /></td>
+    </tr>
+  </table>
+  <div class="shadow"></div>
+  <div id="leftTable">
+    <div>
+      <table class="table1">
+        <tr>
+          <th></th>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="page"> 当前行号:
+      <span>0</span>
+      <span>0/0</span>
+      页  每页显示20条 0%
+<!--      <button class="prev"><</button>
+      <button class="currentNO">1</button>
+      <button>2</button>
+      <button>3</button>
+      ...
+      <button>8</button>
+      <button class="next">></button>-->
+    </div>
+  </div>
+</div>
+</body>
+</html>

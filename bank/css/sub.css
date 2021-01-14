@@ -1,0 +1,380 @@
+@import url("common.css");
+@import url("selectbox.css");
+
+body {
+	font-size: 12px;
+	background: url(../images/bg.png);
+	color: #2b303e
+}
+.top {
+	width: 100%;
+	height: 41px;
+	background: url(../images/title_bg1.jpg) repeat-x;
+}
+.top ul {
+	margin-left: 5px
+}
+.top li {
+	margin: 0px 0px 0 5px;
+	float: left;
+	width: 40px;
+	height: 40px;
+    background-image: url(../images/bank-icons.png);
+    background-repeat: no-repeat;
+}
+.top li a {
+	width: 40px;
+	height: 40px;
+}
+.top li.commandHover {
+	height: 37px;
+    background-color: #68c0ff;
+    border-top: solid white 3px;
+    cursor: pointer;
+}
+.top li.line {
+	width: 2px;
+    margin-top: 0px;
+    height:  41px;
+    background-position: -459px -50px;
+}
+.top li.file {
+    background-position: 0px -50px;
+}
+ .top li.duplicate {
+    background-position: -40px -50px;
+} 
+ .top li.print {
+    background-position: -80px -50px;
+}
+ .top li.search {
+    background-position: -120px -50px;
+}
+ .top li.setting {
+    background-position: -160px -50px;
+}
+ .top li.fullScreen {
+    background-position: -200px -50px;
+}
+ .top li.save {
+    background-position: -240px -50px;
+}
+ .top li.remove {
+    background-position: -280px -50px;
+}
+ .top li.fresh {
+    background-position: -320px -50px;
+}
+ .top li.help {
+    background-position: -360px -50px;
+}
+ .top li.info {
+    background-position: -400px -50px;
+}
+.top2 {
+	width: 100%;
+	height: 41px;
+	background: url(../images/title_bg2.jpg) repeat-x;
+	line-height: 41px;
+	color: #5d7987;
+	text-indent: 10px
+}
+.top2 span {
+	color: #0597d2;
+	text-decoration: underline
+}
+.left {
+	width: 394px;
+	height: 100%;
+	background: #f1f2f8;
+	float: left;
+	position: relative;
+}
+div#leftTable, div#leftTable div, div.dataTable, div.dataTable div {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+div#leftTable, div.dataTable {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+div#leftTable div, div.dataTable div {
+    height: auto;
+}
+#leftTable table, .dataTable table {
+    width: 100%;
+	background: #f5f6fa;
+}
+#leftTable table th, .dataTable table th {
+	height: 35px;
+    word-break:keep-all;
+	line-height: 35px;
+	background: url(../images/th_bg.jpg) repeat-x top;
+	border-right: 1px solid #b7bac9;
+	border-bottom: 1px solid #b7bac9;
+	font-weight: normal;
+	color: #2b303e
+}
+#leftTable table td, .dataTable table td {
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border-bottom: 1px solid #e5e7f2;
+	border-right: 1px solid #e5e7f2;
+}
+#leftTable table tr.even td, .dataTable table tr.even td {
+	background-color: #f1f2f8;
+}
+#leftTable table tr.clk td, .dataTable table tr.clk td {
+	background-color: #e5e7f2;
+}
+#leftTable .page, .dataTable .page {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-top: 1px solid #f5f5fa;
+	border-bottom: 1px solid #f5f5fa;
+	margin-top: 4px;
+	background: #e6e8f5;
+	word-spacing: 5px
+}
+.page span {
+	color: #53b2df
+}
+.page button {
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align:center;
+    vertical-align: middle;
+    background: url(../images/bank-icons.png) -17px -153px no-repeat;
+    border: none;
+}
+.page button.currentNO {
+    background: url(../images/bank-icons.png) left -153px no-repeat;
+}
+.page button.unavailable {
+    color: lightgray;
+}
+.slide {
+	width: 13px;
+	height: 100%;
+	background: url(../images/slide_bg.jpg) repeat-y;
+	position: absolute;
+	left: 393px;
+	top: 0;
+	cursor: pointer;
+}
+.slide_click {
+	width: 9px;
+	height: 100%;
+	background: url(../images/slide.jpg) center center no-repeat;
+	position: absolute;
+	top: 0;
+	left: 2px
+}
+.slide2 {
+	background: url(../images/slide2.jpg) center center no-repeat
+}
+.right {
+	width: 1192px;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 82px;
+    overflow: auto;
+}
+.right.noleft {
+	width: 100%;
+}
+td, th {
+    word-break: keep-all;
+}
+.right #leftTable {
+    height: auto;
+}
+.right table.table1,.right #leftTable table.table1, .right #leftTable .page, .right .dataTable, .right .dataTable .page {
+	width: 99%;
+    min-width: 720px;
+	margin: 5px auto 0;
+}
+.right .dataTable table th {
+    border: solid 1px #B7BAC9;
+}
+.right .dataTable table td {
+    border: solid 1px #E5E7F2;
+}
+table.table1, .right .dataTable, right #leftTable {
+    min-width:1100px;
+}
+table.table1 td {
+	border: 1px solid #c8cad4;
+	line-height: 49px;
+	text-indent: 10px;
+	text-align: left;
+	background: #f5f6fa;
+    width: 35%;
+    vertical-align: middle;
+}
+table.table1 th {
+	border: 1px solid #c8cad4;
+	line-height: 49px;
+	text-indent: 10px;
+	text-align: left;
+	background: #f1f2f8;
+	font-weight: normal;
+    width: 15%;
+}
+.shadow {
+	width: 99%;
+	height: 4px;
+	background: url(../images/shadow.png) repeat-x bottom;
+	margin: 0 auto;
+    margin-bottom: 10px;
+}
+/***************************************/
+.tabs {
+	position: relative;
+	padding: 0px;
+	zoom: 1;
+    /**custom Gray Young*/
+    background: none;
+    border: none;
+}
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.tabs ul {
+	margin: 0;
+	padding: 0px;
+    /**custom Gray Young*/
+    background: none;
+    border: none;
+    border-bottom: solid lightgray 1px;
+    border-radius: 0px;
+	width: 99%;
+	margin: 5px auto 0;
+    clear: both;
+    content: "";
+    display: table;
+}
+.tabs ul li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em -1px 0;
+	border-bottom: 0;
+	padding: 0;
+	white-space: nowrap;
+    /**custom Gray Young*/
+    width:92px;
+    height:35px;
+    border: none;
+    background: url(../images/bank-icons.png) -92px -89px no-repeat;
+    color: black;
+    text-align:center;
+	padding-bottom: 1px;
+}
+.tabs ul li a {
+	float: none;
+	padding: .5em 1em;
+	text-decoration: none;
+    /**custom Gray Young*/
+    color: black;
+    line-height: 35px;
+}
+.tabs ul li.tabs-active {
+    /**custom Gray Young*/
+    background: url(../images/bank-icons.png) left -89px no-repeat;
+    color: white;
+}
+.tabs ul li.tabs-active a, .ui-tabs ul li.state-disabled a, .tabs ul li.tabs-loading a {
+	cursor: text;
+    color: white;
+}
+.tabs ul li a, .tabs-collapsible ul li.tabs-active a {
+	cursor: pointer;
+}
+
+/**Custom input*/
+table td input {
+    height: 28px;
+    line-height: 28px;
+    border: solid #c0c1c6 1px;
+    background: none;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+table td input[type=checkbox] {
+    height: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+table td label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+table td label.inDate, table td label.inTime {
+    margin: 5px;
+}
+table td input.inShort, .inDate input, .inTime input  {
+    width: 80px;
+}
+.inDate input[type=button], .inTime input[type=button], .inDate button, type=button {
+    width: 30px;
+    height: 28px;
+    border: none;
+}
+.inDate input[type=button], .inDate button {
+    background: url(../images/bank-icons.png) left -350px no-repeat;
+}
+.inTime input[type=button], .inTime button {
+    background: url(../images/bank-icons.png) -30px -350px no-repeat;
+}
+input[type=button] {   
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+input.button-info {    
+    background: url(../images/bank-icons.png) -90px -350px no-repeat;
+}
+input.button-search {
+    background: url(../images/bank-icons.png) -60px -350px no-repeat;
+}
+table td input.frontMark {
+    width: 28px;
+}
+table td input.frontMarkL {
+    width: 50px;
+}
+.right table td a {
+    color: #5ebfff;
+    text-decoration: underline;
+}
+div.dialog {
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+    top: 10%;
+}
+div.dialog table.table1 {
+    width: auto;
+    min-width: 500px;
+}
+div.dialog button {
+    width: 87px;
+    height: 32px;
+    line-height: 32px;
+    text-indent: 0px;
+    margin: 5px;
+    background: url(../images/bank-icons.png) no-repeat -200px -90px;
+    border: none;
+}
+div.dialog button.unavailable {
+    background: url(../images/bank-icons.png) no-repeat -287px -90px;
+}

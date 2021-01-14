@@ -1,0 +1,44 @@
+
+@import url("jquery-ui.custom.css");
+@import url("ui.custom.css");
+
+body, html, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, input {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+}
+th {
+	text-align: center
+}
+img {
+	border: none;
+	vertical-align: middle
+}
+a, a:visited {
+	text-decoration: none;
+	outline: none;
+	color: #6ca2c9
+}
+a:hover {
+	color: #86C9F9
+}
+input {
+	font-family: Arial, "微软雅黑", sans-serif;
+}
+body {
+	overflow-x: hidden;
+	font-size: 12px;
+	font-family: "微软雅黑", sans-serif;
+	color: #50545d
+}
+html, body {
+	height: 100%;
+	overflow: hidden
+}
+input, textarea {
+	font-size: 12px;
+	color: #50545d
+}

@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CBK 账户行数据库</title>
+    <link rel="stylesheet" type="text/css" href="/css/sub.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.custom.js"></script>
+    <script type="text/javascript" src="/js/jquery.selectbox.js"></script>
+    <script type="text/javascript" src="/js/sub.js"></script>
+</head>
+
+<body onresize="cpt();" id="cbk">
+    <div class="top">
+        <ul>
+            <li class="file"></li>
+            <li class="duplicate"></li>
+            <li class="print"></li>
+            <li class="search"></li>
+            <li class="line"></li>
+            <li class="setting"></li>
+            <li class="fullScreen"></li>
+            <li class="save"></li>
+            <li class="remove"></li>
+            <li class="line"></li>
+            <li class="fresh"></li>
+            <li class="help"></li>
+            <li class="info"></li>
+        </ul>
+    </div>
+
+    <div class="top2"><span></span></div>
+
+    <div class="left">
+        <div class="slide">
+            <div class="slide_click"></div>
+        </div>
+        <div id="leftTable">
+            <div>
+        <table class="usr">
+            <tr>
+                <th>账户行识别码</th>
+                <th>搜索名称</th>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+            <tr>
+                <td>1000775</td>
+                <td>dsm</td>
+            </tr>
+        </table>
+        </div>
+        <div class="page">
+            当前行号:<span>8</span>    <span>1/8</span>页  每页显示20条
+            <button class="prev"><</button>
+            <button class="currentNO">1</button><button>2</button><button>3</button>...<button>8</button>
+            <button class="next">></button>
+        </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <table class="table1">
+            <tr>
+                <th>账户行识别码</th>
+                <td>1000775<label><input type="checkbox" checked="checked" />活动</label></td>
+                <th></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>总称</th>
+                <td colspan="3"><input type="checkbox" checked="checked" /><select class="inSelectShort">
+                    <option>CBK</option>
+                </select><select class="inSearch">
+                    <option>rfklsaf</option>
+                </select><input type="text" /><input type="button" class="button-info" /></td>
+            </tr>
+            <tr>
+                <th>位置</th>
+                <td><input type="text" /><input type="text" class="frontMarkL" /><input type="text" class="frontMarkL" /><input type="button" class="button-search" /></td>
+                <th>搜索名称</th>
+                <td>rfk</td>
+            </tr>
+            <tr>
+                <th>名称</th>
+                <td>RAIDDEISENKASSW</td>
+                <th>其他名称</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>信箱/街区</th>
+                <td></td>
+                <th>邮局</th>
+                <td><input type="text" /><input type="text" class="inShort" /><input type="button" class="button-search" /></td>
+            </tr>
+            <tr>
+                <th>国家</th>
+                <td colspan="3"><input type="text" /><input type="text" class="inShort" /><input type="text" class="inShort" /><input type="text" class="inShort" /><input type="button" class="button-search" /></td>
+            </tr>
+        </table>
+        <div class="shadow"></div>
+        <div id="tabs">
+	        <ul>
+		        <li><a href="#tabs-1">附加</a></li>
+		        <li><a href="#tabs-2">注册地</a></li>
+		        <li><a href="#tabs-3">联系</a></li>
+		        <li><a href="#tabs-4">电话信息</a></li>
+		        <li><a href="#tabs-5">物理地址</a></li>
+		        <li><a href="#tabs-6">法律地址</a></li>
+		        <li><a href="#tabs-7">管理偿付</a></li>
+		        <li><a href="#tabs-8">统计信息</a></li>
+	        </ul>
+	        <div id="tabs-1">
+                <table class="table1">
+                    <tr>
+                        <th>分支银行数据库</th>
+                        <td><input type="text" class="frontMark" /><select class="inSearch">
+                            <option>1</option></select></td>
+                        <th>分支银行办事处数</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>利润损失中心</th>
+                        <td><input type="text" class="frontMark" /><select class="inSearch">
+                            <option>1</option></select></td>
+                        <th>区域</th>
+                        <td><input type="text" class="frontMark" /><select class="inSearch">
+                            <option>1</option></select></td>
+                    </tr>
+                    <tr>
+                        <th>负责人</th>
+                        <td><input type="text" class="frontMark" /><select class="inSearch">
+                            <option>1</option></select></td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </table>
+	        </div>
+	        <div id="tabs-2"></div>
+	        <div id="tabs-3"></div>
+	        <div id="tabs-4"></div>
+	        <div id="tabs-5"></div>
+	        <div id="tabs-6"></div>
+	        <div id="tabs-7"></div>
+	        <div id="tabs-8"></div>
+        </div>        
+        <div class="shadow"></div>
+        <div class="tabs">
+	        <ul>
+		        <li class="tabs-active"><a href="#tabs-1">维护监控</a></li>
+	        </ul>
+	        <div class="tab-1">
+                <table class="table1">
+                    <tr>
+                        <th>创新</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>最近更新</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>当前状态</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>关键词更改</th>
+                        <td></td>
+                        <th>词条内容更改</th>
+                        <td></td>
+                    </tr>
+                </table>
+	        </div>
+        </div>        
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>
