@@ -1,0 +1,112 @@
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+// @import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group";
+// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+// @import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";
+
+
+
+.btn-primary {
+	border-color: darken(saturate(adjust-hue(theme-color("primary"), -2), 1.28), 1.57);
+	background-image: linear-gradient(to bottom, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 10.78) 0, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 10.78) 1px, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 6.67) 2px, darken(desaturate(theme-color("primary"), 0.94), 4.71) 100%);
+	box-shadow: 0 1px 2px $gray-600;
+
+	&:hover, &:focus {
+		border-color: darken(saturate(adjust-hue(theme-color("primary"), -2), 1.28), 11.57);
+		background-image: linear-gradient(to bottom, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 10.78) 0, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 10.78) 1px, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 6.67) 2px, darken(desaturate(theme-color("primary"), 0.94), 14.71) 100%);
+	}
+
+	&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active {
+		border-color: darken(saturate(adjust-hue(theme-color("primary"), -2), 1.28), 21.57);
+		background-image: linear-gradient(to bottom, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 10.78) 0, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 10.78) 1px, lighten(saturate(adjust-hue(theme-color("primary"), -1), 1.28), 6.67) 2px, darken(desaturate(theme-color("primary"), 0.94), 24.71) 100%);
+	}
+}
+
+.btn-light {
+	border-color: #8f9191;
+	background-image: linear-gradient(to bottom, #f5f5f5 0, #f5f5f5 1px, #f3f3f3 2px, #ededed 100%);
+	box-shadow: 0 1px 2px $gray-400;
+
+	&:hover, &:focus {
+		border-color: darken(#8f9191, 5);
+		background-image: linear-gradient(to bottom, darken(#f5f5f5, 5) 0, darken(#f5f5f5, 5) 1px, darken(#ededed, 5) 2px, darken(#ededed, 5) 100%);
+	}
+
+	&:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active {
+		border-color: darken(#8f9191, 10);
+		background-image: linear-gradient(to bottom, darken(#f5f5f5, 10) 0, darken(#f5f5f5, 10) 1px, darken(#ededed, 10) 2px, darken(#ededed, 10) 100%);
+	}
+}
+
+.breadcrumb {
+	border-bottom: solid 1px lighten(desaturate(adjust-hue(theme-color("primary"), 1), 45.30), 31.96);
+	background-image: linear-gradient(to bottom, lighten(desaturate(adjust-hue(theme-color("primary"), 14), 31.87), 39.22) 0, lighten(desaturate(adjust-hue(theme-color("primary"), 11), 4.83), 45.69) 95%, lighten(saturate(adjust-hue(theme-color("primary"), -18), 24.80), 50.78) 100%);
+	color: $breadcrumb-divider-color;
+}
+
+.page-link {
+	color: $black;
+}
+
+.page-item {
+	&.disabled:not(:first-child):not(:last-child) {
+		margin-left: 0;
+		margin-right: 0;
+
+		> .page-link {
+			padding: 0;
+			border: none;
+			background-color: transparent;
+		}
+	}
+
+	&.active > .page-link {
+		background-image: linear-gradient(to bottom, lighten(saturate(adjust-hue(theme-color("primary"), 6), 23.27), 25.29) 0, lighten(saturate(adjust-hue(theme-color("primary"), 7), 22.54), 16.27) 100%);
+		color: $black;
+	}
+}
+
+.pagination-sm {
+	width: 204px;
+
+	> .page-item {
+		margin: 0 3px;
+
+		> .page-link {
+			border-radius: 2px;
+			font-size: $font-size-base;
+		}
+	}
+}

@@ -1,0 +1,89 @@
+@use 'sass:map';
+@import '~@angular/material/theming';
+
+$dark-primary-text: rgba(black, .87);
+$dark-secondary-text: rgba(black, .54);
+$dark-disabled-text: rgba(black, .38);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, .6);
+$light-disabled-text: rgba(white, .38);
+
+$fb-panel-width: 528px;
+
+$primary-color: (
+  50: #e1f4fa,
+  100: #b2e2f3,
+  200: #82cfec,
+  300: #55bee4,
+  400: #37b0e0,
+  500: #1da2db,
+  600: #1894cd,
+  700: #0f81ba,
+  800: #0e71a7,
+  900: #055285,
+  A100: #b2e2f3,
+  A200: #82cfec,
+  A400: #37b0e0,
+  A700: #0f81ba,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+// Also known as the secondary color
+$accent-color: (
+  50: #edeef7,
+  100: #d1d7e4,
+  200: #b6bccd,
+  300: #99A1B6,
+  400: #848CA4,
+  500: #6e7994,
+  600: #606A83,
+  700: #4F576C,
+  800: #3E4556,
+  900: #2B303E,
+  A100: #d1d7e4,
+  A200: #b6bccd,
+  A400: #848CA4,
+  A700: #4F576C,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text
+  )
+);
+
+$mat-red:         map.merge($mat-red, ('700': #ea4335));
+$mat-green:       map.merge($mat-green, ('700': #34a853));
+$mat-light-green: map.merge($mat-light-green, ('700': #2ed47a));
+$mat-yellow:      map.merge($mat-yellow, ('700': #ffb800));
+$mat-light-theme-foreground:  map.merge($mat-light-theme-foreground, (slider-off: #dedede, slider-off-active: #dedede));
+
+$app-primary:     mat-palette($primary-color);
+$app-accent:      mat-palette($accent-color, A700, A600, A900);
+$app-warn:        mat-palette($mat-red);
+$app-theme:       mat-light-theme($app-primary, $app-accent, $app-warn);

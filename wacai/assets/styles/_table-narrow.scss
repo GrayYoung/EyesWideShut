@@ -1,0 +1,55 @@
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/mixins";
+
+.table-narrow {
+  thead {
+    background-image: linear-gradient(to bottom, #fbfcfe 0, #fbfcfe 1px, #f5f6f8 1px, #e6e7ec 100%);
+  }
+
+  th {
+    border-color: #b7bac9 !important;
+    border-top-width: 0 !important;
+    border-bottom-width: 1px !important;
+    text-align: center !important;
+    font-weight: normal;
+    color: $black;
+
+    &:first-child {
+      border-left-width: 0;
+    }
+
+    &:last-child {
+      border-right-width: 0;
+    }
+  }
+
+  tr {
+    height: auto !important;
+  }
+
+  td {
+    text-align: center;
+    font-size: .75rem;
+
+    &:first-child {
+      border-left-width: 0;
+    }
+
+    &:last-child {
+      border-right-width: 0;
+    }
+  }
+
+  th.mat-header-cell:first-of-type,
+  td.mat-cell:first-of-type,
+  td.mat-footer-cell:first-of-type {
+    padding-left: 0;
+  }
+
+  th.mat-header-cell:last-of-type,
+  td.mat-cell:last-of-type,
+  td.mat-footer-cell:last-of-type {
+    padding-right: 0;
+  }
+}

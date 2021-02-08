@@ -1,0 +1,159 @@
+@import "bootstrap/scss/functions";
+@import "variables";
+
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../images/icons.png) no-repeat;
+}
+
+.icon-close {
+	width: 21px;
+	height: 21px;
+	background-position: -52px -127px;
+}
+
+.icon-ge {
+	width: 50px;
+	height: 50px;
+	background-position: left top;
+}
+
+.icon-cp {
+	width: 50px;
+	height: 50px;
+	background-position: -50px top;
+}
+
+.icon-cfe {
+	width: 50px;
+	height: 50px;
+	background-position: -100px top;
+}
+
+.icon-hm {
+	width: 50px;
+	height: 50px;
+	background-position: -150px top;
+}
+
+.icon-user {
+	width: 18px;
+	height: 17px;
+	background-position: -78px -129px;
+}
+
+.icon-user-lg {
+	width: 23px;
+	height: 28px;
+	background-position: 0 -125px;
+}
+
+.icon-lock {
+	width: 18px;
+	height: 17px;
+	background-position: -104px -129px;
+}
+
+.icon-power-off {
+	width: 23px;
+	height: 28px;
+	background-position: -25px -125px;
+}
+
+.icon-file {
+	width: 21px;
+	height: 21px;
+	background-position: -10px -61px;
+}
+
+.icon-duplicate {
+	width: 21px;
+	height: 21px;
+	background-position: -50px -61px;
+}
+
+.icon-print {
+	width: 21px;
+	height: 21px;
+	background-position: -90px -61px;
+}
+
+.icon-search {
+	width: 21px;
+	height: 21px;
+	background-position: -130px -61px;
+}
+
+.icon-setting {
+	width: 21px;
+	height: 21px;
+	background-position: -170px -61px;
+}
+
+.icon-fullScreen {
+	width: 21px;
+	height: 21px;
+	background-position: -210px -61px;
+}
+
+.icon-save {
+	width: 21px;
+	height: 21px;
+	background-position: -250px -61px;
+}
+
+.icon-remove {
+	width: 21px;
+	height: 21px;
+	background-position: -290px -61px;
+}
+
+.icon-fresh {
+	width: 21px;
+	height: 21px;
+	background-position: -330px -61px;
+}
+
+.icon-help {
+	width: 21px;
+	height: 21px;
+	background-position: -370px -61px;
+}
+
+.icon-info {
+	width: 21px;
+	height: 21px;
+	background-position: -410px -61px;
+}
+
+.icon-calendar {
+	width: 20px;
+	height: 20px;
+	background-position: -5px -165px;
+}
+
+.icon-clock {
+	width: 20px;
+	height: 20px;
+	background-position: -35px -165px;
+}
+
+.icon-double-arrows {
+  width: add($input-height, -$input-height-border);
+  height: add($input-height, -$input-height-border);
+  background-position: -121px -162px;
+}
+
+.icon-input-search {
+  width: add($input-height, -$input-height-border);
+  height: add($input-height, -$input-height-border);
+  background-position: -61px -162px;
+}
+
+.icon-input-info {
+  width: add($input-height, -$input-height-border);
+  height: add($input-height, -$input-height-border);
+  background-position: -91px -162px;
+}

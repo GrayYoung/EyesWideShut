@@ -1,0 +1,177 @@
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/mixins";
+@import "material/variables";
+
+$padding-field-y:                 calc(0.6rem + 1px);
+
+.field-row {
+  margin-bottom: 0;
+  border-left: solid $border-width $border-color;
+  border-right: solid $border-width $border-color;
+}
+
+.field-group {
+  margin-bottom: 0;
+  background-color: #f5f6fa;
+
+  + .field-group {
+    border-left: solid $border-width $border-color;
+  }
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  padding: $padding-field-y 10px !important;
+  margin-bottom: -$border-width;
+  border: solid $border-width $border-color;
+  border-left-width: 0;
+  background-color: #f1f2f8;
+  line-height: 1.5;
+  font-weight: normal;
+  font-size: $font-size-sm;
+}
+
+.field-control {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-height: 56px;
+  padding: $padding-field-y 10px 0 !important;
+  margin-bottom: -$border-width;
+  border: solid 1px $border-color;
+  border-left-width: 0;
+  border-right-width: 0;
+  font-size: $font-size-sm;
+
+  .mat-form-field {
+    max-width: 100%;
+    margin-bottom: $padding-field-y;
+  }
+
+  .mat-form-field-appearance-outline {
+    .mat-form-field-outline {
+      top: 0;
+    }
+
+    .mat-form-field-outline-start, .mat-form-field-outline-end {
+      border: none;
+    }
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+      margin: 0 !important;
+    }
+
+    .mat-form-field-flex {
+      align-items: center;
+      width: 160px;
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0;
+    }
+
+    .mat-form-field-infix {
+      width: auto;
+      max-width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-top: none;
+    }
+
+    .mat-form-field-prefix, .mat-form-field-suffix {
+      top: 0 !important;
+    }
+
+    .mat-select-trigger {
+      height: $input-line-height * 1em;
+    }
+
+    .mat-select {
+      border: solid $input-border-width $input-border-color;
+      background-color: $input-bg;
+    }
+
+    .mat-select-value,
+    input.mat-input-element {
+      padding: $input-padding-y $input-padding-x;
+      line-height: $input-line-height * 1em;
+    }
+
+    .mat-select-arrow-wrapper {
+      transform: translateY(0);
+      border-left: solid $input-border-width $input-border-color;
+      background: url(/assets/images/icons.png) -121px -162px no-repeat;
+    }
+
+    .mat-select-arrow {
+      width: $input-height;
+      height: $input-height;
+      margin-left: 0;
+      margin-right: 0;
+      visibility: hidden;
+    }
+
+    .mat-icon-button {
+      width: $input-height !important;
+      height: $input-height !important;
+      line-height: $input-height !important;
+    }
+
+    input.mat-input-element {
+      margin-top: 0;
+      border: solid $input-border-width $input-border-color;
+      background-color: $input-bg;
+
+      &:disabled {
+        background-color: $input-disabled-bg;
+      }
+
+      &:read-only {
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .mat-form-field-suffix {
+    .icon:not(.icon-calendar):not(.icon-clock) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $input-height;
+      height: $input-height;
+      border: solid $input-border-width $input-border-color;
+      border-left-width: 0;
+      background-color: #eeedf2;
+    }
+  }
+
+  .search-input, .input-select {
+    .mat-form-field-prefix {
+      padding-right: $input-padding-x;
+    }
+  }
+
+  .mat-checkbox-layout {
+    margin-bottom: 0.4em;
+  }
+}
+
+.btn-only-icon {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: $input-height;
+  min-width: unset !important;
+  height: $input-height;
+  line-height: add($input-height, -$input-height-border) !important;
+  border-radius: 0 !important;
+  border-color: $input-border-color !important;
+  font-size: $font-size-sm;
+
+  .icon {
+    vertical-align: -3px !important;
+  }
+}

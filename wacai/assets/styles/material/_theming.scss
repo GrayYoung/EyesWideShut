@@ -1,0 +1,8 @@
+@import 'variables';
+
+$typography-typography: mat-typography-config(
+  $font-family: 'Google Sans'
+);
+
+@include mat-core($typography-typography);
+@include angular-material-theme($app-theme);
