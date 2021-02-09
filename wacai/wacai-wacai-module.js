@@ -310,7 +310,7 @@ function AddOrEditEntryComponent_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-label");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "\u7C7B\u522B");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-select", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-select", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddOrEditEntryComponent_div_8_Template_mat_select_ngModelChange_12_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r35); const ctx_r36 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r36.entry.categoryId = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AddOrEditEntryComponent_div_8_mat_option_13_Template, 2, 2, "mat-option", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -389,7 +389,7 @@ function AddOrEditEntryComponent_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r1.entry.categoryId);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.payCategories);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.revenueCategories);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r1.entry.projectId);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
@@ -440,7 +440,7 @@ function AddOrEditEntryComponent_div_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-label");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u8F6C\u51FA\u8D26\u6237");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-select", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-select", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddOrEditEntryComponent_div_9_Template_mat_select_ngModelChange_6_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r46); const ctx_r45 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r45.entry.accountId = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, AddOrEditEntryComponent_div_9_mat_option_7_Template, 2, 2, "mat-option", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -451,7 +451,7 @@ function AddOrEditEntryComponent_div_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-label");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "\u8F6C\u5165\u8D26\u6237");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-select", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-select", 37);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddOrEditEntryComponent_div_9_Template_mat_select_ngModelChange_12_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r46); const ctx_r47 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r47.entry.targetId = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AddOrEditEntryComponent_div_9_mat_option_13_Template, 2, 2, "mat-option", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -491,11 +491,11 @@ function AddOrEditEntryComponent_div_10_mat_option_7_ng_container_4_Template(rf,
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 } }
 function AddOrEditEntryComponent_div_10_mat_option_7_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_1_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_2_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_3_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_4_Template, 2, 0, "ng-container", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_1_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_2_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_3_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, AddOrEditEntryComponent_div_10_mat_option_7_ng_container_4_Template, 2, 0, "ng-container", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const option_r59 = ctx.$implicit;
@@ -578,9 +578,9 @@ function AddOrEditEntryComponent_div_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-label");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u7C7B\u522B");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-select", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-select", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddOrEditEntryComponent_div_10_Template_mat_select_ngModelChange_6_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r67); const ctx_r66 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r66.entry.lendType = $event; });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, AddOrEditEntryComponent_div_10_mat_option_7_Template, 5, 6, "mat-option", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, AddOrEditEntryComponent_div_10_mat_option_7_Template, 5, 6, "mat-option", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -588,13 +588,13 @@ function AddOrEditEntryComponent_div_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-form-field", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-label", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, AddOrEditEntryComponent_div_10_ng_container_12_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AddOrEditEntryComponent_div_10_ng_container_13_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, AddOrEditEntryComponent_div_10_ng_container_14_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, AddOrEditEntryComponent_div_10_ng_container_15_Template, 2, 0, "ng-container", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-label", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, AddOrEditEntryComponent_div_10_ng_container_12_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AddOrEditEntryComponent_div_10_ng_container_13_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, AddOrEditEntryComponent_div_10_ng_container_14_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, AddOrEditEntryComponent_div_10_ng_container_15_Template, 2, 0, "ng-container", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-select", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-select", 42);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddOrEditEntryComponent_div_10_Template_mat_select_ngModelChange_16_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r67); const ctx_r68 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r68.entry.accountId = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, AddOrEditEntryComponent_div_10_mat_option_17_Template, 2, 2, "mat-option", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -602,11 +602,11 @@ function AddOrEditEntryComponent_div_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "mat-form-field", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-label", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, AddOrEditEntryComponent_div_10_ng_container_21_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, AddOrEditEntryComponent_div_10_ng_container_22_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, AddOrEditEntryComponent_div_10_ng_container_23_Template, 2, 0, "ng-container", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, AddOrEditEntryComponent_div_10_ng_container_24_Template, 2, 0, "ng-container", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-label", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, AddOrEditEntryComponent_div_10_ng_container_21_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, AddOrEditEntryComponent_div_10_ng_container_22_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, AddOrEditEntryComponent_div_10_ng_container_23_Template, 2, 0, "ng-container", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, AddOrEditEntryComponent_div_10_ng_container_24_Template, 2, 0, "ng-container", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-select", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddOrEditEntryComponent_div_10_Template_mat_select_ngModelChange_25_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r67); const ctx_r69 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r69.entry.targetId = $event; });
@@ -664,6 +664,7 @@ class AddOrEditEntryComponent {
         this.projects = [];
         this.members = [];
         this.payCategories = [];
+        this.revenueCategories = [];
         this.txnObjects = [];
         this.creditors = [];
         this.loanTypes = [
@@ -708,6 +709,9 @@ class AddOrEditEntryComponent {
                         this.databaseService.getShortAccounts(),
                         this.databaseService.getBookProjects(this.bookId),
                         this.databaseService.getMembers(this.bookId),
+                        this.databaseService.getEntryCategories(this.bookId, _types__WEBPACK_IMPORTED_MODULE_6__["ENTRY_CATEGOTY_TYPES"].PAY),
+                        this.databaseService.getEntryCategories(this.bookId, _types__WEBPACK_IMPORTED_MODULE_6__["ENTRY_CATEGOTY_TYPES"].REVENUE),
+                        this.databaseService.getShortAccounts(-1),
                     ])
                         .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["finalize"])(() => {
                         this.notification.hideLoading();
@@ -717,6 +721,9 @@ class AddOrEditEntryComponent {
                         this.accounts = datas[1].data.accounts;
                         this.projects = datas[2].data.bookProjects;
                         this.members = datas[3].data.bookMembers;
+                        this.payCategories = datas[4].data.bookCategories;
+                        this.revenueCategories = datas[5].data.bookCategories;
+                        this.creditors = datas[6].data.accounts;
                         if (this.isNew) {
                             if (!this.entry.accountId && this.accounts[0]) {
                                 this.entry.accountId = this.accounts[0].uuid;
@@ -756,27 +763,17 @@ class AddOrEditEntryComponent {
                     entry.accountId = this.accountId;
                     break;
                 }
-                this.notification.showLoading(this.elementRef.nativeElement);
-                this.databaseService
-                    .getEntryCategories(this.bookId, categroy)
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["finalize"])(() => {
-                    this.notification.hideLoading();
-                }))
-                    .subscribe((data) => {
-                    let firstCategory;
-                    this.payCategories = data.data.bookCategories;
-                    this.checkValuesWhetherExisted();
-                    firstCategory = this.payCategories[0];
-                    if (!entry.categoryId) {
-                        if (firstCategory.outgoSubTypes &&
-                            firstCategory.outgoSubTypes[0]) {
-                            entry.categoryId = firstCategory.outgoSubTypes[0].categoryId;
-                        }
-                        else {
-                            entry.categoryId = firstCategory.categoryId;
-                        }
+                const firstCategory = this.payCategories[0];
+                this.checkValuesWhetherExisted();
+                if (!entry.categoryId && firstCategory) {
+                    if (firstCategory.outgoSubTypes &&
+                        firstCategory.outgoSubTypes[0]) {
+                        entry.categoryId = firstCategory.outgoSubTypes[0].categoryId;
                     }
-                });
+                    else {
+                        entry.categoryId = firstCategory.categoryId;
+                    }
+                }
                 break;
             case _types__WEBPACK_IMPORTED_MODULE_6__["ENTRY_TYPES"].TRANSFER:
                 this.checkValuesWhetherExisted();
@@ -789,29 +786,13 @@ class AddOrEditEntryComponent {
                 break;
             default:
                 this.checkValuesWhetherExisted();
+                entry.lendType = 1;
                 if (!entry.targetId) {
                     entry.targetId = this.accountId || (this.accounts[0] ? this.accounts[0].uuid : undefined);
                 }
-                if (this.creditors.length) {
-                    if (!entry.accountId && this.creditors[0]) {
-                        entry.accountId = this.creditors[0].uuid;
-                    }
-                    break;
+                if (!entry.accountId) {
+                    entry.accountId = (this.creditors && this.creditors[0]) ? this.creditors[0].uuid : undefined;
                 }
-                entry.lendType = 1;
-                this.notification.showLoading(this.elementRef.nativeElement);
-                this.databaseService
-                    .getShortAccounts(-1)
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["finalize"])(() => {
-                    this.notification.hideLoading();
-                }))
-                    .subscribe((data) => {
-                    this.creditors = data.data.accounts;
-                    this.checkValuesWhetherExisted();
-                    if (!entry.accountId && this.creditors[0]) {
-                        entry.accountId = this.creditors[0].uuid;
-                    }
-                });
                 break;
         }
     }
@@ -908,7 +889,6 @@ class AddOrEditEntryComponent {
                     entry.profit = undefined;
                     entry.lendType = undefined;
                     entry.recSubtype = undefined;
-                    entry.tradetgtId = entry.accountId;
                     entry.members = this.selectedMembers.map((item) => {
                         return {
                             memberId: item.uuid,
@@ -1030,7 +1010,7 @@ AddOrEditEntryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.entryForm = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.selects = _t);
-    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 45, vars: 13, consts: [["name", "entryForm", 1, "d-flex", "flex-column", "flex-nowrap", "flex-fill", "overflow-hidden", 3, "ngSubmit"], ["color", "primary", 3, "selectedIndex", "selectedIndexChange", "selectedTabChange"], ["label", "\u652F\u51FA"], ["label", "\u6536\u5165"], ["label", "\u8F6C\u8D26"], ["label", "\u501F\u8D37"], [1, "flex-fill", "overflow-auto"], ["class", "container-fluid pt-3", 4, "ngIf"], [1, "container-fluid", "pb-3"], [1, "row"], [1, "col", "col-lg-6"], ["appearance", "legacy"], ["name", "amount", "type", "number", "step", "1", "min", "0.01", "required", "", "matInput", "", 3, "ngModel", "ngModelChange"], ["name", "bizDatetime", "matInput", "", "required", "", 3, "ngxMatDatetimePicker", "ngModel", "ngModelChange"], ["matSuffix", "", 3, "for"], ["showSeconds", "true", "color", "primary"], ["picker", ""], [1, "col"], ["name", "comment", "matInput", "", 3, "ngModel", "ngModelChange"], [1, "container-fluid", "pt-3", "pb-3", "text-right"], ["type", "submit", "mat-flat-button", "", "color", "primary", 1, "mr-2", 3, "disabled"], ["type", "button", "mat-flat-button", "", "color", "accent", 1, "mr-2", 3, "disabled", "click"], ["type", "button", "mat-flat-button", "", "color", "warn", 1, "mr-2", 3, "disabled", "click"], [1, "container-fluid", "pt-3"], ["name", "account", "required", "", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "payCategory", "required", "", 3, "ngModel", "ngModelChange"], [3, "label", 4, "ngFor", "ngForOf"], ["name", "project", 3, "ngModel", "ngModelChange"], ["value", ""], ["name", "txnObject", 3, "ngModel", "ngModelChange"], ["name", "member", "multiple", "", "required", "", 3, "ngModel", "ngModelChange"], ["name", "reimburse", 3, "ngModel", "ngModelChange"], [3, "value"], [3, "label"], ["name", "account", "required", "", 3, "ngModel", "forbiddenSame", "ngModelChange"], ["name", "transferObject", "required", "", 3, "ngModel", "forbiddenSame", "ngModelChange"], ["name", "lendType", "required", "", 3, "ngModel", "ngModelChange"], [3, "value", "ngSwitch", 4, "ngFor", "ngForOf"], [3, "ngSwitch"], [4, "ngSwitchCase"], ["name", "creditor", "required", "", 3, "ngModel", "ngModelChange"], [3, "value", "ngSwitch"]], template: function AddOrEditEntryComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 45, vars: 13, consts: [["name", "entryForm", 1, "d-flex", "flex-column", "flex-nowrap", "flex-fill", "overflow-hidden", 3, "ngSubmit"], ["color", "primary", 3, "selectedIndex", "selectedIndexChange", "selectedTabChange"], ["label", "\u652F\u51FA"], ["label", "\u6536\u5165"], ["label", "\u8F6C\u8D26"], ["label", "\u501F\u8D37"], [1, "flex-fill", "overflow-auto"], ["class", "container-fluid pt-3", 4, "ngIf"], [1, "container-fluid", "pb-3"], [1, "row"], [1, "col", "col-lg-6"], ["appearance", "legacy"], ["name", "amount", "type", "number", "step", "1", "min", "0.01", "required", "", "matInput", "", 3, "ngModel", "ngModelChange"], ["name", "bizDatetime", "matInput", "", "required", "", 3, "ngxMatDatetimePicker", "ngModel", "ngModelChange"], ["matSuffix", "", 3, "for"], ["showSeconds", "true", "color", "primary"], ["picker", ""], [1, "col"], ["name", "comment", "matInput", "", 3, "ngModel", "ngModelChange"], [1, "container-fluid", "pt-3", "pb-3", "text-right"], ["type", "submit", "mat-flat-button", "", "color", "primary", 1, "mr-2", 3, "disabled"], ["type", "button", "mat-flat-button", "", "color", "accent", 1, "mr-2", 3, "disabled", "click"], ["type", "button", "mat-flat-button", "", "color", "warn", 1, "mr-2", 3, "disabled", "click"], [1, "container-fluid", "pt-3"], ["name", "account", "required", "", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "payCategory", "required", "", 3, "ngModel", "ngModelChange"], [3, "label", 4, "ngFor", "ngForOf"], ["name", "project", 3, "ngModel", "ngModelChange"], ["value", ""], ["name", "txnObject", 3, "ngModel", "ngModelChange"], ["name", "member", "multiple", "", "required", "", 3, "ngModel", "ngModelChange"], ["name", "reimburse", 3, "ngModel", "ngModelChange"], [3, "value"], [3, "label"], ["name", "revenueCategory", "required", "", 3, "ngModel", "ngModelChange"], ["name", "account", "required", "", 3, "ngModel", "forbiddenSame", "ngModelChange"], ["name", "transferObject", "required", "", 3, "ngModel", "forbiddenSame", "ngModelChange"], ["name", "lendType", "required", "", 3, "ngModel", "ngModelChange"], [3, "value", "ngSwitch", 4, "ngFor", "ngForOf"], [3, "ngSwitch"], [4, "ngSwitchCase"], ["name", "creditor", "required", "", 3, "ngModel", "ngModelChange"], [3, "value", "ngSwitch"]], template: function AddOrEditEntryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function AddOrEditEntryComponent_Template_form_ngSubmit_0_listener() { return ctx.save(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-tab-group", 1);
@@ -1748,8 +1728,8 @@ class AccountsComponent {
         this.subscription.unsubscribe();
     }
     goToEntryList(account) {
-        this.router.navigate(['../', 'entries', account.uuid], {
-            relativeTo: this.route
+        this.router.navigate(['accounts', account.uuid], {
+            relativeTo: this.route.parent
         });
     }
     adjustPageSize() {
@@ -1922,7 +1902,7 @@ const routes = [{
         path: 'search',
         component: _search_entries_search_entries_component__WEBPACK_IMPORTED_MODULE_4__["SearchEntriesComponent"]
     }, {
-        path: 'entries/:accountId',
+        path: 'accounts/:accountId',
         component: _account_entries_account_entries_component__WEBPACK_IMPORTED_MODULE_5__["AccountEntriesComponent"]
     }, {
         path: 'entry/add/:accountId',
@@ -2260,7 +2240,7 @@ function SearchEntriesComponent_th_94_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function SearchEntriesComponent_td_95_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 61);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -2595,7 +2575,7 @@ SearchEntriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.flexFillContainer = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.paginator = _t.first);
-    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 108, vars: 33, consts: [[3, "new", "delete"], ["appStartContent", "", 1, "d-flex", "flex-column", "h-100", 3, "ngSubmit"], [1, "flex-fill", "overflow-auto"], ["appearance", "fill", 1, "w-100"], ["name", "book", 3, "value", "valueChange", "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], ["name", "recordTypes", "multiple", "", 3, "value", "valueChange"], [3, "value"], [1, "d-flex", "flex-row", "flex-nowrap"], ["name", "amountStart", "type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], [1, "mx-2"], ["name", "amountEnd", "type", "number", "matInput", "", 3, "ngModel", "ngModelChange", "click"], ["name", "comment", "type", "text", "matInput", "", 3, "ngModel", "ngModelChange"], ["name", "accounts", "multiple", "", 3, "value", "valueChange"], ["name", "members", "multiple", "", 3, "value", "valueChange"], ["name", "txnObjects", "multiple", "", 3, "value", "valueChange"], ["name", "project", "multiple", "", 3, "value", "valueChange"], ["name", "reimburses", "multiple", "", 3, "value", "valueChange"], [1, "container-fluid", "py-3", "text-right"], ["type", "submit", "mat-flat-button", "", "color", "primary", 1, "mr-2"], ["type", "button", "mat-stroked-button", "", "color", "primary", 3, "click"], [1, "d-flex", "flex-column", "flex-nowrap", "h-100"], ["flexFillContainer", ""], ["mat-table", "", 1, "table", "table-striped", "table-hover", "w-100", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "bizTime"], ["matColumnDef", "amount"], ["mat-cell", "", "class", "text-nowrap", 3, "ngSwitch", 4, "matCellDef"], ["matColumnDef", "categoryName"], ["mat-cell", "", "class", "text-nowrap", 4, "matCellDef"], ["matColumnDef", "projectName"], ["matColumnDef", "comment"], ["mat-cell", "", "style", "max-width: 150px", 4, "matCellDef"], ["matColumnDef", "operation"], ["matColumnDef", "daySummary"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns", "matRowDefWhen"], ["class", "table-dark", "mat-row", "", 4, "matRowDef", "matRowDefColumns", "matRowDefWhen"], ["showFirstLastButtons", "", 3, "length", "pageSize"], [3, "ngSwitch"], [4, "ngSwitchCase"], ["mat-header-cell", ""], ["matBadgeColor", "warn", 3, "checked", "indeterminate", "matBadge", "change"], ["mat-cell", ""], [3, "checked", "click", "change"], [1, "text-nowrap"], ["mat-cell", "", 1, "text-nowrap", 3, "ngSwitch"], ["class", "text-danger", 4, "ngSwitchCase"], ["class", "text-success", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchDefault"], [1, "text-danger"], [1, "text-success"], [1, "text-muted"], ["mat-cell", "", 1, "text-nowrap"], ["mat-cell", "", 2, "max-width", "150px"], ["type", "button", "mat-icon-button", "", "color", "primary", 3, "click"], ["mat-header-row", ""], ["mat-row", ""], ["mat-row", "", 1, "table-dark"]], template: function SearchEntriesComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 108, vars: 33, consts: [[3, "new", "delete"], ["appStartContent", "", 1, "d-flex", "flex-column", "h-100", 3, "ngSubmit"], [1, "flex-fill", "overflow-auto"], ["appearance", "fill", 1, "w-100"], ["name", "book", 3, "value", "valueChange", "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], ["name", "recordTypes", "multiple", "", 3, "value", "valueChange"], [3, "value"], [1, "d-flex", "flex-row", "flex-nowrap"], ["name", "amountStart", "type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], [1, "mx-2"], ["name", "amountEnd", "type", "number", "matInput", "", 3, "ngModel", "ngModelChange", "click"], ["name", "comment", "type", "text", "matInput", "", 3, "ngModel", "ngModelChange"], ["name", "accounts", "multiple", "", 3, "value", "valueChange"], ["name", "members", "multiple", "", 3, "value", "valueChange"], ["name", "txnObjects", "multiple", "", 3, "value", "valueChange"], ["name", "project", "multiple", "", 3, "value", "valueChange"], ["name", "reimburses", "multiple", "", 3, "value", "valueChange"], [1, "container-fluid", "py-3", "text-right"], ["type", "submit", "mat-flat-button", "", "color", "primary", 1, "mr-2"], ["type", "button", "mat-stroked-button", "", "color", "primary", 3, "click"], [1, "d-flex", "flex-column", "flex-nowrap", "h-100"], ["flexFillContainer", ""], ["mat-table", "", 1, "table", "table-striped", "table-hover", "w-100", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "bizTime"], ["matColumnDef", "amount"], ["mat-cell", "", "class", "text-nowrap", 3, "ngSwitch", 4, "matCellDef"], ["matColumnDef", "categoryName"], ["mat-cell", "", "class", "text-nowrap", 4, "matCellDef"], ["matColumnDef", "projectName"], ["matColumnDef", "comment"], ["mat-cell", "", "width", "1000", 4, "matCellDef"], ["matColumnDef", "operation"], ["matColumnDef", "daySummary"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns", "matRowDefWhen"], ["class", "table-dark", "mat-row", "", 4, "matRowDef", "matRowDefColumns", "matRowDefWhen"], ["showFirstLastButtons", "", 3, "length", "pageSize"], [3, "ngSwitch"], [4, "ngSwitchCase"], ["mat-header-cell", ""], ["matBadgeColor", "warn", 3, "checked", "indeterminate", "matBadge", "change"], ["mat-cell", ""], [3, "checked", "click", "change"], [1, "text-nowrap"], ["mat-cell", "", 1, "text-nowrap", 3, "ngSwitch"], ["class", "text-danger", 4, "ngSwitchCase"], ["class", "text-success", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchDefault"], [1, "text-danger"], [1, "text-success"], [1, "text-muted"], ["mat-cell", "", 1, "text-nowrap"], ["mat-cell", "", "width", "1000"], ["type", "button", "mat-icon-button", "", "color", "primary", 3, "click"], ["mat-header-row", ""], ["mat-row", ""], ["mat-row", "", 1, "table-dark"]], template: function SearchEntriesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-operation-toolbar", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("new", function SearchEntriesComponent_Template_app_operation_toolbar_new_0_listener() { return ctx.addNewOne(); })("delete", function SearchEntriesComponent_Template_app_operation_toolbar_delete_0_listener() { return ctx.delete(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -2751,7 +2731,7 @@ SearchEntriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](93, 37);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](94, SearchEntriesComponent_th_94_Template, 2, 0, "th", 30);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](95, SearchEntriesComponent_td_95_Template, 2, 1, "td", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](95, SearchEntriesComponent_td_95_Template, 2, 1, "td", 36);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](96, 38);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](97, SearchEntriesComponent_th_97_Template, 2, 0, "th", 30);
@@ -3042,7 +3022,7 @@ function AccountEntriesComponent_th_33_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function AccountEntriesComponent_td_34_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3071,7 +3051,7 @@ function AccountEntriesComponent_th_39_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function AccountEntriesComponent_td_40_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -3317,7 +3297,7 @@ AccountEntriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.flexFillContainer = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.paginator = _t.first);
-    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 50, vars: 12, consts: [[3, "new", "delete"], ["appStartContent", "", 1, "d-flex", "flex-column", "h-100"], ["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date", 3, "disabled"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date", 3, "disabled"], ["matSuffix", "", 3, "for", "disabled"], ["picker", ""], [1, "container-fluid"], ["color", "primary", 3, "ngModel", "ngModelChange", "change"], [1, "d-flex", "flex-column", "flex-nowrap", "h-100"], [1, "flex-fill", "overflow-auto"], ["flexFillContainer", ""], ["mat-table", "", 1, "table", "table-striped", "table-hover", "w-100", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "bizTime"], ["matColumnDef", "amount"], ["mat-cell", "", "class", "text-nowrap", 3, "ngSwitch", 4, "matCellDef"], ["matColumnDef", "accountBalance"], ["matColumnDef", "categoryName"], ["mat-cell", "", "class", "text-nowrap", 4, "matCellDef"], ["matColumnDef", "projectName"], ["matColumnDef", "comment"], ["mat-cell", "", "style", "max-width: 150px", 4, "matCellDef"], ["matColumnDef", "operation"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSize"], ["mat-header-cell", ""], ["matBadgeColor", "warn", 3, "checked", "indeterminate", "matBadge", "change"], ["mat-cell", ""], [3, "checked", "click", "change"], [1, "text-nowrap"], ["mat-cell", "", 1, "text-nowrap", 3, "ngSwitch"], ["class", "text-danger", 4, "ngSwitchCase"], ["class", "text-success", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchCase"], [4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchDefault"], [1, "text-danger"], [1, "text-success"], [1, "text-muted"], ["mat-cell", "", 1, "text-nowrap"], ["mat-cell", "", 2, "max-width", "150px"], ["type", "button", "mat-icon-button", "", "color", "primary", 3, "click"], ["mat-header-row", ""], ["mat-row", ""]], template: function AccountEntriesComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 50, vars: 12, consts: [[3, "new", "delete"], ["appStartContent", "", 1, "d-flex", "flex-column", "h-100"], ["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date", 3, "disabled"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date", 3, "disabled"], ["matSuffix", "", 3, "for", "disabled"], ["picker", ""], [1, "container-fluid"], ["color", "primary", 3, "ngModel", "ngModelChange", "change"], [1, "d-flex", "flex-column", "flex-nowrap", "h-100"], [1, "flex-fill", "overflow-auto"], ["flexFillContainer", ""], ["mat-table", "", 1, "table", "table-striped", "table-hover", "w-100", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "bizTime"], ["matColumnDef", "amount"], ["mat-cell", "", "class", "text-nowrap", 3, "ngSwitch", 4, "matCellDef"], ["matColumnDef", "accountBalance"], ["mat-cell", "", "class", "text-nowrap", 4, "matCellDef"], ["matColumnDef", "categoryName"], ["matColumnDef", "projectName"], ["matColumnDef", "comment"], ["mat-cell", "", "width", "1000", 4, "matCellDef"], ["matColumnDef", "operation"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSize"], ["mat-header-cell", ""], ["matBadgeColor", "warn", 3, "checked", "indeterminate", "matBadge", "change"], ["mat-cell", ""], [3, "checked", "click", "change"], [1, "text-nowrap"], ["mat-cell", "", 1, "text-nowrap", 3, "ngSwitch"], ["class", "text-danger", 4, "ngSwitchCase"], ["class", "text-success", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchCase"], [4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchDefault"], [1, "text-danger"], [1, "text-success"], [1, "text-muted"], ["mat-cell", "", 1, "text-nowrap"], ["mat-cell", "", "width", "1000"], ["type", "button", "mat-icon-button", "", "color", "primary", 3, "click"], ["mat-header-row", ""], ["mat-row", ""]], template: function AccountEntriesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-operation-toolbar", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("new", function AccountEntriesComponent_Template_app_operation_toolbar_new_0_listener() { return ctx.addNewOne(); })("delete", function AccountEntriesComponent_Template_app_operation_toolbar_delete_0_listener() { return ctx.delete(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3364,15 +3344,15 @@ AccountEntriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](32, 20);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](33, AccountEntriesComponent_th_33_Template, 2, 0, "th", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, AccountEntriesComponent_td_34_Template, 3, 5, "td", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, AccountEntriesComponent_td_34_Template, 3, 5, "td", 21);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](35, 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](35, 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](36, AccountEntriesComponent_th_36_Template, 2, 0, "th", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, AccountEntriesComponent_td_37_Template, 2, 1, "td", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, AccountEntriesComponent_td_37_Template, 2, 1, "td", 21);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](38, 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](39, AccountEntriesComponent_th_39_Template, 2, 0, "th", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](40, AccountEntriesComponent_td_40_Template, 2, 1, "td", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](40, AccountEntriesComponent_td_40_Template, 2, 1, "td", 21);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](41, 24);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](42, AccountEntriesComponent_th_42_Template, 2, 0, "th", 15);
@@ -3618,8 +3598,10 @@ AdditionalDataService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/chart/sunburst-chart/sunburst-chart.component */ "U4UI");
-/* harmony import */ var _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/chart/bar-chart/bar-chart.component */ "EzXn");
+/* harmony import */ var _shared_components_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/components/breadcrumb/breadcrumb.component */ "+803");
+/* harmony import */ var _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/chart/sunburst-chart/sunburst-chart.component */ "U4UI");
+/* harmony import */ var _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/chart/bar-chart/bar-chart.component */ "EzXn");
+
 
 
 
@@ -3629,23 +3611,24 @@ class DashboardComponent {
     ngOnInit() { }
 }
 DashboardComponent.ɵfac = function DashboardComponent_Factory(t) { return new (t || DashboardComponent)(); };
-DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100", "overflow-auto"], decls: 9, vars: 0, consts: [[1, "container-fluid", "py-3", "h-100"], [1, "row", "h-50"], [1, "col-12", "col-lg-6"], [1, "col-12"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "app-sunburst-chart");
+DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 10, vars: 0, consts: [[1, "container-fluid", "flex-fill", "py-2", "overflow-auto"], [1, "row", "h-50"], [1, "col-12", "col-lg-6"], [1, "col-12"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-breadcrumb");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "app-sunburst-chart");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "app-sunburst-chart");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "app-bar-chart");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "app-sunburst-chart");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "app-bar-chart");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_1__["SunburstChartComponent"], _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_2__["BarChartComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkYXNoYm9hcmQuY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, directives: [_shared_components_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_1__["BreadcrumbComponent"], _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_2__["SunburstChartComponent"], _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_3__["BarChartComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkYXNoYm9hcmQuY29tcG9uZW50LnNjc3MifQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DashboardComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -3653,7 +3636,7 @@ DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
                 templateUrl: './dashboard.component.html',
                 styleUrls: ['./dashboard.component.scss'],
                 host: {
-                    class: 'd-flex flex-column flex-nowrap w-100 h-100 overflow-auto',
+                    class: 'd-flex flex-column flex-nowrap w-100 h-100',
                 },
             }]
     }], function () { return []; }, null); })();

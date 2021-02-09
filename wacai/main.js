@@ -72,7 +72,11 @@ class BreadcrumbComponent {
         }).reverse().join('/');
         menuPaths.length = 0;
         this.findRoute(src_data_menu_items__WEBPACK_IMPORTED_MODULE_1__["MENU_ITEMS"].concat(src_data_wacai_menu__WEBPACK_IMPORTED_MODULE_2__["WACAI_MENU"]), url);
+        this.oldTitle = document.title;
         document.title = (_a = menuPaths[menuPaths.length - 1]) === null || _a === void 0 ? void 0 : _a.title;
+    }
+    ngOnDestroy() {
+        document.title = this.oldTitle;
     }
     findRoute(items, url) {
         let flag = false;
@@ -3195,7 +3199,7 @@ class InitLoadingComponent {
     }
 }
 InitLoadingComponent.ɵfac = function InitLoadingComponent_Factory(t) { return new (t || InitLoadingComponent)(); };
-InitLoadingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InitLoadingComponent, selectors: [["app-init-loading"]], hostAttrs: [1, "d-flex", "align-items-center", "justify-content-center", "w-100", "h-100"], decls: 4, vars: 0, consts: [[1, "bubble"], [1, "loader", "d-flex", "align-items-center", "justify-content-center"], ["alt", "", "src", "/assets/images/logo-lg.png"]], template: function InitLoadingComponent_Template(rf, ctx) { if (rf & 1) {
+InitLoadingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InitLoadingComponent, selectors: [["app-init-loading"]], hostAttrs: [1, "d-flex", "align-items-center", "justify-content-center", "w-100", "h-100"], decls: 4, vars: 0, consts: [[1, "bubble"], [1, "loader", "d-flex", "align-items-center", "justify-content-center"], ["alt", "", "src", "assets/images/logo-lg.png"]], template: function InitLoadingComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
