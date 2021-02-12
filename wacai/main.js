@@ -116,1060 +116,6 @@ BreadcrumbComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
 
 /***/ }),
 
-/***/ "/NeN":
-/*!**********************************************************!*\
-  !*** ./src/app/shared/chart/sunburst-chart/test-data.ts ***!
-  \**********************************************************/
-/*! exports provided: DATA */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DATA", function() { return DATA; });
-const DATA = {
-    name: 'flare',
-    children: [
-        {
-            name: 'analytics',
-            children: [
-                {
-                    name: 'cluster',
-                    children: [
-                        {
-                            name: 'AgglomerativeCluster',
-                            value: 3938,
-                        },
-                        {
-                            name: 'CommunityStructure',
-                            value: 3812,
-                        },
-                        {
-                            name: 'HierarchicalCluster',
-                            value: 6714,
-                        },
-                        {
-                            name: 'MergeEdge',
-                            value: 743,
-                        },
-                    ],
-                },
-                {
-                    name: 'graph',
-                    children: [
-                        {
-                            name: 'BetweennessCentrality',
-                            value: 3534,
-                        },
-                        {
-                            name: 'LinkDistance',
-                            value: 5731,
-                        },
-                        {
-                            name: 'MaxFlowMinCut',
-                            value: 7840,
-                        },
-                        {
-                            name: 'ShortestPaths',
-                            value: 5914,
-                        },
-                        {
-                            name: 'SpanningTree',
-                            value: 3416,
-                        },
-                    ],
-                },
-                {
-                    name: 'optimization',
-                    children: [
-                        {
-                            name: 'AspectRatioBanker',
-                            value: 7074,
-                        },
-                    ],
-                },
-            ],
-        },
-        {
-            name: 'animate',
-            children: [
-                {
-                    name: 'Easing',
-                    value: 17010,
-                },
-                {
-                    name: 'FunctionSequence',
-                    value: 5842,
-                },
-                {
-                    name: 'interpolate',
-                    children: [
-                        {
-                            name: 'ArrayInterpolator',
-                            value: 1983,
-                        },
-                        {
-                            name: 'ColorInterpolator',
-                            value: 2047,
-                        },
-                        {
-                            name: 'DateInterpolator',
-                            value: 1375,
-                        },
-                        {
-                            name: 'Interpolator',
-                            value: 8746,
-                        },
-                        {
-                            name: 'MatrixInterpolator',
-                            value: 2202,
-                        },
-                        {
-                            name: 'NumberInterpolator',
-                            value: 1382,
-                        },
-                        {
-                            name: 'ObjectInterpolator',
-                            value: 1629,
-                        },
-                        {
-                            name: 'PointInterpolator',
-                            value: 1675,
-                        },
-                        {
-                            name: 'RectangleInterpolator',
-                            value: 2042,
-                        },
-                    ],
-                },
-                {
-                    name: 'ISchedulable',
-                    value: 1041,
-                },
-                {
-                    name: 'Parallel',
-                    value: 5176,
-                },
-                {
-                    name: 'Pause',
-                    value: 449,
-                },
-                {
-                    name: 'Scheduler',
-                    value: 5593,
-                },
-                {
-                    name: 'Sequence',
-                    value: 5534,
-                },
-                {
-                    name: 'Transition',
-                    value: 9201,
-                },
-                {
-                    name: 'Transitioner',
-                    value: 19975,
-                },
-                {
-                    name: 'TransitionEvent',
-                    value: 1116,
-                },
-                {
-                    name: 'Tween',
-                    value: 6006,
-                },
-            ],
-        },
-        {
-            name: 'data',
-            children: [
-                {
-                    name: 'converters',
-                    children: [
-                        {
-                            name: 'Converters',
-                            value: 721,
-                        },
-                        {
-                            name: 'DelimitedTextConverter',
-                            value: 4294,
-                        },
-                        {
-                            name: 'GraphMLConverter',
-                            value: 9800,
-                        },
-                        {
-                            name: 'IDataConverter',
-                            value: 1314,
-                        },
-                        {
-                            name: 'JSONConverter',
-                            value: 2220,
-                        },
-                    ],
-                },
-                {
-                    name: 'DataField',
-                    value: 1759,
-                },
-                {
-                    name: 'DataSchema',
-                    value: 2165,
-                },
-                {
-                    name: 'DataSet',
-                    value: 586,
-                },
-                {
-                    name: 'DataSource',
-                    value: 3331,
-                },
-                {
-                    name: 'DataTable',
-                    value: 772,
-                },
-                {
-                    name: 'DataUtil',
-                    value: 3322,
-                },
-            ],
-        },
-        {
-            name: 'display',
-            children: [
-                {
-                    name: 'DirtySprite',
-                    value: 8833,
-                },
-                {
-                    name: 'LineSprite',
-                    value: 1732,
-                },
-                {
-                    name: 'RectSprite',
-                    value: 3623,
-                },
-                {
-                    name: 'TextSprite',
-                    value: 10066,
-                },
-            ],
-        },
-        {
-            name: 'flex',
-            children: [
-                {
-                    name: 'FlareVis',
-                    value: 4116,
-                },
-            ],
-        },
-        {
-            name: 'physics',
-            children: [
-                {
-                    name: 'DragForce',
-                    value: 1082,
-                },
-                {
-                    name: 'GravityForce',
-                    value: 1336,
-                },
-                {
-                    name: 'IForce',
-                    value: 319,
-                },
-                {
-                    name: 'NBodyForce',
-                    value: 10498,
-                },
-                {
-                    name: 'Particle',
-                    value: 2822,
-                },
-                {
-                    name: 'Simulation',
-                    value: 9983,
-                },
-                {
-                    name: 'Spring',
-                    value: 2213,
-                },
-                {
-                    name: 'SpringForce',
-                    value: 1681,
-                },
-            ],
-        },
-        {
-            name: 'query',
-            children: [
-                {
-                    name: 'AggregateExpression',
-                    value: 1616,
-                },
-                {
-                    name: 'And',
-                    value: 1027,
-                },
-                {
-                    name: 'Arithmetic',
-                    value: 3891,
-                },
-                {
-                    name: 'Average',
-                    value: 891,
-                },
-                {
-                    name: 'BinaryExpression',
-                    value: 2893,
-                },
-                {
-                    name: 'Comparison',
-                    value: 5103,
-                },
-                {
-                    name: 'CompositeExpression',
-                    value: 3677,
-                },
-                {
-                    name: 'Count',
-                    value: 781,
-                },
-                {
-                    name: 'DateUtil',
-                    value: 4141,
-                },
-                {
-                    name: 'Distinct',
-                    value: 933,
-                },
-                {
-                    name: 'Expression',
-                    value: 5130,
-                },
-                {
-                    name: 'ExpressionIterator',
-                    value: 3617,
-                },
-                {
-                    name: 'Fn',
-                    value: 3240,
-                },
-                {
-                    name: 'If',
-                    value: 2732,
-                },
-                {
-                    name: 'IsA',
-                    value: 2039,
-                },
-                {
-                    name: 'Literal',
-                    value: 1214,
-                },
-                {
-                    name: 'Match',
-                    value: 3748,
-                },
-                {
-                    name: 'Maximum',
-                    value: 843,
-                },
-                {
-                    name: 'methods',
-                    children: [
-                        {
-                            name: 'add',
-                            value: 593,
-                        },
-                        {
-                            name: 'and',
-                            value: 330,
-                        },
-                        {
-                            name: 'average',
-                            value: 287,
-                        },
-                        {
-                            name: 'count',
-                            value: 277,
-                        },
-                        {
-                            name: 'distinct',
-                            value: 292,
-                        },
-                        {
-                            name: 'div',
-                            value: 595,
-                        },
-                        {
-                            name: 'eq',
-                            value: 594,
-                        },
-                        {
-                            name: 'fn',
-                            value: 460,
-                        },
-                        {
-                            name: 'gt',
-                            value: 603,
-                        },
-                        {
-                            name: 'gte',
-                            value: 625,
-                        },
-                        {
-                            name: 'iff',
-                            value: 748,
-                        },
-                        {
-                            name: 'isa',
-                            value: 461,
-                        },
-                        {
-                            name: 'lt',
-                            value: 597,
-                        },
-                        {
-                            name: 'lte',
-                            value: 619,
-                        },
-                        {
-                            name: 'max',
-                            value: 283,
-                        },
-                        {
-                            name: 'min',
-                            value: 283,
-                        },
-                        {
-                            name: 'mod',
-                            value: 591,
-                        },
-                        {
-                            name: 'mul',
-                            value: 603,
-                        },
-                        {
-                            name: 'neq',
-                            value: 599,
-                        },
-                        {
-                            name: 'not',
-                            value: 386,
-                        },
-                        {
-                            name: 'or',
-                            value: 323,
-                        },
-                        {
-                            name: 'orderby',
-                            value: 307,
-                        },
-                        {
-                            name: 'range',
-                            value: 772,
-                        },
-                        {
-                            name: 'select',
-                            value: 296,
-                        },
-                        {
-                            name: 'stddev',
-                            value: 363,
-                        },
-                        {
-                            name: 'sub',
-                            value: 600,
-                        },
-                        {
-                            name: 'sum',
-                            value: 280,
-                        },
-                        {
-                            name: 'update',
-                            value: 307,
-                        },
-                        {
-                            name: 'variance',
-                            value: 335,
-                        },
-                        {
-                            name: 'where',
-                            value: 299,
-                        },
-                        {
-                            name: 'xor',
-                            value: 354,
-                        },
-                        {
-                            name: '_',
-                            value: 264,
-                        },
-                    ],
-                },
-                {
-                    name: 'Minimum',
-                    value: 843,
-                },
-                {
-                    name: 'Not',
-                    value: 1554,
-                },
-                {
-                    name: 'Or',
-                    value: 970,
-                },
-                {
-                    name: 'Query',
-                    value: 13896,
-                },
-                {
-                    name: 'Range',
-                    value: 1594,
-                },
-                {
-                    name: 'StringUtil',
-                    value: 4130,
-                },
-                {
-                    name: 'Sum',
-                    value: 791,
-                },
-                {
-                    name: 'Variable',
-                    value: 1124,
-                },
-                {
-                    name: 'Variance',
-                    value: 1876,
-                },
-                {
-                    name: 'Xor',
-                    value: 1101,
-                },
-            ],
-        },
-        {
-            name: 'scale',
-            children: [
-                {
-                    name: 'IScaleMap',
-                    value: 2105,
-                },
-                {
-                    name: 'LinearScale',
-                    value: 1316,
-                },
-                {
-                    name: 'LogScale',
-                    value: 3151,
-                },
-                {
-                    name: 'OrdinalScale',
-                    value: 3770,
-                },
-                {
-                    name: 'QuantileScale',
-                    value: 2435,
-                },
-                {
-                    name: 'QuantitativeScale',
-                    value: 4839,
-                },
-                {
-                    name: 'RootScale',
-                    value: 1756,
-                },
-                {
-                    name: 'Scale',
-                    value: 4268,
-                },
-                {
-                    name: 'ScaleType',
-                    value: 1821,
-                },
-                {
-                    name: 'TimeScale',
-                    value: 5833,
-                },
-            ],
-        },
-        {
-            name: 'util',
-            children: [
-                {
-                    name: 'Arrays',
-                    value: 8258,
-                },
-                {
-                    name: 'Colors',
-                    value: 10001,
-                },
-                {
-                    name: 'Dates',
-                    value: 8217,
-                },
-                {
-                    name: 'Displays',
-                    value: 12555,
-                },
-                {
-                    name: 'Filter',
-                    value: 2324,
-                },
-                {
-                    name: 'Geometry',
-                    value: 10993,
-                },
-                {
-                    name: 'heap',
-                    children: [
-                        {
-                            name: 'FibonacciHeap',
-                            value: 9354,
-                        },
-                        {
-                            name: 'HeapNode',
-                            value: 1233,
-                        },
-                    ],
-                },
-                {
-                    name: 'IEvaluable',
-                    value: 335,
-                },
-                {
-                    name: 'IPredicate',
-                    value: 383,
-                },
-                {
-                    name: 'IValueProxy',
-                    value: 874,
-                },
-                {
-                    name: 'math',
-                    children: [
-                        {
-                            name: 'DenseMatrix',
-                            value: 3165,
-                        },
-                        {
-                            name: 'IMatrix',
-                            value: 2815,
-                        },
-                        {
-                            name: 'SparseMatrix',
-                            value: 3366,
-                        },
-                    ],
-                },
-                {
-                    name: 'Maths',
-                    value: 17705,
-                },
-                {
-                    name: 'Orientation',
-                    value: 1486,
-                },
-                {
-                    name: 'palette',
-                    children: [
-                        {
-                            name: 'ColorPalette',
-                            value: 6367,
-                        },
-                        {
-                            name: 'Palette',
-                            value: 1229,
-                        },
-                        {
-                            name: 'ShapePalette',
-                            value: 2059,
-                        },
-                        {
-                            name: 'SizePalette',
-                            value: 2291,
-                        },
-                    ],
-                },
-                {
-                    name: 'Property',
-                    value: 5559,
-                },
-                {
-                    name: 'Shapes',
-                    value: 19118,
-                },
-                {
-                    name: 'Sort',
-                    value: 6887,
-                },
-                {
-                    name: 'Stats',
-                    value: 6557,
-                },
-                {
-                    name: 'Strings',
-                    value: 22026,
-                },
-            ],
-        },
-        {
-            name: 'vis',
-            children: [
-                {
-                    name: 'axis',
-                    children: [
-                        {
-                            name: 'Axes',
-                            value: 1302,
-                        },
-                        {
-                            name: 'Axis',
-                            value: 24593,
-                        },
-                        {
-                            name: 'AxisGridLine',
-                            value: 652,
-                        },
-                        {
-                            name: 'AxisLabel',
-                            value: 636,
-                        },
-                        {
-                            name: 'CartesianAxes',
-                            value: 6703,
-                        },
-                    ],
-                },
-                {
-                    name: 'controls',
-                    children: [
-                        {
-                            name: 'AnchorControl',
-                            value: 2138,
-                        },
-                        {
-                            name: 'ClickControl',
-                            value: 3824,
-                        },
-                        {
-                            name: 'Control',
-                            value: 1353,
-                        },
-                        {
-                            name: 'ControlList',
-                            value: 4665,
-                        },
-                        {
-                            name: 'DragControl',
-                            value: 2649,
-                        },
-                        {
-                            name: 'ExpandControl',
-                            value: 2832,
-                        },
-                        {
-                            name: 'HoverControl',
-                            value: 4896,
-                        },
-                        {
-                            name: 'IControl',
-                            value: 763,
-                        },
-                        {
-                            name: 'PanZoomControl',
-                            value: 5222,
-                        },
-                        {
-                            name: 'SelectionControl',
-                            value: 7862,
-                        },
-                        {
-                            name: 'TooltipControl',
-                            value: 8435,
-                        },
-                    ],
-                },
-                {
-                    name: 'data',
-                    children: [
-                        {
-                            name: 'Data',
-                            value: 20544,
-                        },
-                        {
-                            name: 'DataList',
-                            value: 19788,
-                        },
-                        {
-                            name: 'DataSprite',
-                            value: 10349,
-                        },
-                        {
-                            name: 'EdgeSprite',
-                            value: 3301,
-                        },
-                        {
-                            name: 'NodeSprite',
-                            value: 19382,
-                        },
-                        {
-                            name: 'render',
-                            children: [
-                                {
-                                    name: 'ArrowType',
-                                    value: 698,
-                                },
-                                {
-                                    name: 'EdgeRenderer',
-                                    value: 5569,
-                                },
-                                {
-                                    name: 'IRenderer',
-                                    value: 353,
-                                },
-                                {
-                                    name: 'ShapeRenderer',
-                                    value: 2247,
-                                },
-                            ],
-                        },
-                        {
-                            name: 'ScaleBinding',
-                            value: 11275,
-                        },
-                        {
-                            name: 'Tree',
-                            value: 7147,
-                        },
-                        {
-                            name: 'TreeBuilder',
-                            value: 9930,
-                        },
-                    ],
-                },
-                {
-                    name: 'events',
-                    children: [
-                        {
-                            name: 'DataEvent',
-                            value: 2313,
-                        },
-                        {
-                            name: 'SelectionEvent',
-                            value: 1880,
-                        },
-                        {
-                            name: 'TooltipEvent',
-                            value: 1701,
-                        },
-                        {
-                            name: 'VisualizationEvent',
-                            value: 1117,
-                        },
-                    ],
-                },
-                {
-                    name: 'legend',
-                    children: [
-                        {
-                            name: 'Legend',
-                            value: 20859,
-                        },
-                        {
-                            name: 'LegendItem',
-                            value: 4614,
-                        },
-                        {
-                            name: 'LegendRange',
-                            value: 10530,
-                        },
-                    ],
-                },
-                {
-                    name: 'operator',
-                    children: [
-                        {
-                            name: 'distortion',
-                            children: [
-                                {
-                                    name: 'BifocalDistortion',
-                                    value: 4461,
-                                },
-                                {
-                                    name: 'Distortion',
-                                    value: 6314,
-                                },
-                                {
-                                    name: 'FisheyeDistortion',
-                                    value: 3444,
-                                },
-                            ],
-                        },
-                        {
-                            name: 'encoder',
-                            children: [
-                                {
-                                    name: 'ColorEncoder',
-                                    value: 3179,
-                                },
-                                {
-                                    name: 'Encoder',
-                                    value: 4060,
-                                },
-                                {
-                                    name: 'PropertyEncoder',
-                                    value: 4138,
-                                },
-                                {
-                                    name: 'ShapeEncoder',
-                                    value: 1690,
-                                },
-                                {
-                                    name: 'SizeEncoder',
-                                    value: 1830,
-                                },
-                            ],
-                        },
-                        {
-                            name: 'filter',
-                            children: [
-                                {
-                                    name: 'FisheyeTreeFilter',
-                                    value: 5219,
-                                },
-                                {
-                                    name: 'GraphDistanceFilter',
-                                    value: 3165,
-                                },
-                                {
-                                    name: 'VisibilityFilter',
-                                    value: 3509,
-                                },
-                            ],
-                        },
-                        {
-                            name: 'IOperator',
-                            value: 1286,
-                        },
-                        {
-                            name: 'label',
-                            children: [
-                                {
-                                    name: 'Labeler',
-                                    value: 9956,
-                                },
-                                {
-                                    name: 'RadialLabeler',
-                                    value: 3899,
-                                },
-                                {
-                                    name: 'StackedAreaLabeler',
-                                    value: 3202,
-                                },
-                            ],
-                        },
-                        {
-                            name: 'layout',
-                            children: [
-                                {
-                                    name: 'AxisLayout',
-                                    value: 6725,
-                                },
-                                {
-                                    name: 'BundledEdgeRouter',
-                                    value: 3727,
-                                },
-                                {
-                                    name: 'CircleLayout',
-                                    value: 9317,
-                                },
-                                {
-                                    name: 'CirclePackingLayout',
-                                    value: 12003,
-                                },
-                                {
-                                    name: 'DendrogramLayout',
-                                    value: 4853,
-                                },
-                                {
-                                    name: 'ForceDirectedLayout',
-                                    value: 8411,
-                                },
-                                {
-                                    name: 'IcicleTreeLayout',
-                                    value: 4864,
-                                },
-                                {
-                                    name: 'IndentedTreeLayout',
-                                    value: 3174,
-                                },
-                                {
-                                    name: 'Layout',
-                                    value: 7881,
-                                },
-                                {
-                                    name: 'NodeLinkTreeLayout',
-                                    value: 12870,
-                                },
-                                {
-                                    name: 'PieLayout',
-                                    value: 2728,
-                                },
-                                {
-                                    name: 'RadialTreeLayout',
-                                    value: 12348,
-                                },
-                                {
-                                    name: 'RandomLayout',
-                                    value: 870,
-                                },
-                                {
-                                    name: 'StackedAreaLayout',
-                                    value: 9121,
-                                },
-                                {
-                                    name: 'TreeMapLayout',
-                                    value: 9191,
-                                },
-                            ],
-                        },
-                        {
-                            name: 'Operator',
-                            value: 2490,
-                        },
-                        {
-                            name: 'OperatorList',
-                            value: 5248,
-                        },
-                        {
-                            name: 'OperatorSequence',
-                            value: 4190,
-                        },
-                        {
-                            name: 'OperatorSwitch',
-                            value: 2581,
-                        },
-                        {
-                            name: 'SortOperator',
-                            value: 2023,
-                        },
-                    ],
-                },
-                {
-                    name: 'Visualization',
-                    value: 16540,
-                },
-            ],
-        },
-    ],
-};
-
-
-/***/ }),
-
 /***/ 0:
 /*!***************************!*\
   !*** multi ./src/main.ts ***!
@@ -2791,6 +1737,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _chart_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../chart-options */ "mZci");
 /* harmony import */ var _chart_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../chart-base */ "MG/C");
 /* harmony import */ var app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/shared/services/event.service */ "6BoG");
+/* harmony import */ var app_shared_services_algorithm_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/shared/services/algorithm.service */ "eT13");
+
 
 
 
@@ -2799,11 +1747,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartBase"] {
-    constructor(elementRef, renderer, eventService) {
+    constructor(elementRef, renderer, eventService, algorithm) {
         super(eventService);
         this.elementRef = elementRef;
         this.renderer = renderer;
         this.eventService = eventService;
+        this.algorithm = algorithm;
         this._options = new _chart_options__WEBPACK_IMPORTED_MODULE_3__["BarChartOptions"]();
         this.subscription = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subscription"]();
     }
@@ -2812,7 +1761,6 @@ class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartB
         super.ngAfterViewInit();
         setTimeout(() => {
             this.draw();
-            this.updateLayout('stacked');
         });
     }
     updateLayout(layout) {
@@ -2851,18 +1799,32 @@ class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartB
             .attr('width', this.x.bandwidth());
     }
     draw() {
+        const data = this.data;
+        if (!data) {
+            return;
+        }
         const parentEl = this.elementRef.nativeElement.parentElement;
         const width = this.coerceNumber(this.options.width, parentEl.offsetWidth);
         const height = this.coerceNumber(this.options.height, parentEl.offsetHeight);
         const margin = { top: 0, right: 0, bottom: 10, left: 0 };
-        const n = 5; // number of series
-        const m = 58; // number of values per series
-        const xz = d3__WEBPACK_IMPORTED_MODULE_2__["range"](m);
-        const yz = d3__WEBPACK_IMPORTED_MODULE_2__["range"](n).map(() => this.bumps(m));
+        const dataLength = data.length;
+        const seriesDatas = [];
+        // number of series
+        const n = this.getNumOfSeries();
+        const xz = d3__WEBPACK_IMPORTED_MODULE_2__["range"](dataLength);
+        // const xz = data.map(item => (item[0] as Date).getTime());
+        this.algorithm.deviceOfDuff(data, (item, index) => {
+            item && item.slice(1).forEach((value, i) => {
+                if (!Array.isArray(seriesDatas[i])) {
+                    seriesDatas[i] = [];
+                }
+                seriesDatas[i].push(value);
+            });
+        });
         const y01z = d3__WEBPACK_IMPORTED_MODULE_2__["stack"]()
-            .keys(d3__WEBPACK_IMPORTED_MODULE_2__["range"](n).map((item) => item.toString()))(d3__WEBPACK_IMPORTED_MODULE_2__["transpose"](yz)) // stacked yz
+            .keys(d3__WEBPACK_IMPORTED_MODULE_2__["range"](n))(d3__WEBPACK_IMPORTED_MODULE_2__["transpose"](seriesDatas)) // stacked seriesDatas
             .map((data, i) => data.map(([y0, y1]) => [y0, y1, i]));
-        this.yGroupedMax = d3__WEBPACK_IMPORTED_MODULE_2__["max"](yz, (y) => d3__WEBPACK_IMPORTED_MODULE_2__["max"](y));
+        this.yGroupedMax = d3__WEBPACK_IMPORTED_MODULE_2__["max"](seriesDatas, (y) => d3__WEBPACK_IMPORTED_MODULE_2__["max"](y));
         this.yStackedMax = d3__WEBPACK_IMPORTED_MODULE_2__["max"](y01z, (y) => d3__WEBPACK_IMPORTED_MODULE_2__["max"](y, (d) => d[1]));
         this.x = d3__WEBPACK_IMPORTED_MODULE_2__["scaleBand"]()
             .domain(xz)
@@ -2871,7 +1833,7 @@ class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartB
         this.y = d3__WEBPACK_IMPORTED_MODULE_2__["scaleLinear"]()
             .domain([0, this.yStackedMax])
             .range([height - margin.bottom, margin.top]);
-        this.z = d3__WEBPACK_IMPORTED_MODULE_2__["scaleSequential"](d3__WEBPACK_IMPORTED_MODULE_2__["interpolateBlues"])
+        this.color = d3__WEBPACK_IMPORTED_MODULE_2__["scaleSequential"](d3__WEBPACK_IMPORTED_MODULE_2__["interpolateBlues"])
             .domain([-0.5 * n, 1.5 * n]);
         const xAxis = (svg) => svg
             .append('g')
@@ -2885,7 +1847,7 @@ class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartB
             .selectAll('g')
             .data(y01z)
             .join('g')
-            .attr('fill', (d, i) => this.options.seriesColor[i] || this.z(i))
+            .attr('fill', (d, i) => this.getColor(i))
             .selectAll('rect')
             .data((d) => d)
             .join('rect')
@@ -2895,6 +1857,7 @@ class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartB
             .attr('height', 0);
         svg.append('g').call(xAxis);
         this.renderer.appendChild(this.elementRef.nativeElement, svg.node());
+        this.updateLayout('stacked');
     }
     clear() {
         if (this.svg) {
@@ -2903,32 +1866,10 @@ class BarChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartB
         }
     }
     getNumOfSeries() {
-        return this.data[0].length;
-    }
-    bumps(m) {
-        const values = [];
-        // Initialize with uniform random values in [0.1, 0.2).
-        for (let i = 0; i < m; ++i) {
-            values[i] = 0.1 + 0.1 * Math.random();
-        }
-        // Add five random bumps.
-        for (let j = 0; j < 5; ++j) {
-            const x = 1 / (0.1 + Math.random());
-            const y = 2 * Math.random() - 0.5;
-            const z = 10 / (0.1 + Math.random());
-            for (let i = 0; i < m; i++) {
-                const w = (i / m - y) * z;
-                values[i] += x * Math.exp(-w * w);
-            }
-        }
-        // Ensure all values are positive.
-        for (let i = 0; i < m; ++i) {
-            values[i] = Math.max(0, values[i]);
-        }
-        return values;
+        return this.data && this.data[0] ? this.data[0].length - 1 : 0;
     }
 }
-BarChartComponent.ɵfac = function BarChartComponent_Factory(t) { return new (t || BarChartComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_5__["EventService"])); };
+BarChartComponent.ɵfac = function BarChartComponent_Factory(t) { return new (t || BarChartComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_5__["EventService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_algorithm_service__WEBPACK_IMPORTED_MODULE_6__["AlgorithmService"])); };
 BarChartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BarChartComponent, selectors: [["app-bar-chart"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 0, vars: 0, template: function BarChartComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiYXItY2hhcnQuY29tcG9uZW50LnNjc3MifQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BarChartComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -2937,7 +1878,7 @@ BarChartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
                 template: '',
                 styleUrls: ['./bar-chart.component.scss'],
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_5__["EventService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_5__["EventService"] }, { type: app_shared_services_algorithm_service__WEBPACK_IMPORTED_MODULE_6__["AlgorithmService"] }]; }, null); })();
 
 
 /***/ }),
@@ -3059,6 +2000,7 @@ class ManagementHeaderComponent {
         this.signed = false;
     }
     ngOnInit() {
+        this.signed = this.authService.isLoggedIn;
     }
     logout() {
         this.authService.logout();
@@ -3120,13 +2062,16 @@ ManagementHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartBase", function() { return ChartBase; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/event.service */ "6BoG");
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3 */ "VphZ");
+/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/event.service */ "6BoG");
+
 
 
 
 class ChartBase {
     constructor(eventService) {
         this.eventService = eventService;
+        this.color = d3__WEBPACK_IMPORTED_MODULE_1__["scaleSequential"](d3__WEBPACK_IMPORTED_MODULE_1__["interpolateBlues"]);
     }
     set options(value) {
         this._options = Object.assign(Object.assign({}, this._options), value);
@@ -3137,6 +2082,7 @@ class ChartBase {
         return this._options;
     }
     set data(value) {
+        this._data = value;
         this.clear();
         this.draw();
     }
@@ -3144,7 +2090,6 @@ class ChartBase {
         return this._data;
     }
     ngAfterViewInit() {
-        console.log(1);
     }
     ngOnDestroy() {
         this.subscription.unsubscribe();
@@ -3163,15 +2108,24 @@ class ChartBase {
         }
         return value;
     }
+    getColor(index) {
+        if (this.options.seriesColor) {
+            return this.options.seriesColor[index];
+        }
+        else {
+            this.color(index);
+        }
+        return '#000';
+    }
 }
-ChartBase.ɵfac = function ChartBase_Factory(t) { return new (t || ChartBase)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_event_service__WEBPACK_IMPORTED_MODULE_1__["EventService"])); };
+ChartBase.ɵfac = function ChartBase_Factory(t) { return new (t || ChartBase)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_event_service__WEBPACK_IMPORTED_MODULE_2__["EventService"])); };
 ChartBase.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChartBase, selectors: [["ng-component"]], inputs: { options: "options", data: "data" }, decls: 0, vars: 0, template: function ChartBase_Template(rf, ctx) { }, encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ChartBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 template: '',
             }]
-    }], function () { return [{ type: _services_event_service__WEBPACK_IMPORTED_MODULE_1__["EventService"] }]; }, { options: [{
+    }], function () { return [{ type: _services_event_service__WEBPACK_IMPORTED_MODULE_2__["EventService"] }]; }, { options: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], data: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
@@ -3392,36 +2346,46 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginGuard", function() { return LoginGuard; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ "rI6T");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth.service */ "rI6T");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "iInd");
+/* harmony import */ var _auth_guard_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth-guard.service */ "sJMl");
+
+
+
+
 
 
 
 class LoginGuard {
-    constructor(
-    // private authGuard: AuthGuard,
-    authService) {
+    constructor(router, authGuard, authService) {
+        this.router = router;
+        this.authGuard = authGuard;
         this.authService = authService;
     }
     canLoad(route) {
-        return !this.authService.isLoggedIn;
-        /*     return this.authGuard.checkLogin(route.path).pipe(
-              map((data) => {
-                console.log(data)
-                return !data;
-              })
-            ); */
+        if (this.authGuard.isTimeount()) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
+        }
+        return this.authGuard.checkLogin(route.path).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((data) => {
+            if (data) {
+                this.router.navigate(['/']);
+            }
+            return !data;
+        }));
     }
 }
-LoginGuard.ɵfac = function LoginGuard_Factory(t) { return new (t || LoginGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_service__WEBPACK_IMPORTED_MODULE_1__["AUTH_SERVICE_TOKEN"])); };
+LoginGuard.ɵfac = function LoginGuard_Factory(t) { return new (t || LoginGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_service__WEBPACK_IMPORTED_MODULE_3__["AUTH_SERVICE_TOKEN"])); };
 LoginGuard.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: LoginGuard, factory: LoginGuard.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LoginGuard, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: undefined, decorators: [{
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }, { type: _auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"] }, { type: undefined, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
-                args: [_auth_service__WEBPACK_IMPORTED_MODULE_1__["AUTH_SERVICE_TOKEN"]]
+                args: [_auth_service__WEBPACK_IMPORTED_MODULE_3__["AUTH_SERVICE_TOKEN"]]
             }] }]; }, null); })();
 
 
@@ -3531,11 +2495,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SunburstChartComponent", function() { return SunburstChartComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "VphZ");
-/* harmony import */ var _chart_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../chart-options */ "mZci");
-/* harmony import */ var _chart_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../chart-base */ "MG/C");
-/* harmony import */ var _test_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./test-data */ "/NeN");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "VphZ");
+/* harmony import */ var _chart_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../chart-options */ "mZci");
+/* harmony import */ var _chart_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../chart-base */ "MG/C");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "SVse");
 /* harmony import */ var app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/shared/services/event.service */ "6BoG");
 
 
@@ -3546,22 +2510,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartBase"] {
-    constructor(elementRef, renderer, eventService) {
+class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_5__["ChartBase"] {
+    constructor(elementRef, renderer, percentPipe, eventService) {
         super(eventService);
         this.elementRef = elementRef;
         this.renderer = renderer;
+        this.percentPipe = percentPipe;
         this.eventService = eventService;
-        this._options = new _chart_options__WEBPACK_IMPORTED_MODULE_3__["SunburstChartOptions"]();
+        this._options = new _chart_options__WEBPACK_IMPORTED_MODULE_4__["SunburstChartOptions"]();
         this.subscription = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subscription"]();
     }
     ngOnInit() {
-        this.color = d3__WEBPACK_IMPORTED_MODULE_2__["scaleOrdinal"](d3__WEBPACK_IMPORTED_MODULE_2__["quantize"](d3__WEBPACK_IMPORTED_MODULE_2__["interpolateRainbow"], _test_data__WEBPACK_IMPORTED_MODULE_5__["DATA"].children.length + 1));
     }
     ngAfterViewInit() {
-        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["debounceTime"])(300)).subscribe((event) => {
+        super.ngAfterViewInit();
+        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(300)).subscribe((event) => {
             if (event.either) {
-                console.log('-----');
                 this.clear();
                 this.draw();
             }
@@ -3571,23 +2535,29 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["C
         });
     }
     draw() {
+        let data = this.data ? this.data[0] : null;
+        if (!data) {
+            return;
+        }
+        data = data;
+        this.color = d3__WEBPACK_IMPORTED_MODULE_3__["scaleOrdinal"](this.options.seriesColor ||
+            d3__WEBPACK_IMPORTED_MODULE_3__["quantize"](d3__WEBPACK_IMPORTED_MODULE_3__["interpolateRainbow"], data ? data.children.length + 1 : 1));
         const parentEl = this.elementRef.nativeElement.parentElement;
         const width = this.coerceNumber(this.options.width, parentEl.offsetWidth);
         const height = this.coerceNumber(this.options.height, parentEl.offsetHeight);
         const radius = Math.min(width, height) / 2;
-        const format = d3__WEBPACK_IMPORTED_MODULE_2__["format"](',d');
-        const arc = d3__WEBPACK_IMPORTED_MODULE_2__["arc"]()
+        const format = d3__WEBPACK_IMPORTED_MODULE_3__["format"](',d');
+        const arc = d3__WEBPACK_IMPORTED_MODULE_3__["arc"]()
             .startAngle((d) => d.x0)
             .endAngle((d) => d.x1)
             .padAngle((d) => Math.min((d.x1 - d.x0) / 2, 0.005))
             .padRadius(radius / 2)
             .innerRadius((d) => d.y0)
             .outerRadius((d) => d.y1 - 1);
-        const partition = (data) => d3__WEBPACK_IMPORTED_MODULE_2__["partition"]().size([2 * Math.PI, radius])(d3__WEBPACK_IMPORTED_MODULE_2__["hierarchy"](data)
-            .sum((d) => d.value)
+        const root = d3__WEBPACK_IMPORTED_MODULE_3__["partition"]().size([2 * Math.PI, radius])(d3__WEBPACK_IMPORTED_MODULE_3__["hierarchy"](data)
+            .sum((d) => d.children && d.children.length ? 0 : d.value)
             .sort((a, b) => b.value - a.value));
-        const root = partition(_test_data__WEBPACK_IMPORTED_MODULE_5__["DATA"]);
-        const svg = d3__WEBPACK_IMPORTED_MODULE_2__["create"]('svg')
+        const svg = d3__WEBPACK_IMPORTED_MODULE_3__["create"]('svg')
             .attr('viewBox', [-width / 2, -height / 2, width, height]);
         const svgElement = svg.node();
         const path = svg
@@ -3598,13 +2568,12 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["C
             return d.depth && d.x1 - d.x0 > 0.001;
         }))
             .join('path')
-            .attr('fill', (d) => this.color(d.data.name))
+            .attr('fill', (d) => this.color(d.data.id))
             .attr('d', arc);
         const label = svg
             .append('text')
             .attr('text-anchor', 'middle')
-            .attr('fill', '#888')
-            .style('visibility', 'hidden');
+            .attr('fill', '#888');
         svgElement.value = { sequence: [], percentage: 0.0 };
         label
             .append('tspan')
@@ -3613,14 +2582,16 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["C
             .attr('y', 0)
             .attr('dy', '0.4em')
             .attr('font-size', '1em')
-            .text('');
+            .text(this.getLabelWithValue(data));
         this.svg = svg;
         svg
             .append('g')
             .attr('fill-opacity', 0.6)
             .on('mouseleave', () => {
             path.attr('fill-opacity', 0.6);
-            label.style('visibility', 'hidden');
+            label
+                .select('.percentage')
+                .text(this.getLabelWithValue(this.data ? this.data[0] : null));
             // Update the value of this view
             svgElement.value = { sequence: [], percentage: 0.0 };
             svgElement.dispatchEvent(new CustomEvent('input'));
@@ -3631,7 +2602,7 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["C
             .attr('fill', (d) => {
             while (d.depth > 1)
                 d = d.parent;
-            return this.color(d.data.name);
+            return this.color(d.data.id);
         })
             .attr('d', arc)
             .on('mouseenter', (event, d) => {
@@ -3639,11 +2610,10 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["C
             const sequence = d.ancestors().reverse().slice(1);
             // Highlight the ancestors
             path.attr('fill-opacity', (node) => sequence.indexOf(node) >= 0 ? 1.0 : 0.3);
-            const percentage = ((100 * d.value) / root.value).toPrecision(3);
+            const percentage = this.percentPipe.transform(d.value / root.value, '0.0-2');
             label
-                .style('visibility', null)
                 .select('.percentage')
-                .text(percentage + '%');
+                .text(percentage);
             // Update the value of this view with the currently hovered sequence and percentage
             svgElement.value = { sequence, percentage };
             svgElement.dispatchEvent(new CustomEvent('input'));
@@ -3680,8 +2650,11 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["C
             this.svg = undefined;
         }
     }
+    getLabelWithValue(data) {
+        return data ? data.name + '\n' + data.value : '';
+    }
 }
-SunburstChartComponent.ɵfac = function SunburstChartComponent_Factory(t) { return new (t || SunburstChartComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__["EventService"])); };
+SunburstChartComponent.ɵfac = function SunburstChartComponent_Factory(t) { return new (t || SunburstChartComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__["EventService"])); };
 SunburstChartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SunburstChartComponent, selectors: [["app-sunburst-chart"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 0, vars: 0, template: function SunburstChartComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdW5idXJzdC1jaGFydC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SunburstChartComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -3690,7 +2663,7 @@ SunburstChartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
                 template: '',
                 styleUrls: ['./sunburst-chart.component.scss'],
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__["EventService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"] }, { type: app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__["EventService"] }]; }, null); })();
 
 
 /***/ }),
@@ -3845,18 +2818,18 @@ class AlgorithmService {
         let i = 0;
         if (leftover > 0) {
             do {
-                process(values[i++]);
+                process(values[i++], i);
             } while (--leftover > 0);
         }
         do {
-            process(values[i++]);
-            process(values[i++]);
-            process(values[i++]);
-            process(values[i++]);
-            process(values[i++]);
-            process(values[i++]);
-            process(values[i++]);
-            process(values[i++]);
+            process(values[i++], i);
+            process(values[i++], i);
+            process(values[i++], i);
+            process(values[i++], i);
+            process(values[i++], i);
+            process(values[i++], i);
+            process(values[i++], i);
+            process(values[i++], i);
         } while (--iterations > 0);
     }
     reverseDeviceOfDuff(values, process) {
@@ -3866,18 +2839,18 @@ class AlgorithmService {
         let i = length - 1;
         if (leftover > 0) {
             do {
-                process(values[i--]);
+                process(values[i--], i);
             } while (--leftover > 0);
         }
         do {
-            process(values[i--]);
-            process(values[i--]);
-            process(values[i--]);
-            process(values[i--]);
-            process(values[i--]);
-            process(values[i--]);
-            process(values[i--]);
-            process(values[i--]);
+            process(values[i--], i);
+            process(values[i--], i);
+            process(values[i--], i);
+            process(values[i--], i);
+            process(values[i--], i);
+            process(values[i--], i);
+            process(values[i--], i);
+            process(values[i--], i);
         } while (--iterations > 0);
     }
 }
@@ -4361,14 +3334,14 @@ class WacaiAuthService {
             const data = response.body;
             if (!!data.data[0] && data.data[0].token) {
                 const now = new Date();
+                this.isLoggedIn = true;
                 now.setTime(now.getTime() + (24 * 60 * 60 * 1000));
                 this.setToken(data.data[0].token);
                 document.cookie = 'access_token=' + this.getToken() + '; expires=' + now.toUTCString() + '; path=/; httpOnly=false; Secure=false; SameSite=None';
-                this.isLoggedIn = true;
             }
             else {
-                this.notification.showWarning(data.error);
                 this.isLoggedIn = false;
+                this.notification.showWarning(data.error);
             }
             return this.isLoggedIn;
         }));
@@ -4473,7 +3446,9 @@ __webpack_require__.r(__webpack_exports__);
 class ChartModule {
 }
 ChartModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: ChartModule });
-ChartModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function ChartModule_Factory(t) { return new (t || ChartModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
+ChartModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function ChartModule_Factory(t) { return new (t || ChartModule)(); }, providers: [
+        _angular_common__WEBPACK_IMPORTED_MODULE_1__["PercentPipe"]
+    ], imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](ChartModule, { declarations: [_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_2__["BarChartComponent"], _sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_3__["SunburstChartComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]], exports: [_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_2__["BarChartComponent"], _sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_3__["SunburstChartComponent"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ChartModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
@@ -4481,6 +3456,9 @@ ChartModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
                 declarations: [_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_2__["BarChartComponent"], _sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_3__["SunburstChartComponent"]],
                 exports: [_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_2__["BarChartComponent"], _sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_3__["SunburstChartComponent"]],
                 imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+                providers: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["PercentPipe"]
+                ]
             }]
     }], null, null); })();
 
@@ -4491,19 +3469,27 @@ ChartModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
 /*!***********************************************!*\
   !*** ./src/app/shared/chart/chart-options.ts ***!
   \***********************************************/
-/*! exports provided: BarChartOptions, SunburstChartOptions */
+/*! exports provided: PRIMARY_COLORS, BarChartOptions, SunburstChartOptions */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PRIMARY_COLORS", function() { return PRIMARY_COLORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BarChartOptions", function() { return BarChartOptions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SunburstChartOptions", function() { return SunburstChartOptions; });
+const PRIMARY_COLORS = [
+    '#a6aaad',
+    '#11a3dc',
+    '#5e92a8',
+    '#10536d',
+    '#012345'
+];
 class BarChartOptions {
     constructor() {
         this.width = '100%';
         this.height = '100%';
         this.delay = 20;
-        this.seriesColor = [];
+        this.seriesColor = PRIMARY_COLORS;
     }
 }
 class SunburstChartOptions {
@@ -4511,7 +3497,7 @@ class SunburstChartOptions {
         this.width = '100%';
         this.height = '100%';
         this.delay = 20;
-        this.seriesColor = [];
+        this.seriesColor = PRIMARY_COLORS;
     }
 }
 
@@ -4598,6 +3584,7 @@ class AuthGuard {
         this.router = router;
         this.notification = notification;
         this.authService = authService;
+        this.timeoutCount = 0;
     }
     canActivate(route, state) {
         const url = state.url;
@@ -4613,11 +3600,15 @@ class AuthGuard {
     checkLogin(url) {
         // Store the attempted URL for redirecting
         // this.authService.redirectUrl = url;
+        if (this.isTimeount()) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+        }
         if (this.authService.isLoggedIn) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
         }
         this.notification.showInitLoading();
         return this.authService.checkSignInStatus().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["finalize"])(() => {
+            this.timeoutCount++;
             this.notification.hideLoading();
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((value) => {
             this.authService.isLoggedIn = value;
@@ -4629,6 +3620,9 @@ class AuthGuard {
             }
             return value;
         }));
+    }
+    isTimeount() {
+        return this.timeoutCount > 4;
     }
 }
 AuthGuard.ɵfac = function AuthGuard_Factory(t) { return new (t || AuthGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_service__WEBPACK_IMPORTED_MODULE_3__["AUTH_SERVICE_TOKEN"])); };

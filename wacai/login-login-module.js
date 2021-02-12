@@ -69,7 +69,7 @@ class SignInComponent {
                 this.notification.hideLoading();
             }))
                 .subscribe((data) => {
-                if (this.authService.isLoggedIn) {
+                if (data) {
                     // Set our navigation extras object
                     // that passes on our global query params and fragment
                     const navigationExtras = {

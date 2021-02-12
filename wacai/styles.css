@@ -8667,5 +8667,17 @@ button:focus {
 .mat-drawer-content .mat-ink-bar {
   opacity: 0;
 }
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button, .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+.mat-select-arrow-wrapper {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+.mat-date-range-input-inner,
+.mat-date-range-input-mirror {
+  line-height: 1.5em !important;
+}
 
 /*# sourceMappingURL=styles.css.map*/
