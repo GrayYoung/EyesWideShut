@@ -223,7 +223,7 @@ AdminComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.leftSidenav = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.rightSidenav = _t.first);
-    } }, decls: 11, vars: 1, consts: [["hasBackdrop", "false", 1, "w-100", "h-100"], ["mode", "side", "opened", ""], ["leftSide", ""], [1, "top-level", 3, "items"], ["mode", "over", "position", "end"], ["rightSide", ""], ["name", "secondary", 3, "activate", "deactivate"], [1, "d-flex", "w-100", "h-100", "overflow-hidden", "container-content"]], template: function AdminComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 11, vars: 1, consts: [["hasBackdrop", "false", 1, "w-100", "h-100"], ["mode", "side", "opened", ""], ["leftSide", ""], [1, "top-level", 3, "items"], ["mode", "over", "position", "end", "autoFocus", "false"], ["rightSide", ""], ["name", "secondary", 3, "activate", "deactivate"], [1, "d-flex", "w-100", "h-100", "overflow-hidden", "container-content"]], template: function AdminComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-management-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-sidenav-container", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-sidenav", 1, 2);
