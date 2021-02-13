@@ -174,7 +174,8 @@ __webpack_require__.r(__webpack_exports__);
 const _c0 = ["leftSide"];
 const _c1 = ["rightSide"];
 class AdminComponent {
-    constructor(route, communication, notification) {
+    constructor(router, route, communication, notification) {
+        this.router = router;
         this.route = route;
         this.communication = communication;
         this.notification = notification;
@@ -184,6 +185,9 @@ class AdminComponent {
     }
     ngOnInit() {
         // this.notification.showInitLoading();
+        this.subscription.add(Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(window, 'unload').subscribe(() => {
+            localStorage.setItem('redirectUrl', this.router.routerState.snapshot.url);
+        }));
     }
     ngAfterViewInit() {
         setTimeout(() => {
@@ -215,7 +219,7 @@ class AdminComponent {
         this.secondaryOutletState.next(false);
     }
 }
-AdminComponent.ɵfac = function AdminComponent_Factory(t) { return new (t || AdminComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_5__["CommunicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"])); };
+AdminComponent.ɵfac = function AdminComponent_Factory(t) { return new (t || AdminComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_5__["CommunicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"])); };
 AdminComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminComponent, selectors: [["app-admin"]], viewQuery: function AdminComponent_Query(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c1, true);
@@ -250,7 +254,7 @@ AdminComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
                 templateUrl: './admin.component.html',
                 styleUrls: ['./admin.component.scss']
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }, { type: app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_5__["CommunicationService"] }, { type: app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"] }]; }, { leftSidenav: [{
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }, { type: app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_5__["CommunicationService"] }, { type: app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"] }]; }, { leftSidenav: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
             args: ['leftSide']
         }], rightSidenav: [{

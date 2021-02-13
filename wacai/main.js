@@ -1446,10 +1446,10 @@ class EventService {
     onViewportDimensionChange() {
         return this.viewportDimensionChange;
     }
-    setWindowDimension(width, height) {
+    resetWindowDimension() {
         const oldDimension = this.oldWindowDimension;
-        oldDimension.width = width;
-        oldDimension.height = height;
+        oldDimension.width = window.innerWidth;
+        oldDimension.height = window.innerHeight;
     }
     init() {
         this.viewportDimensionChange = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(window, 'resize').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(() => {
@@ -1465,7 +1465,7 @@ class EventService {
                 both: widthChanged && heightChanged,
                 either: widthChanged || heightChanged
             };
-            this.setWindowDimension(newWidth, newHeight);
+            this.resetWindowDimension();
             return changeEvent;
         }));
     }
@@ -2062,8 +2062,10 @@ ManagementHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartBase", function() { return ChartBase; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3 */ "VphZ");
-/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/event.service */ "6BoG");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "VphZ");
+/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/event.service */ "6BoG");
+
 
 
 
@@ -2071,7 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 class ChartBase {
     constructor(eventService) {
         this.eventService = eventService;
-        this.color = d3__WEBPACK_IMPORTED_MODULE_1__["scaleSequential"](d3__WEBPACK_IMPORTED_MODULE_1__["interpolateBlues"]);
+        this.color = d3__WEBPACK_IMPORTED_MODULE_2__["scaleSequential"](d3__WEBPACK_IMPORTED_MODULE_2__["interpolateBlues"]);
     }
     set options(value) {
         this._options = Object.assign(Object.assign({}, this._options), value);
@@ -2090,6 +2092,7 @@ class ChartBase {
         return this._data;
     }
     ngAfterViewInit() {
+        this.listenViewportResize();
     }
     ngOnDestroy() {
         this.subscription.unsubscribe();
@@ -2117,15 +2120,27 @@ class ChartBase {
         }
         return '#000';
     }
+    getDisplayValue(value) {
+        if (typeof this.options.valueFormat === 'function') {
+            return this.options.valueFormat(value);
+        }
+        return value ? value.toString() : '';
+    }
+    listenViewportResize() {
+        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["debounceTime"])(300)).subscribe((event) => {
+            this.clear();
+            this.draw();
+        }));
+    }
 }
-ChartBase.ɵfac = function ChartBase_Factory(t) { return new (t || ChartBase)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_event_service__WEBPACK_IMPORTED_MODULE_2__["EventService"])); };
+ChartBase.ɵfac = function ChartBase_Factory(t) { return new (t || ChartBase)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"])); };
 ChartBase.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChartBase, selectors: [["ng-component"]], inputs: { options: "options", data: "data" }, decls: 0, vars: 0, template: function ChartBase_Template(rf, ctx) { }, encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ChartBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 template: '',
             }]
-    }], function () { return [{ type: _services_event_service__WEBPACK_IMPORTED_MODULE_2__["EventService"] }]; }, { options: [{
+    }], function () { return [{ type: _services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"] }]; }, { options: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], data: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
@@ -2445,30 +2460,24 @@ RouterOutletWindowComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var _shared_services_event_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/services/event.service */ "6BoG");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var _shared_services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/services/event.service */ "6BoG");
-
 
 
 
 
 const _c0 = ["app-root", ""];
 class AppComponent {
-    constructor(router, eventService) {
-        this.router = router;
+    constructor(eventService) {
         this.eventService = eventService;
     }
     ngOnInit() {
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(window, 'unload').subscribe(() => {
-            localStorage.setItem('redirectUrl', this.router.routerState.snapshot.url);
-        });
     }
     ngAfterViewInit() {
-        this.eventService.setWindowDimension(window.innerWidth, window.innerHeight);
+        this.eventService.resetWindowDimension();
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"])); };
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_event_service__WEBPACK_IMPORTED_MODULE_1__["EventService"])); };
 AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["", "app-root", ""]], attrs: _c0, decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet");
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], encapsulation: 2 });
@@ -2478,7 +2487,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
                 selector: '[app-root]',
                 template: `<router-outlet></router-outlet>`
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: _shared_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"] }]; }, null); })();
+    }], function () { return [{ type: _shared_services_event_service__WEBPACK_IMPORTED_MODULE_1__["EventService"] }]; }, null); })();
 
 
 /***/ }),
@@ -2495,12 +2504,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SunburstChartComponent", function() { return SunburstChartComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "VphZ");
-/* harmony import */ var _chart_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../chart-options */ "mZci");
-/* harmony import */ var _chart_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../chart-base */ "MG/C");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "SVse");
-/* harmony import */ var app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/shared/services/event.service */ "6BoG");
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "VphZ");
+/* harmony import */ var _chart_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../chart-options */ "mZci");
+/* harmony import */ var _chart_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../chart-base */ "MG/C");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "SVse");
+/* harmony import */ var app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/shared/services/event.service */ "6BoG");
 
 
 
@@ -2509,27 +2517,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_5__["ChartBase"] {
+class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_4__["ChartBase"] {
     constructor(elementRef, renderer, percentPipe, eventService) {
         super(eventService);
         this.elementRef = elementRef;
         this.renderer = renderer;
         this.percentPipe = percentPipe;
         this.eventService = eventService;
-        this._options = new _chart_options__WEBPACK_IMPORTED_MODULE_4__["SunburstChartOptions"]();
+        this._options = new _chart_options__WEBPACK_IMPORTED_MODULE_3__["SunburstChartOptions"]();
         this.subscription = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subscription"]();
     }
     ngOnInit() {
     }
     ngAfterViewInit() {
         super.ngAfterViewInit();
-        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(300)).subscribe((event) => {
-            if (event.either) {
-                this.clear();
-                this.draw();
-            }
-        }));
         setTimeout(() => {
             this.draw();
         });
@@ -2540,24 +2541,26 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_5__["C
             return;
         }
         data = data;
-        this.color = d3__WEBPACK_IMPORTED_MODULE_3__["scaleOrdinal"](this.options.seriesColor ||
-            d3__WEBPACK_IMPORTED_MODULE_3__["quantize"](d3__WEBPACK_IMPORTED_MODULE_3__["interpolateRainbow"], data ? data.children.length + 1 : 1));
+        this.color = d3__WEBPACK_IMPORTED_MODULE_2__["scaleOrdinal"](this.options.seriesColor ||
+            d3__WEBPACK_IMPORTED_MODULE_2__["quantize"](d3__WEBPACK_IMPORTED_MODULE_2__["interpolateRainbow"], data ? data.children.length + 1 : 1));
         const parentEl = this.elementRef.nativeElement.parentElement;
         const width = this.coerceNumber(this.options.width, parentEl.offsetWidth);
         const height = this.coerceNumber(this.options.height, parentEl.offsetHeight);
         const radius = Math.min(width, height) / 2;
-        const format = d3__WEBPACK_IMPORTED_MODULE_3__["format"](',d');
-        const arc = d3__WEBPACK_IMPORTED_MODULE_3__["arc"]()
+        const format = (value) => {
+            return this.getDisplayValue(value);
+        };
+        const arc = d3__WEBPACK_IMPORTED_MODULE_2__["arc"]()
             .startAngle((d) => d.x0)
             .endAngle((d) => d.x1)
             .padAngle((d) => Math.min((d.x1 - d.x0) / 2, 0.005))
             .padRadius(radius / 2)
             .innerRadius((d) => d.y0)
             .outerRadius((d) => d.y1 - 1);
-        const root = d3__WEBPACK_IMPORTED_MODULE_3__["partition"]().size([2 * Math.PI, radius])(d3__WEBPACK_IMPORTED_MODULE_3__["hierarchy"](data)
+        const root = d3__WEBPACK_IMPORTED_MODULE_2__["partition"]().size([2 * Math.PI, radius])(d3__WEBPACK_IMPORTED_MODULE_2__["hierarchy"](data)
             .sum((d) => d.children && d.children.length ? 0 : d.value)
             .sort((a, b) => b.value - a.value));
-        const svg = d3__WEBPACK_IMPORTED_MODULE_3__["create"]('svg')
+        const svg = d3__WEBPACK_IMPORTED_MODULE_2__["create"]('svg')
             .attr('viewBox', [-width / 2, -height / 2, width, height]);
         const svgElement = svg.node();
         const path = svg
@@ -2651,10 +2654,10 @@ class SunburstChartComponent extends _chart_base__WEBPACK_IMPORTED_MODULE_5__["C
         }
     }
     getLabelWithValue(data) {
-        return data ? data.name + '\n' + data.value : '';
+        return data ? data.name + '\n' + this.getDisplayValue(data.value) : '';
     }
 }
-SunburstChartComponent.ɵfac = function SunburstChartComponent_Factory(t) { return new (t || SunburstChartComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__["EventService"])); };
+SunburstChartComponent.ɵfac = function SunburstChartComponent_Factory(t) { return new (t || SunburstChartComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__["PercentPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"])); };
 SunburstChartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SunburstChartComponent, selectors: [["app-sunburst-chart"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 0, vars: 0, template: function SunburstChartComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdW5idXJzdC1jaGFydC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SunburstChartComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -2663,7 +2666,7 @@ SunburstChartComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
                 template: '',
                 styleUrls: ['./sunburst-chart.component.scss'],
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"] }, { type: app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_7__["EventService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_5__["PercentPipe"] }, { type: app_shared_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"] }]; }, null); })();
 
 
 /***/ }),
