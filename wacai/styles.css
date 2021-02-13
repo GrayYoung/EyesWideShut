@@ -8387,6 +8387,13 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   height: calc(calc(1.5em + 0.65rem + 2px) + -2px);
   background-position: -91px -162px;
 }
+@font-face {
+  font-family: "Square";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('Square_BT_Roman.woff2') format("woff2");
+}
 /* Colors for the ripple elements.*/
 /* stylelint-disable-next-line material/theme-mixin-api */
 /* stylelint-disable-next-line material/theme-mixin-api */
