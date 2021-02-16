@@ -1711,7 +1711,7 @@ class AccountsComponent {
         this.secondaryDataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"]();
     }
     ngOnInit() {
-        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["debounceTime"])(300)).subscribe((change) => {
+        this.subscription.add(this.eventService.onViewportDimensionChange().subscribe((change) => {
             if (change.height) {
                 this.adjustPageSize();
             }
@@ -2510,7 +2510,6 @@ class SearchEntriesComponent {
         });
         this.subscription.add(this.eventService
             .onViewportDimensionChange()
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["debounceTime"])(300))
             .subscribe((change) => {
             if (change.height) {
                 this.adjustPageSize();
@@ -3261,7 +3260,6 @@ class AccountEntriesComponent {
         }));
         this.subscription.add(this.eventService
             .onViewportDimensionChange()
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["debounceTime"])(300))
             .subscribe((change) => {
             if (change.height) {
                 this.adjustPageSize();
@@ -3968,9 +3966,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/form-field */ "Q2Ze");
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/select */ "ZTz/");
 /* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/datepicker */ "TN/R");
-/* harmony import */ var _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../shared/chart/sunburst-chart/sunburst-chart.component */ "U4UI");
-/* harmony import */ var _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../shared/chart/bar-chart/bar-chart.component */ "EzXn");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/core */ "UhP/");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/button */ "Dxy4");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/icon */ "Tj54");
+/* harmony import */ var _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../shared/chart/sunburst-chart/sunburst-chart.component */ "U4UI");
+/* harmony import */ var _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../shared/chart/bar-chart/bar-chart.component */ "EzXn");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/core */ "UhP/");
+
+
 
 
 
@@ -3992,7 +3994,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function DashboardComponent_mat_option_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -4002,23 +4004,33 @@ function DashboardComponent_mat_option_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", option_r2.name, " ");
 } }
 class DashboardComponent {
-    constructor(elementRef, currencyPipe, notification, communication, datetimeService, database, statistics) {
+    constructor(elementRef, currencyPipe, datePipe, notification, communication, datetimeService, database, statistics) {
         this.elementRef = elementRef;
         this.currencyPipe = currencyPipe;
+        this.datePipe = datePipe;
         this.notification = notification;
         this.communication = communication;
         this.datetimeService = datetimeService;
         this.database = database;
         this.statistics = statistics;
+        this.currencyValueFormat = (value) => {
+            return this.currencyPipe.transform(value / 100, 'CNY', 'symbol-narrow', '0.0-2');
+        };
         this.range = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
             start: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](),
             end: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](),
         });
         this.books = [];
         this.sunburstChartOptions = {
-            valueFormat: (value) => {
-                return this.currencyPipe.transform(value, 'CNY', 'symbol-narrow');
-            }
+            valueFormat: this.currencyValueFormat
+        };
+        this.barChartOptions = {
+            layout: 'stacked',
+            valueFormat: this.currencyValueFormat,
+            xAxisValueFormat: (value) => {
+                return this.datePipe.transform(value, 'MMM, y');
+            },
+            yAxisValueFormat: this.currencyValueFormat
         };
         this.subscription = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subscription"]();
     }
@@ -4050,11 +4062,72 @@ class DashboardComponent {
     onBookSelectionChange(change) {
         this.communication.giveRefreshCommand();
     }
+    prevYear() {
+        let startDate = this.range.value.start;
+        let endDate;
+        if (startDate) {
+            startDate.setFullYear(startDate.getFullYear() - 1, 0, 1);
+            endDate = new Date(startDate.getTime());
+            endDate.setFullYear(startDate.getFullYear() + 1, 0, 0);
+            this.range.setValue({
+                start: startDate,
+                end: endDate
+            });
+        }
+    }
+    nextYear() {
+        let endDate = this.range.value.end;
+        let startDate;
+        if (endDate) {
+            endDate.setFullYear(endDate.getFullYear() + 2, 0, 0);
+            startDate = new Date(endDate.getTime());
+            startDate.setFullYear(endDate.getFullYear(), 0, 1);
+            this.range.setValue({
+                start: startDate,
+                end: endDate
+            });
+        }
+    }
+    prevMonth() {
+        let startDate = this.range.value.start;
+        let endDate = new Date();
+        if (startDate) {
+            startDate.setMonth(startDate.getMonth() - 1, 1);
+            endDate = new Date(startDate.getTime());
+            endDate.setMonth(startDate.getMonth() + 1, 0);
+            this.range.setValue({
+                start: startDate,
+                end: endDate
+            });
+        }
+    }
+    nextMonth() {
+        let endDate = this.range.value.end;
+        let startDate;
+        if (endDate) {
+            endDate.setMonth(endDate.getMonth() + 2, 0);
+            startDate = new Date(endDate.getTime());
+            startDate.setMonth(endDate.getMonth(), 1);
+            this.range.setValue({
+                start: startDate,
+                end: endDate
+            });
+        }
+    }
+    showAllHistory() {
+        this.range.setValue({
+            start: this.datetimeService.getMinDate(),
+            end: this.datetimeService.getMaxDate()
+        });
+    }
     initRefreshIndicator() {
         this.subscription.add(this.communication.acceptRefreshCommand()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])({}), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => {
             let startDate = this.range.controls.start.value;
             let endDate = this.range.controls.end.value;
+            if (this.range.invalid) {
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(null);
+            }
             this.notification.showLoading(this.elementRef.nativeElement);
             if (startDate && endDate) {
                 startDate = new Date(this.datetimeService.getStartDatetime(startDate));
@@ -4082,22 +4155,24 @@ class DashboardComponent {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])([]);
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((responseDatas) => {
             let hasError = false;
-            if (hasError) {
-                return;
-            }
             responseDatas.forEach((responseData) => {
                 if (responseData.error) {
                     hasError = true;
                     this.notification.showError(responseData.error);
                 }
+                hasError = !responseData.data || hasError;
             });
+            if (hasError) {
+                this.payCategoriesData = [];
+                return;
+            }
             const categories = responseDatas[0].data.bookCategories;
             const level1Data = responseDatas[1].data;
             const level2Data = responseDatas[2].data.groups;
             this.payCategoriesData = [{
                     id: '_',
                     name: level1Data.title,
-                    value: level1Data.totalAmount / 100,
+                    value: level1Data.totalAmount,
                     children: level1Data.groups.map((level1Item) => {
                         var _a;
                         const categoryId = level1Item.id;
@@ -4112,13 +4187,13 @@ class DashboardComponent {
                             return {
                                 id: level2Item.id,
                                 name: level2Item.name,
-                                value: level2Item.amount / 100,
+                                value: level2Item.amount,
                             };
                         });
                         return {
                             id: level1Item.id,
                             name: level1Item.name,
-                            value: level1Item.amount / 100,
+                            value: level1Item.amount,
                             children: children
                         };
                     })
@@ -4134,18 +4209,19 @@ class DashboardComponent {
                 this.notification.showError(responseData.error);
             }
             const level1Data = responseData.data;
-            if (!level1Data) {
+            if (!level1Data || !level1Data.groups) {
+                this.revenueCategoriesData = [];
                 return;
             }
             this.revenueCategoriesData = [{
                     id: '_',
                     name: level1Data.title,
-                    value: level1Data.totalAmount / 100,
+                    value: level1Data.totalAmount,
                     children: level1Data.groups.map((level1Item) => {
                         return {
                             id: level1Item.id,
                             name: level1Item.name,
-                            value: level1Item.amount / 100
+                            value: level1Item.amount
                         };
                     })
                 }];
@@ -4160,7 +4236,8 @@ class DashboardComponent {
                 this.notification.showError(responseData.error);
             }
             const data = responseData.data;
-            if (!data) {
+            if (!data || !data.groups) {
+                this.revNExpndData = [];
                 return;
             }
             this.revNExpndData = data.groups.map((item) => {
@@ -4174,8 +4251,8 @@ class DashboardComponent {
         }));
     }
 }
-DashboardComponent.ɵfac = function DashboardComponent_Factory(t) { return new (t || DashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__["CurrencyPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_7__["CommunicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_datetime_service__WEBPACK_IMPORTED_MODULE_8__["DatetimeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_database_service__WEBPACK_IMPORTED_MODULE_9__["DatabaseService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_statistics_service__WEBPACK_IMPORTED_MODULE_10__["StatisticsService"])); };
-DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 25, vars: 10, consts: [[1, "d-flex", "flex-row"], ["appearance", "fill"], ["name", "book", 3, "value", "valueChange", "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], ["appearance", "fill", 1, "flex-fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [1, "container-fluid", "flex-fill", "py-2", "overflow-auto"], [1, "row"], [1, "col-12", "col-lg-6", "py-2", "sunburst-chart"], [3, "data", "options"], [1, "col-12", "py-2", "bar-chart"], [3, "data"], [3, "value"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+DashboardComponent.ɵfac = function DashboardComponent_Factory(t) { return new (t || DashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__["CurrencyPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__["DatePipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_7__["CommunicationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_datetime_service__WEBPACK_IMPORTED_MODULE_8__["DatetimeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_database_service__WEBPACK_IMPORTED_MODULE_9__["DatabaseService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_statistics_service__WEBPACK_IMPORTED_MODULE_10__["StatisticsService"])); };
+DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 41, vars: 11, consts: [[1, "d-flex", "flex-row"], ["appearance", "fill"], ["name", "book", 3, "value", "valueChange", "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], ["appearance", "fill", 1, "flex-fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [1, "d-flex", "flex-row", "justify-content-center", 2, "padding-bottom", "1.34375em"], ["type", "button", "mat-flat-button", "", "color", "accent", 3, "click"], ["type", "button", "mat-flat-button", "", "color", "primary", 3, "click"], [1, "container-fluid", "flex-fill", "py-2", "overflow-auto"], [1, "row"], [1, "col-12", "col-lg-6", "py-2", "sunburst-chart"], [3, "data", "options"], [1, "col-12", "py-2", "bar-chart"], [3, "value"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-breadcrumb");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-form-field", 1);
@@ -4198,19 +4275,51 @@ DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "mat-datepicker-toggle", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "mat-date-range-picker", null, 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "app-sunburst-chart", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "app-sunburst-chart", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "button", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_17_listener() { return ctx.prevYear(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "first_page");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "app-bar-chart", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "button", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_20_listener() { return ctx.prevMonth(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "chevron_left");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "button", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_23_listener() { return ctx.nextMonth(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "chevron_right");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "button", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_26_listener() { return ctx.nextYear(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "last_page");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_29_listener() { return ctx.showAllHistory(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "history_toggle_off");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "app-sunburst-chart", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](37, "app-sunburst-chart", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "app-bar-chart", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -4224,13 +4333,13 @@ DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.range)("rangePicker", _r1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("for", _r1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](22);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", ctx.payCategoriesData)("options", ctx.sunburstChartOptions);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", ctx.revenueCategoriesData)("options", ctx.sunburstChartOptions);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", ctx.revNExpndData);
-    } }, directives: [_shared_components_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_11__["BreadcrumbComponent"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_13__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatDateRangeInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatStartDate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatEndDate"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatDateRangePicker"], _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_15__["SunburstChartComponent"], _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_16__["BarChartComponent"], _angular_material_core__WEBPACK_IMPORTED_MODULE_17__["MatOption"]], styles: [".sunburst-chart[_ngcontent-%COMP%] {\n  height: calc(60vh - 140px);\n  min-height: 300px;\n}\n\n.bar-chart[_ngcontent-%COMP%] {\n  height: calc(40vh - 100px);\n  min-height: 300px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0UsMEJBQUE7RUFDQSxpQkFBQTtBQUFGOztBQUdBO0VBQ0UsMEJBQUE7RUFDQSxpQkFBQTtBQUFGIiwiZmlsZSI6ImRhc2hib2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4uc3VuYnVyc3QtY2hhcnQge1xyXG4gIGhlaWdodDogY2FsYyg2MHZoIC0gMTQwcHgpO1xyXG4gIG1pbi1oZWlnaHQ6IDMwMHB4O1xyXG59XHJcblxyXG4uYmFyLWNoYXJ0IHtcclxuICBoZWlnaHQ6IGNhbGMoNDB2aCAtIDEwMHB4KTtcclxuICBtaW4taGVpZ2h0OiAzMDBweDtcclxufSJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", ctx.revNExpndData)("options", ctx.barChartOptions);
+    } }, directives: [_shared_components_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_11__["BreadcrumbComponent"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_13__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatDateRangeInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatStartDate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatEndDate"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_14__["MatDateRangePicker"], _angular_material_button__WEBPACK_IMPORTED_MODULE_15__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__["MatIcon"], _shared_chart_sunburst_chart_sunburst_chart_component__WEBPACK_IMPORTED_MODULE_17__["SunburstChartComponent"], _shared_chart_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_18__["BarChartComponent"], _angular_material_core__WEBPACK_IMPORTED_MODULE_19__["MatOption"]], styles: [".mat-button-base[_ngcontent-%COMP%] {\n  border-radius: 0;\n}\n\n.sunburst-chart[_ngcontent-%COMP%] {\n  height: calc(60vh - 140px);\n  min-height: 300px;\n}\n\n.bar-chart[_ngcontent-%COMP%] {\n  height: calc(40vh - 100px);\n  min-height: 300px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQUE7QUFDRjs7QUFFQTtFQUNFLDBCQUFBO0VBQ0EsaUJBQUE7QUFDRjs7QUFFQTtFQUNFLDBCQUFBO0VBQ0EsaUJBQUE7QUFDRiIsImZpbGUiOiJkYXNoYm9hcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWJ1dHRvbi1iYXNlIHtcclxuICBib3JkZXItcmFkaXVzOiAwO1xyXG59XHJcblxyXG4uc3VuYnVyc3QtY2hhcnQge1xyXG4gIGhlaWdodDogY2FsYyg2MHZoIC0gMTQwcHgpO1xyXG4gIG1pbi1oZWlnaHQ6IDMwMHB4O1xyXG59XHJcblxyXG4uYmFyLWNoYXJ0IHtcclxuICBoZWlnaHQ6IGNhbGMoNDB2aCAtIDEwMHB4KTtcclxuICBtaW4taGVpZ2h0OiAzMDBweDtcclxufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DashboardComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -4241,7 +4350,7 @@ DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
                     class: 'd-flex flex-column flex-nowrap w-100 h-100',
                 },
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_5__["CurrencyPipe"] }, { type: app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"] }, { type: app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_7__["CommunicationService"] }, { type: _services_datetime_service__WEBPACK_IMPORTED_MODULE_8__["DatetimeService"] }, { type: _services_database_service__WEBPACK_IMPORTED_MODULE_9__["DatabaseService"] }, { type: _services_statistics_service__WEBPACK_IMPORTED_MODULE_10__["StatisticsService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_5__["CurrencyPipe"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_5__["DatePipe"] }, { type: app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"] }, { type: app_shared_services_communication_service__WEBPACK_IMPORTED_MODULE_7__["CommunicationService"] }, { type: _services_datetime_service__WEBPACK_IMPORTED_MODULE_8__["DatetimeService"] }, { type: _services_database_service__WEBPACK_IMPORTED_MODULE_9__["DatabaseService"] }, { type: _services_statistics_service__WEBPACK_IMPORTED_MODULE_10__["StatisticsService"] }]; }, null); })();
 
 
 /***/ }),

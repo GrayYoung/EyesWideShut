@@ -397,7 +397,7 @@ class NavigationMenuComponent {
         setTimeout(() => {
             this.detectScrollbar();
         }, 100);
-        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(300)).subscribe((change) => {
+        this.subscription.add(this.eventService.onViewportDimensionChange().subscribe((change) => {
             if (change.height) {
                 this.detectScrollbar();
             }

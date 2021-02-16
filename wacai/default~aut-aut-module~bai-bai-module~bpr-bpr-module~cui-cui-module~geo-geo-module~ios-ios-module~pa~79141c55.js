@@ -350,7 +350,7 @@ class DatabaseTableComponent {
     ngOnInit() {
     }
     ngAfterViewInit() {
-        this.subscription.add(this.eventService.onViewportDimensionChange().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["debounceTime"])(300)).subscribe((change) => {
+        this.subscription.add(this.eventService.onViewportDimensionChange().subscribe((change) => {
             if (change.height) {
                 this.adjustPageSize();
             }
