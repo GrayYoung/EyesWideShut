@@ -2573,9 +2573,6 @@ class LoginGuard {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
         }
         return this.authGuard.checkLogin(route.path).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((data) => {
-            if (data) {
-                this.router.navigate(['/']);
-            }
             return !data;
         }));
     }
@@ -3570,7 +3567,7 @@ class WacaiAuthService {
                 this.isLoggedIn = true;
                 now.setTime(now.getTime() + (24 * 60 * 60 * 1000));
                 this.setToken(data.data[0].token);
-                document.cookie = 'access_token=' + this.getToken() + '; expires=' + now.toUTCString() + '; path=/; httpOnly=false; Secure=false; SameSite=None';
+                document.cookie = 'access_token=' + this.getToken() + '; expires=' + now.toUTCString() + '; domain=wacai.com; path=/; httpOnly=false; Secure=false; SameSite=None';
                 this.checkSignInStatus().subscribe();
             }
             else {
@@ -3585,7 +3582,7 @@ class WacaiAuthService {
             if (!!data.data && !data.error) {
                 const now = new Date();
                 this.isLoggedIn = false;
-                document.cookie = 'access_token=null; expires=' + now.toUTCString() + '; path=/; httpOnly=false; Secure=false; SameSite=None';
+                document.cookie = 'access_token=null; expires=' + now.toUTCString() + '; domain=wacai.com; path=/; httpOnly=false; Secure=false; SameSite=None';
             }
             else {
                 this.notification.showWarning(data.error);
@@ -3869,15 +3866,15 @@ class AuthGuard {
     checkLogin(url) {
         // Store the attempted URL for redirecting
         // this.authService.redirectUrl = url;
-        if (this.isTimeount()) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
-        }
         if (this.authService.isLoggedIn) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
         }
+        if (this.isTimeount()) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+        }
         this.notification.showInitLoading();
+        this.timeoutCount++;
         return this.authService.checkSignInStatus().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["finalize"])(() => {
-            this.timeoutCount++;
             this.notification.hideLoading();
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((value) => {
             this.authService.isLoggedIn = value;
@@ -3891,7 +3888,7 @@ class AuthGuard {
         }));
     }
     isTimeount() {
-        return this.timeoutCount > 4;
+        return this.timeoutCount > 1;
     }
 }
 AuthGuard.ɵfac = function AuthGuard_Factory(t) { return new (t || AuthGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](app_shared_services_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_service__WEBPACK_IMPORTED_MODULE_3__["AUTH_SERVICE_TOKEN"])); };
