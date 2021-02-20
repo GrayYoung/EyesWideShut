@@ -10,7 +10,7 @@ $light-disabled-text: rgba(white, .38);
 
 $fb-panel-width: 528px;
 
-$primary-color: (
+$mat-blue: map.merge($mat-blue, (
   50: #e1f4fa,
   100: #b2e2f3,
   200: #82cfec,
@@ -41,10 +41,10 @@ $primary-color: (
     A400: $light-primary-text,
     A700: $light-primary-text,
   )
-);
+));
 
 // Also known as the secondary color
-$accent-color: (
+$mat-grey: map.merge($mat-grey, (
   50: #edeef7,
   100: #d1d7e4,
   200: #b6bccd,
@@ -75,7 +75,7 @@ $accent-color: (
     A400: $dark-primary-text,
     A700: $light-primary-text
   )
-);
+));
 
 $mat-red:         map.merge($mat-red, ('700': #ea4335));
 $mat-green:       map.merge($mat-green, ('700': #34a853));
@@ -83,7 +83,7 @@ $mat-light-green: map.merge($mat-light-green, ('700': #2ed47a));
 $mat-yellow:      map.merge($mat-yellow, ('700': #ffb800));
 $mat-light-theme-foreground:  map.merge($mat-light-theme-foreground, (slider-off: #dedede, slider-off-active: #dedede));
 
-$app-primary:     mat-palette($primary-color);
-$app-accent:      mat-palette($accent-color, A700, A600, A900);
+$app-primary:     mat-palette($mat-blue);
+$app-accent:      mat-palette($mat-grey, A700, A600, A900);
 $app-warn:        mat-palette($mat-red);
 $app-theme:       mat-light-theme($app-primary, $app-accent, $app-warn);

@@ -7894,7 +7894,7 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 }
 .mat-slide-toggle-thumb {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  background-color: #fafafa;
+  background-color: #edeef7;
 }
 .mat-slide-toggle-bar {
   background-color: rgba(0, 0, 0, 0.38);
