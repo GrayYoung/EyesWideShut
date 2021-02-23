@@ -2023,7 +2023,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WACAI_MENU", function() { return WACAI_MENU; });
 const WACAI_MENU = {
     title: "Wacai",
-    icon: "icon icon-cfe",
+    icon: "icon icon-cp",
     description: "挖财记账",
     children: [{
             title: "Dashboard",
