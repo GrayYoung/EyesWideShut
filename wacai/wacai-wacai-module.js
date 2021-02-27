@@ -1833,6 +1833,9 @@ class AccountsComponent {
     }
     goToEntryList(account) {
         this.router.navigate(['accounts', account.uuid], {
+            queryParams: {
+                title: account.name
+            },
             relativeTo: this.route.parent
         });
     }
@@ -3484,6 +3487,10 @@ class AccountEntriesComponent {
                 start: this.datetimeService.getMinDate(),
                 end: this.datetimeService.getMaxDate(),
             });
+            this.range.disable();
+        }
+        else {
+            this.range.enable();
         }
         this.displayedColumns = this.columnsToDisplay.filter((item) => {
             return item !== 'accountBalance' || this.showBalance;
@@ -3530,7 +3537,7 @@ AccountEntriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.flexFillContainer = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.paginator = _t.first);
-    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 50, vars: 12, consts: [[3, "new", "delete"], ["appStartContent", "", 1, "d-flex", "flex-column", "h-100"], ["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date", 3, "disabled"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date", 3, "disabled"], ["matSuffix", "", 3, "for", "disabled"], ["picker", ""], [1, "container-fluid"], ["color", "primary", 3, "ngModel", "ngModelChange", "change"], [1, "d-flex", "flex-column", "flex-nowrap", "h-100"], [1, "flex-fill", "overflow-auto"], ["flexFillContainer", ""], ["mat-table", "", 1, "table", "table-striped", "table-hover", "w-100", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "bizTime"], ["matColumnDef", "amount"], ["mat-cell", "", "class", "text-nowrap", 3, "ngSwitch", 4, "matCellDef"], ["matColumnDef", "accountBalance"], ["mat-cell", "", "class", "text-nowrap", 4, "matCellDef"], ["matColumnDef", "categoryName"], ["matColumnDef", "projectName"], ["matColumnDef", "comment"], ["mat-cell", "", "width", "1000", 4, "matCellDef"], ["matColumnDef", "operation"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSize"], ["mat-header-cell", ""], ["matBadgeColor", "warn", 3, "checked", "indeterminate", "matBadge", "change"], ["mat-cell", ""], [3, "checked", "click", "change"], [1, "text-nowrap"], ["mat-cell", "", 1, "text-nowrap", 3, "ngSwitch"], ["class", "text-danger", 4, "ngSwitchCase"], ["class", "text-success", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchCase"], [4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchDefault"], [1, "text-danger"], [1, "text-success"], [1, "text-muted"], ["mat-cell", "", 1, "text-nowrap"], ["mat-cell", "", "width", "1000"], ["type", "button", "mat-icon-button", "", "color", "primary", 3, "click"], ["mat-header-row", ""], ["mat-row", ""]], template: function AccountEntriesComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, hostAttrs: [1, "d-flex", "flex-column", "flex-nowrap", "w-100", "h-100"], decls: 50, vars: 10, consts: [[3, "new", "delete"], ["appStartContent", "", 1, "d-flex", "flex-column", "h-100"], ["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for", "disabled"], ["picker", ""], [1, "container-fluid"], ["color", "primary", 3, "ngModel", "ngModelChange", "change"], [1, "d-flex", "flex-column", "flex-nowrap", "h-100"], [1, "flex-fill", "overflow-auto"], ["flexFillContainer", ""], ["mat-table", "", 1, "table", "table-striped", "table-hover", "w-100", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "bizTime"], ["matColumnDef", "amount"], ["mat-cell", "", "class", "text-nowrap", 3, "ngSwitch", 4, "matCellDef"], ["matColumnDef", "accountBalance"], ["mat-cell", "", "class", "text-nowrap", 4, "matCellDef"], ["matColumnDef", "categoryName"], ["matColumnDef", "projectName"], ["matColumnDef", "comment"], ["mat-cell", "", "width", "1000", 4, "matCellDef"], ["matColumnDef", "operation"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSize"], ["mat-header-cell", ""], ["matBadgeColor", "warn", 3, "checked", "indeterminate", "matBadge", "change"], ["mat-cell", ""], [3, "checked", "click", "change"], [1, "text-nowrap"], ["mat-cell", "", 1, "text-nowrap", 3, "ngSwitch"], ["class", "text-danger", 4, "ngSwitchCase"], ["class", "text-success", 4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchCase"], [4, "ngSwitchCase"], ["class", "text-muted", 4, "ngSwitchDefault"], [1, "text-danger"], [1, "text-success"], [1, "text-muted"], ["mat-cell", "", 1, "text-nowrap"], ["mat-cell", "", "width", "1000"], ["type", "button", "mat-icon-button", "", "color", "primary", 3, "click"], ["mat-header-row", ""], ["mat-row", ""]], template: function AccountEntriesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-operation-toolbar", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("new", function AccountEntriesComponent_Template_app_operation_toolbar_new_0_listener() { return ctx.addNewOne(); })("delete", function AccountEntriesComponent_Template_app_operation_toolbar_delete_0_listener() { return ctx.delete(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3606,11 +3613,7 @@ AccountEntriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.range)("rangePicker", _r0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx.showBalance);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx.showBalance);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("for", _r0)("disabled", ctx.showBalance);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.showBalance);
