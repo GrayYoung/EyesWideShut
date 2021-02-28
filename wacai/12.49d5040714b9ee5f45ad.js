@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{"3wt3":function(n,t,e){"use strict";e.r(t),e.d(t,"CPModule",function(){return c});var o=e("SVse"),r=e("8Y7J");let c=(()=>{class n{}return n.\u0275mod=r.Lb({type:n}),n.\u0275inj=r.Kb({factory:function(t){return new(t||n)},imports:[[o.c]]}),n})()}}]);
