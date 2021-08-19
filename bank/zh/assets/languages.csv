@@ -1,0 +1,488 @@
+ISO639_3,ISO639_2,ISO639_1,english_name,native_name
+,aar,aa,Afar,Afar
+,abk,ab,Abkhazian,Аҧсуа
+,ace,,Achinese,
+,ach,,Acoli,
+,ada,,Adangme,
+,ady,,Adyghe; Adygei,
+,afa,,Afro-Asiatic languages,
+,afh,,Afrihili,
+,afr,af,Afrikaans,Afrikaans
+,ain,,Ainu,
+,aka,ak,Akan,Akana
+,akk,,Akkadian,
+,alb,sq,Albanian,Shqip
+,ale,,Aleut,
+,alg,,Algonquian languages,
+,alt,,Southern Altai,
+,amh,am,Amharic,አማርኛ
+,ang,,English,Old (ca.450-1100),Angal Heneng
+,anp,,Angika,
+,apa,,Apache languages,
+,ara,ar,Arabic,العربية
+,arc,,Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE),ܣܘܪܬ
+,arg,an,Aragonese,Aragonés
+,arm,hy,Armenian,Հայերեն
+,arn,,Mapudungun; Mapuche,
+,arp,,Arapaho,
+,art,,Artificial languages,
+,arw,,Arawak,
+,asm,as,Assamese,অসমীয়া
+,ast,,Asturian; Bable; Leonese; Asturleonese,Asturianu
+,ath,,Athapascan languages,
+,aus,,Australian languages,
+,ava,av,Avaric,Авар
+,ave,ae,Avestan,
+,awa,,Awadhi,Awadhi
+,aym,ay,Aymara,Aymar
+,aze,az,Azerbaijani,Azərbaycanca / آذربايجان
+,bad,,Banda languages,
+,bai,,Bamileke languages,
+,bak,ba,Bashkir,Башҡорт
+,bal,,Baluchi,
+,bam,bm,Bambara,Bamanankan
+,ban,,Balinese,
+,baq,eu,Basque,Euskara
+,bas,,Basa,
+,bat,,Baltic languages,
+,bej,,Beja; Bedawiyet,
+,bel,be,Belarusian,Беларуская
+,bem,,Bemba,
+,ben,bn,Bengali,বাংলা
+,ber,,Berber languages,
+,bho,,Bhojpuri,
+,bih,bh,Bihari languages,भोजपुरी
+,bik,,Bikol,
+,bin,,Bini; Edo,
+,bis,bi,Bislama,Bislama
+,bla,,Siksika,
+,bnt,,Bantu languages,
+,bos,bs,Bosnian,Bosanski
+,bra,,Braj,
+,bre,br,Breton,Brezhoneg
+,btk,,Batak languages,
+,bua,,Buriat,
+,bug,,Buginese,ᨅᨔ ᨕᨘᨁᨗ / Basa Ugi
+,bul,bg,Bulgarian,Български
+,bur,my,Burmese,Myanmasa
+,byn,,Blin; Bilin,
+,cad,,Caddo,
+,cai,,Central American Indian languages,
+,car,,Galibi Carib,
+,cat,ca,Catalan; Valencian,Català
+,cau,,Caucasian languages,
+,ceb,,Cebuano,Sinugboanong Binisaya
+,cel,,Celtic languages,
+,cha,ch,Chamorro,Chamoru
+,chb,,Chibcha,
+,che,ce,Chechen,Нохчийн
+,chg,,Chagatai,
+,chi,zh,Chinese,中文
+,chk,,Chuukese,
+,chm,,Mari,
+,chn,,Chinook jargon,
+,cho,,Choctaw,Choctaw
+,chp,,Chipewyan; Dene Suline,
+,chr,,Cherokee,ᏣᎳᎩ
+,chu,cu,Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic,словѣньскъ / slověnĭskŭ
+,chv,cv,Chuvash,Чăваш
+,chy,,Cheyenne,Tsetsêhestâhese
+,cmc,,Chamic languages,
+,cnr,,Montenegrin,
+,cop,,Coptic,
+,cor,kw,Cornish,Kernewek
+,cos,co,Corsican,Corsu
+,cpe,,Creoles and pidgins,English based,
+,cpf,,Creoles and pidgins,French-based,
+,cpp,,Creoles and pidgins,Portuguese-based,
+,cre,cr,Cree,Nehiyaw
+,crh,,Crimean Tatar; Crimean Turkish,
+,crp,,Creoles and pidgins,
+,csb,,Kashubian,Kaszëbsczi
+,cus,,Cushitic languages,
+,cze,cs,Czech,Česky
+,dak,,Dakota,
+,dan,da,Danish,Dansk
+,dar,,Dargwa,
+,day,,Land Dayak languages,
+,del,,Delaware,
+,den,,Slave (Athapascan),
+,dgr,,Dogrib,
+,din,,Dinka,
+,div,dv,Divehi; Dhivehi; Maldivian,ދިވެހިބަސް
+,doi,,Dogri,
+,dra,,Dravidian languages,
+,dsb,,Lower Sorbian,Dolnoserbski
+,dua,,Duala,
+,dum,,Dutch,Middle (ca.1050-1350),
+,dut,nl,Dutch; Flemish,Nederlands
+,dyu,,Dyula,
+,dzo,dz,Dzongkha,རྫོང་ཁ
+,efi,,Efik,
+,egy,,Egyptian (Ancient),
+,eka,,Ekajuk,
+,elx,,Elamite,
+,eng,en,English,English
+,enm,,English,Middle (1100-1500),
+,epo,eo,Esperanto,Esperanto
+,est,et,Estonian,Eesti
+,ewe,ee,Ewe,Ɛʋɛ
+,ewo,,Ewondo,
+,fan,,Fang,
+,fao,fo,Faroese,Føroyskt
+,fat,,Fanti,
+,fij,fj,Fijian,Na Vosa Vakaviti
+,fil,,Filipino; Pilipino,
+,fin,fi,Finnish,Suomi
+,fiu,,Finno-Ugrian languages,
+,fon,,Fon,
+,fre,fr,French,Français
+,frm,,French,Middle (ca.1400-1600),
+,fro,,French,Old (842-ca.1400),
+,frr,,Northern Frisian,
+,frs,,Eastern Frisian,
+,fry,fy,Western Frisian,Frysk
+,ful,ff,Fulah,Fulfulde
+,fur,,Friulian,Furlan
+,gaa,,Ga,
+,gay,,Gayo,
+,gba,,Gbaya,
+,gem,,Germanic languages,
+,geo,ka,Georgian,ქართული
+,ger,de,German,Deutsch
+,gez,,Geez,
+,gil,,Gilbertese,Taetae ni kiribati
+,gla,gd,Gaelic; Scottish Gaelic,Gàidhlig
+,gle,ga,Irish,Gaeilge
+,glg,gl,Galician,Galego
+,glv,gv,Manx,Gaelg
+,gmh,,German,Middle High (ca.1050-1500),
+,goh,,German,Old High (ca.750-1050),
+,gon,,Gondi,
+,gor,,Gorontalo,
+,got,,Gothic,gutisk
+,grb,,Grebo,
+,grc,,Greek,Ancient (to 1453),
+,gre,el,Greek,Modern (1453-),Ελληνικά
+,grn,gn,Guarani,Avañe'ẽ
+,gsw,,Swiss German; Alemannic; Alsatian,
+,guj,gu,Gujarati,ગુજરાતી
+,gwi,,Gwich'in,
+,hai,,Haida,
+,hat,ht,Haitian; Haitian Creole,Krèyol ayisyen
+,hau,ha,Hausa,هَوُسَ
+,haw,,Hawaiian,Hawai`i
+,heb,he,Hebrew,עברית
+,her,hz,Herero,Otsiherero
+,hil,,Hiligaynon,
+,him,,Himachali languages; Western Pahari languages,
+,hin,hi,Hindi,हिन्दी
+,hit,,Hittite,
+,hmn,,Hmong; Mong,
+,hmo,ho,Hiri Motu,Hiri Motu
+,hrv,hr,Croatian,Hrvatski
+,hsb,,Upper Sorbian,
+,hun,hu,Hungarian,Magyar
+,hup,,Hupa,
+,iba,,Iban,
+,ibo,ig,Igbo,Igbo
+,ice,is,Icelandic,Íslenska
+,ido,io,Ido,Ido
+,iii,ii,Sichuan Yi; Nuosu,ꆇꉙ / 四川彝语
+,ijo,,Ijo languages,
+,iku,iu,Inuktitut,ᐃᓄᒃᑎᑐᑦ
+,ile,ie,Interlingue; Occidental,Interlingue
+,ilo,,Iloko,Ilokano
+,ina,ia,Interlingua (International Auxiliary Language Association),Interlingua
+,inc,,Indic languages,
+,ind,id,Indonesian,Bahasa Indonesia
+,ine,,Indo-European languages,
+,inh,,Ingush,ГӀалгӀай
+,ipk,ik,Inupiaq,Iñupiak
+,ira,,Iranian languages,
+,iro,,Iroquoian languages,
+,ita,it,Italian,Italiano
+,jav,jv,Javanese,Basa Jawa
+,jbo,,Lojban,Lojban
+,jpn,ja,Japanese,日本語
+,jpr,,Judeo-Persian,
+,jrb,,Judeo-Arabic,
+,kaa,,Kara-Kalpak,
+,kab,,Kabyle,
+,kac,,Kachin; Jingpho,
+,kal,kl,Kalaallisut; Greenlandic,Kalaallisut
+,kam,,Kamba,
+,kan,kn,Kannada,ಕನ್ನಡ
+,kar,,Karen languages,
+,kas,ks,Kashmiri,कॉशुर / کٲشُر
+,kau,kr,Kanuri,Kanuri
+,kaw,,Kawi,
+,kaz,kk,Kazakh,Қазақша
+,kbd,,Kabardian,
+,kha,,Khasi,
+,khi,,Khoisan languages,
+,khm,km,Central Khmer,ភាសាខ្មែរ
+,kho,,Khotanese; Sakan,
+,kik,ki,Kikuyu; Gikuyu,Gĩkũyũ
+,kin,rw,Kinyarwanda,Kinyarwandi
+,kir,ky,Kirghiz; Kyrgyz,Kırgızca / Кыргызча
+,kmb,,Kimbundu,
+,kok,,Konkani,
+,kom,kv,Komi,Коми
+,kon,kg,Kongo,KiKongo
+,kor,ko,Korean,한국어
+,kos,,Kosraean,
+,kpe,,Kpelle,
+,krc,,Karachay-Balkar,
+,krl,,Karelian,
+,kro,,Kru languages,
+,kru,,Kurukh,
+,kua,kj,Kuanyama; Kwanyama,Kuanyama
+,kum,,Kumyk,
+,kur,ku,Kurdish,Kurdî
+,kut,,Kutenai,
+,lad,,Ladino,Dzhudezmo / Djudeo-Espanyol
+,lah,,Lahnda,
+,lam,,Lamba,
+,lao,lo,Lao,ລາວ / Pha xa lao
+,lat,la,Latin,Latina
+,lav,lv,Latvian,Latviešu
+,lez,,Lezghian,
+,lim,li,Limburgan; Limburger; Limburgish,Limburgs
+,lin,ln,Lingala,Lingála
+,lit,lt,Lithuanian,Lietuvių
+,lol,,Mongo,
+,loz,,Lozi,
+,ltz,lb,Luxembourgish; Letzeburgesch,Lëtzebuergesch
+,lua,,Luba-Lulua,
+,lub,lu,Luba-Katanga,
+,lug,lg,Ganda,Luganda
+,lui,,Luiseno,
+,lun,,Lunda,
+,luo,,Luo (Kenya and Tanzania),
+,lus,,Lushai,
+,mac,mk,Macedonian,Македонски
+,mad,,Madurese,
+,mag,,Magahi,
+,mah,mh,Marshallese,Kajin Majel / Ebon
+,mai,,Maithili,
+,mak,,Makasar,
+,mal,ml,Malayalam,മലയാളം
+,man,,Mandingo,官話/官话
+,mao,mi,Maori,Māori
+,map,,Austronesian languages,
+,mar,mr,Marathi,मराठी
+,mas,,Masai,
+,may,ms,Malay,Bahasa Melayu
+,mdf,,Moksha,
+,mdr,,Mandar,
+,men,,Mende,
+,mga,,Irish,Middle (900-1200),
+,mic,,Mi'kmaq; Micmac,
+,min,,Minangkabau,Minangkabau
+,mis,,Uncoded languages,
+,mkh,,Mon-Khmer languages,
+,mlg,mg,Malagasy,Malagasy
+,mlt,mt,Maltese,bil-Malti
+,mnc,,Manchu,
+,mni,,Manipuri,
+,mno,,Manobo languages,
+,moh,,Mohawk,
+,mon,mn,Mongolian,Монгол
+,mos,,Mossi,
+,mul,,Multiple languages,
+,mun,,Munda languages,
+,mus,,Creek,Mvskoke
+,mwl,,Mirandese,Mirandés
+,mwr,,Marwari,
+,myn,,Mayan languages,
+,myv,,Erzya,
+,nah,,Nahuatl languages,Nahuatl
+,nai,,North American Indian languages,
+,nap,,Neapolitan,Nnapulitano
+,nau,na,Nauru,Dorerin Naoero
+,nav,nv,Navajo; Navaho,Diné bizaad
+,nbl,nr,Ndebele,South; South Ndebele,isiNdebele
+,nde,nd,Ndebele,North; North Ndebele,Sindebele
+,ndo,ng,Ndonga,Oshiwambo
+,nds,,Low German; Low Saxon; German,Low; Saxon,Low,Plattdüütsch
+,nep,ne,Nepali,नेपाली
+,new,,Nepal Bhasa; Newari,नेपालभाषा / Newah Bhaye
+,nia,,Nias,
+,nic,,Niger-Kordofanian languages,
+,niu,,Niuean,
+,nno,nn,Norwegian Nynorsk; Nynorsk,Norwegian,Norsk (nynorsk)
+,nob,nb,Bokmål,Norwegian; Norwegian Bokmål,Norsk (bokmål)
+,nog,,Nogai,
+,non,,Norse,Old,
+,nor,no,Norwegian,Norsk (bokmål / riksmål)
+,nqo,,N'Ko,
+,nso,,Pedi; Sepedi; Northern Sotho,Sesotho sa Leboa / Sepedi
+,nub,,Nubian languages,
+,nwc,,Classical Newari; Old Newari; Classical Nepal Bhasa,
+,nya,ny,Chichewa; Chewa; Nyanja,Chi-Chewa
+,nym,,Nyamwezi,
+,nyn,,Nyankole,
+,nyo,,Nyoro,
+,nzi,,Nzima,
+,oci,oc,Occitan (post 1500),Occitan
+,oji,oj,Ojibwa,ᐊᓂᔑᓈᐯᒧᐎᓐ / Anishinaabemowin
+,ori,or,Oriya,ଓଡ଼ିଆ
+,orm,om,Oromo,Oromoo
+,osa,,Osage,
+,oss,os,Ossetian; Ossetic,Иронау
+,ota,,Turkish,Ottoman (1500-1928),
+,oto,,Otomian languages,
+,paa,,Papuan languages,
+,pag,,Pangasinan,Pangasinan
+,pal,,Pahlavi,
+,pam,,Pampanga; Kapampangan,Kapampangan
+,pan,pa,Panjabi; Punjabi,ਪੰਜਾਬੀ / پنجابی
+,pap,,Papiamento,Papiamentu
+,pau,,Palauan,
+,peo,,Persian,Old (ca.600-400 B.C.),
+,per,fa,Persian,فارسی
+,phi,,Philippine languages,
+,phn,,Phoenician,
+,pli,pi,Pali,Pāli / पाऴि
+,pol,pl,Polish,Polski
+,pon,,Pohnpeian,
+,por,pt,Portuguese,Português
+,pra,,Prakrit languages,
+,pro,,Provençal,Old (to 1500); Occitan,Old (to 1500),
+,pus,ps,Pushto; Pashto,پښتو
+,qaa-qtz,,Reserved for local use,
+,que,qu,Quechua,Runa Simi
+,raj,,Rajasthani,
+,rap,,Rapanui,
+,rar,,Rarotongan; Cook Islands Maori,
+,roa,,Romance languages,
+,roh,rm,Romansh,Rumantsch
+,rom,,Romany,
+,rum,ro,Romanian; Moldavian; Moldovan,Română
+,run,rn,Rundi,Kirundi
+,rup,,Aromanian; Arumanian; Macedo-Romanian,
+,rus,ru,Russian,Русский
+,sad,,Sandawe,
+,sag,sg,Sango,Sängö
+,sah,,Yakut,
+,sai,,South American Indian languages,
+,sal,,Salishan languages,
+,sam,,Samaritan Aramaic,
+,san,sa,Sanskrit,संस्कृतम्
+,sas,,Sasak,
+,sat,,Santali,
+,scn,,Sicilian,Sicilianu
+,sco,,Scots,Scots
+,sel,,Selkup,
+,sem,,Semitic languages,
+,sga,,Irish,Old (to 900),
+,sgn,,Sign Languages,
+,shn,,Shan,
+,sid,,Sidamo,
+,sin,si,Sinhala; Sinhalese,සිංහල
+,sio,,Siouan languages,
+,sit,,Sino-Tibetan languages,
+,sla,,Slavic languages,
+,slo,sk,Slovak,Slovenčina
+,slv,sl,Slovenian,Slovenščina
+,sma,,Southern Sami,
+,sme,se,Northern Sami,Davvisámegiella
+,smi,,Sami languages,
+,smj,,Lule Sami,
+,smn,,Inari Sami,
+,smo,sm,Samoan,Gagana Samoa
+,sms,,Skolt Sami,
+,sna,sn,Shona,chiShona
+,snd,sd,Sindhi,सिंधी / سنڌي
+,snk,,Soninke,
+,sog,,Sogdian,
+,som,so,Somali,Soomaaliga
+,son,,Songhai languages,
+,sot,st,Sotho,Southern,Sesotho
+,spa,es,Spanish; Castilian,Español
+,srd,sc,Sardinian,Sardu
+,srn,,Sranan Tongo,
+,srp,sr,Serbian,Српски
+,srr,,Serer,
+,ssa,,Nilo-Saharan languages,
+,ssw,ss,Swati,SiSwati
+,suk,,Sukuma,
+,sun,su,Sundanese,Basa Sunda
+,sus,,Susu,
+,sux,,Sumerian,
+,swa,sw,Swahili,Kiswahili
+,swe,sv,Swedish,Svenska
+,syc,,Classical Syriac,
+,syr,,Syriac,
+,tah,ty,Tahitian,Reo Mā`ohi
+,tai,,Tai languages,
+,tam,ta,Tamil,தமிழ்
+,tat,tt,Tatar,Tatarça
+,tel,te,Telugu,తెలుగు
+,tem,,Timne,
+,ter,,Tereno,
+,tet,,Tetum,Tetun
+,tgk,tg,Tajik,Тоҷикӣ
+,tgl,tl,Tagalog,Tagalog / ᜆᜄᜎᜓᜄ᜔
+,tha,th,Thai,ไทย / Phasa Thai
+,tib,bo,Tibetan,བོད་ཡིག / Bod skad
+,tig,,Tigre,
+,tir,ti,Tigrinya,ትግርኛ
+,tiv,,Tiv,
+,tkl,,Tokelau,
+,tlh,,Klingon; tlhIngan-Hol,tlhIngan-Hol
+,tli,,Tlingit,
+,tmh,,Tamashek,
+,tog,,Tonga (Nyasa),
+,ton,to,Tonga (Tonga Islands),Lea Faka-Tonga
+,tpi,,Tok Pisin,Tok Pisin
+,tsi,,Tsimshian,
+,tsn,tn,Tswana,Setswana
+,tso,ts,Tsonga,Xitsonga
+,tuk,tk,Turkmen,Туркмен / تركمن
+,tum,,Tumbuka,chiTumbuka
+,tup,,Tupi languages,
+,tur,tr,Turkish,Türkçe
+,tut,,Altaic languages,
+,tvl,,Tuvalu,
+,twi,tw,Twi,Twi
+,tyv,,Tuvinian,
+,udm,,Udmurt,Удмурт кыл
+,uga,,Ugaritic,
+,uig,ug,Uighur; Uyghur,Uyƣurqə / ئۇيغۇرچە
+,ukr,uk,Ukrainian,Українська
+,umb,,Umbundu,
+,und,,Undetermined,
+,urd,ur,Urdu,اردو
+,uzb,uz,Uzbek,Ўзбек
+,vai,,Vai,
+,ven,ve,Venda,Tshivenḓa
+,vie,vi,Vietnamese,Tiếng Việt
+,vol,vo,Volapük,Volapük
+,vot,,Votic,
+,wak,,Wakashan languages,
+,wal,,Wolaitta; Wolaytta,
+,war,,Waray,Winaray / Binisaya Lineyte-Samarnon
+,was,,Washo,
+,wel,cy,Welsh,Cymraeg
+,wen,,Sorbian languages,
+,wln,wa,Walloon,Walon
+,wol,wo,Wolof,Wollof
+,xal,,Kalmyk; Oirat,Хальмг
+,xho,xh,Xhosa,isiXhosa
+,yao,,Yao,
+,yap,,Yapese,
+,yid,yi,Yiddish,ייִדיש
+,yor,yo,Yoruba,Yorùbá
+,ypk,,Yupik languages,
+,zap,,Zapotec,
+,zbl,,Blissymbols; Blissymbolics; Bliss,
+,zen,,Zenaga,
+,zgh,,Standard Moroccan Tamazight,
+,zha,za,Zhuang; Chuang,Cuengh / Tôô / 壮语
+,znd,,Zande languages,
+,zul,zu,Zulu,isiZulu
+,zun,,Zuni,
+,zxx,,No linguistic content; Not applicable,
+,zza,,Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki,

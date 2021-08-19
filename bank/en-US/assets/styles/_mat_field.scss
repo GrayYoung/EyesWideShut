@@ -1,0 +1,187 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/mixins";
+
+$mat-input-height:                32px;
+$mat-input-border-radius:         $mat-input-height / 2;
+
+
+input.mat-input-element,
+.mat-date-range-input-inner,
+.mat-date-range-input-mirror,
+.mat-select-trigger {
+  height: 1.5em;
+  line-height: 1.5;
+}
+
+/* .mat-form-field-appearance-outline {
+  $config: mat.get-color-config($app-theme);
+  $primary: map.get($config, primary);
+  $accent: map.get($config, accent);
+  $warn: map.get($config, warn);
+  $outline-color-primary: mat.get-color-from-palette($primary);
+  $outline-color-accent: mat.get-color-from-palette($accent);
+  $outline-color-warn: mat.get-color-from-palette($warn);
+
+  .mat-form-field-outline-thick {
+    color: $outline-color-primary;
+  }
+
+  &.mat-accent .mat-form-field-outline-thick {
+    color: $outline-color-accent;
+  }
+
+  &.mat-warn .mat-form-field-outline-thick {
+    color: $outline-color-warn;
+  }
+} */
+
+.mat-mini {
+  &.mat-form-field {
+    font-size: 0.75rem;
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .mat-form-field-flex {
+      align-items: center;
+      padding: 0 0.75em;
+      margin-top: 0;
+      border-radius: $mat-input-border-radius;
+      background-color: white;
+    }
+
+    .mat-form-field-infix {
+      padding: 0.5rem 0;
+      border-top: none;
+    }
+
+    input.mat-input-element,
+    .mat-date-range-input-inner {
+      height: 1rem;
+    }
+
+    input.mat-chip-input {
+      flex: 1 1 auto;
+      display: inline-flex;
+      width: 4rem;
+    }
+
+    .mat-form-field-prefix,
+    .mat-form-field-suffix {
+      top: auto;
+
+      .mat-icon-button {
+        width: fit-content !important;
+        height: fit-content !important;
+        margin: auto 0.25em;
+        vertical-align: middle;
+      }
+
+      .mat-icon {
+        height: 1em;
+        line-height: 1;
+      }
+    }
+
+    .mat-form-field-prefix .mat-icon-button {
+      margin-left: calc(2rem - 28px - 0.75em);
+    }
+
+    .mat-form-field-suffix .mat-icon-button {
+      margin-right: calc(2rem - 28px - 0.75em);
+    }
+
+    &.mat-form-field-appearance-legacy {
+      .mat-button-wrapper {
+        line-height: 2;
+      }
+
+      .mat-form-field-prefix,
+      .mat-form-field-suffix {
+        .mat-icon-button .mat-icon {
+          font-size: 150%;
+        }
+      }
+    }
+
+    .mat-form-field-underline {
+      bottom: 0;
+      visibility: hidden;
+    }
+
+    .mat-form-field-outline {
+      top: 0;
+      color: #F5F5F5 !important;
+    }
+
+    &.mat-primary.mat-focused .mat-form-field-outline {
+      color: $primary !important;
+    }
+
+    .mat-form-field-outline-start {
+      min-width: 1rem;
+      border-radius: $mat-input-border-radius 0 0 $mat-input-border-radius;
+      border-width: 1px !important;
+    }
+
+    .mat-form-field-outline-gap {
+      border-width: 1px !important;
+    }
+
+    .mat-form-field-outline-end {
+      border-radius: 0 $mat-input-border-radius $mat-input-border-radius 0;
+      border-width: 1px !important;
+    }
+
+    .mat-form-field-label {
+      top: 0.84375em;
+      margin-top: auto;
+      line-height: 2rem;
+      color: mat.get-color-from-palette(map.get(mat.get-color-config($app-theme), foreground), primary-text);
+    }
+  }
+
+  &.mat-form-field-type-mat-select {
+    .mat-select-value {
+      line-height: 1rem;
+    }
+
+    .mat-select-trigger {
+      height: 1rem;
+
+      .mat-badge {
+        top: 8px;
+        left: -1.25rem;
+        padding: 0 1rem 0 0.5rem;
+      }
+    }
+
+    .mat-select-arrow {
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+
+  &.mat-form-field-type-mat-date-range-input {
+    .mat-datepicker-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mat-date-range-input-container {
+      line-height: 1rem;
+    }
+  }
+
+  .mat-standard-chip {
+    min-height: 1.5rem;
+  }
+}

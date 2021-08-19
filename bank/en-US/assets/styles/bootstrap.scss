@@ -1,0 +1,95 @@
+@use "sass:color";
+
+
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+// @import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/accordion";
+@import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+$breadcrumb-edge-color:   color.adjust($primary, $hue: -1.87234, $lightness: 44.509804%, $saturation: -29.745455%);
+
+.breadcrumb {
+  border-bottom: solid 1px color.adjust($primary, $hue: 1, $lightness: 31.96%, $saturation: -45.30%);
+  background-image: linear-gradient(to bottom, $breadcrumb-edge-color 1px, color.adjust($primary, $hue: 12.12766, $lightness: 40.784314%, $saturation: -29.046154%) 0, color.adjust($primary, $hue: 6.673114, $lightness: 41.568627%, $saturation: -29.366667%) 67.6471%, color.adjust($primary, $hue: 12.12766, $lightness: 43.529412%, $saturation: -22.568421%) calc(100% - 1px), $breadcrumb-edge-color 100%);
+  color: $breadcrumb-divider-color;
+}
+
+.page-link {
+  color: $black;
+}
+
+.page-item.active > .page-link {
+  background-image: linear-gradient(to bottom, color.adjust($primary, $hue: 6, $lightness: 25.29%, $saturation: 23.27%) 0, color.adjust($primary, $hue: 7, $lightness: 16.27%, $saturation: 22.54%) 100%);
+  color: $black;
+}
+
+.pagination-sm {
+  width: 204px;
+
+  > .page-item {
+    margin: 0 3px;
+
+    > .page-link {
+      border-radius: 2px;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.page-item.disabled:not(:first-child, :last-child) {
+  margin-left: 0;
+  margin-right: 0;
+
+  > .page-link {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: inherit;
+}
