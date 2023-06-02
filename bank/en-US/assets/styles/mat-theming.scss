@@ -1,0 +1,222 @@
+@use "sass:color";
+@use "@angular/material" as mat;
+
+@import "bootstrap/scss/functions";
+@import "./mat-variables";
+
+@include mat.core;
+@include mat.all-component-themes($app-theme);
+
+// Adjust Styles
+
+
+.mat-icon > svg {
+  vertical-align: top;
+}
+
+.mat-mdc-progress-spinner circle {
+  stroke-linecap: round;
+}
+
+body {
+  // Button
+
+  .mat-mdc-button-base {
+    .mat-icon {
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+    }
+  }
+
+  .mdc-icon-button.mat-button-mini {
+    --mdc-icon-button-state-layer-size: 32px;
+
+    padding: 4px;
+    line-height: 24px;
+    vertical-align: middle;
+
+    .mat-icon {
+      vertical-align: 0;
+    }
+  }
+
+  .mat-mdc-mini-fab[mat-dialog-close] {
+    background-color: white;
+    background-image: linear-gradient(to top, #EBEDF7 0%, #FFFFFF 100%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+    &,
+    .mat-icon {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+    }
+
+    &:active {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75) !important;
+    }
+
+    .mat-icon {
+      font-size: 20px;
+      vertical-align: 0;
+    }
+  }
+
+  // Datepicker
+
+  .mat-datepicker-toggle-default-icon {
+    font-size: $font-size-base;
+  }
+
+  .mat-calendar-body-cell.text-white {
+    .mat-calendar-body-cell-content,
+    .mat-date-range-input-separator {
+      color: white;
+    }
+  }
+
+  // Dialog
+
+  .mat-mdc-dialog-container {
+    --mdc-dialog-container-shape: #{$modal-content-border-radius};
+  }
+
+  .mat-mdc-dialog-title {
+    padding: $modal-header-padding-y $modal-header-padding-x;
+    background-image: linear-gradient(to top, color.adjust($primary, $hue: 0.92766, $lightness: 10.980392%, $saturation: -1.670588%) 0, color.adjust($primary, $hue: 1.743044, $lightness: 21.176471%, $saturation: -6.778947%) 60%, color.adjust($primary, $hue: 1.556231, $lightness: 20.980392%, $saturation: -6.572549%) 100%);
+    box-shadow: 0 1px 3px $gray-300;
+    color: $primary;
+    text-shadow: 0 0 2px $gray-300;
+
+    > h3 {
+      font-size: $font-size-base;
+    }
+  }
+
+  .mdc-dialog__title::before {
+    content: none;
+  }
+
+  .mdc-dialog {
+    .mdc-dialog__content, .mat-mdc-dialog-actions {
+      padding: $modal-inner-padding;
+    }
+  }
+
+  .mdc-dialog__content + .mdc-dialog__actions {
+    padding-top: 0;
+  }
+
+  // Paginator
+
+  .mat-mdc-paginator {
+    margin: 0.25rem 0 0.5rem;
+    border-top: 1px solid #F5F5FA;
+    border-bottom: 1px solid #F5F5FA;
+    background-color: #E6E8F5;
+  }
+
+  .mat-mdc-paginator-container {
+    min-height: 32px;
+
+    .mat-mdc-paginator-icon {
+      width: 18px;
+      height: 18px;
+      vertical-align: top;
+    }
+  }
+
+  .mat-mdc-paginator-range-actions .mat-mdc-button-base {
+    --mdc-icon-button-state-layer-size: 20px;
+
+    padding: 0;
+    border-radius: $border-radius-sm;
+    border: solid $btn-border-width $border-edge-color;
+    background-color: $white;
+    line-height: 1;
+
+    + .mat-mdc-button-base {
+      margin-left: 0.325em;
+    }
+
+    .mat-mdc-button-touch-target {
+      height: var(--mdc-icon-button-state-layer-size);
+      width: var(--mdc-icon-button-state-layer-size);
+    }
+  }
+
+  // SideNav
+
+  .mat-drawer,
+  .mat-drawer-inner-container {
+    overflow: visible !important;
+  }
+
+  .mat-drawer-container {
+    background-color: transparent;
+  }
+
+  // Tabs
+
+  .mat-mdc-tab-header {
+    border-bottom: solid $border-width $border-color;
+    margin-bottom: 0.25rem;
+  }
+
+  .mat-mdc-tab-label-container {
+    padding-left: 1em;
+  }
+
+  .mat-mdc-tab {
+    padding: $nav-link-padding-y $nav-link-padding-x !important;
+    min-width: 92px !important;
+    height: auto !important;
+    border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0;
+    border-style: solid;
+    border-color: $nav-tabs-border-color;
+    border-width: $nav-tabs-border-width $nav-tabs-border-width 0 $nav-tabs-border-width;
+    margin-right: 5px;
+    background-image: linear-gradient(to bottom, #FCFCFD 0, #FCFCFD 1px, #F5F6FA 2px, #E6E7EC 100%);
+    color: $black;
+    font-size: $font-size-sm;
+    opacity: 0.6;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &,
+    &:hover {
+      .mdc-tab__text-label {
+        color: $black;
+      }
+    }
+
+    &.mdc-tab--active {
+      &,
+      &:hover,
+      &:focus {
+        .mdc-tab__text-label {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .mdc-tab--active {
+    background-image: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+    color: $nav-tabs-link-active-color;
+    text-shadow: 1px 1px 1px $gray-800;
+  }
+
+  .mdc-tab-indicator {
+    opacity: 0;
+  }
+
+  .mat-tooltip {
+    white-space: pre-line;
+  }
+}

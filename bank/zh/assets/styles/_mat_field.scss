@@ -1,23 +1,77 @@
 @use "sass:map";
+@use "sass:math";
 @use "@angular/material" as mat;
 
 @import "bootstrap/scss/functions";
 @import "variables";
 @import "bootstrap/scss/mixins";
 
-$mat-input-height:                32px;
-$mat-input-border-radius:         $mat-input-height / 2;
+$mat-input-height-mini: 32px;
+$mat-input-border-radius-mini: math.div($mat-input-height-mini, 2);
 
 
-input.mat-input-element,
-.mat-date-range-input-inner,
-.mat-date-range-input-mirror,
-.mat-select-trigger {
-  height: 1.5em;
-  line-height: 1.5;
+.mat-mdc-form-field-infix {
+  display: inline-flex;
+  align-items: center;
 }
 
-/* .mat-form-field-appearance-outline {
+.mat-mdc-checkbox.mat-checkbox-mini {
+  --mdc-checkbox-state-layer-size: 32px;
+
+  .mdc-checkbox {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    padding: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+
+    + .mdc-label {
+      padding-left: 0;
+    }
+  }
+
+  .mat-mdc-checkbox-touch-target {
+    width: var(--mdc-checkbox-state-layer-size);
+    height: var(--mdc-checkbox-state-layer-size);
+  }
+
+  .mdc-checkbox__background {
+    top: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+    left: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.mat-mdc-select .mat-mdc-select-arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  color: mat.get-color-from-palette(mat.$grey-palette, A400);
+  direction: ltr;
+  font-family: Marching, "Material Icons Round";
+  font-feature-settings: "liga";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-shadow: $icon-shadow;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+
+  &::before {
+    content: "unfold_more";
+  }
+
+  > svg {
+    display: none;
+  }
+}
+
+.mat-form-field-appearance-outline {
   $config: mat.get-color-config($app-theme);
   $primary: map.get($config, primary);
   $accent: map.get($config, accent);
@@ -26,43 +80,46 @@ input.mat-input-element,
   $outline-color-accent: mat.get-color-from-palette($accent);
   $outline-color-warn: mat.get-color-from-palette($warn);
 
-  .mat-form-field-outline-thick {
+  .mat-mdc-form-field-outline-thick {
     color: $outline-color-primary;
   }
 
-  &.mat-accent .mat-form-field-outline-thick {
+  &.mat-accent .mat-mdc-form-field-outline-thick {
     color: $outline-color-accent;
   }
 
-  &.mat-warn .mat-form-field-outline-thick {
+  &.mat-warn .mat-mdc-form-field-outline-thick {
     color: $outline-color-warn;
   }
-} */
+}
 
-.mat-mini {
-  &.mat-form-field {
-    font-size: 0.75rem;
-
-    .mat-form-field-wrapper {
-      padding-bottom: 0;
-      margin-top: 0;
-      margin-bottom: 0;
+.mat-form-field-mini {
+  &.mat-mdc-form-field {
+    .mdc-line-ripple::before,
+    .mdc-line-ripple::after,
+    .mat-mdc-form-field-bottom-align::before {
+      content: none;
     }
 
-    .mat-form-field-flex {
-      align-items: center;
-      padding: 0 0.75em;
-      margin-top: 0;
-      border-radius: $mat-input-border-radius;
-      background-color: white;
+    .mdc-text-field {
+      border-radius: $mat-input-border-radius-mini;
     }
 
-    .mat-form-field-infix {
-      padding: 0.5rem 0;
-      border-top: none;
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: $white;
     }
 
-    input.mat-input-element,
+    .mat-mdc-text-field-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .mat-mdc-form-field-infix {
+      min-height: $mat-input-height-mini;
+      padding: 4px 1em !important;
+    }
+
+    input.mat-mdc-input-element,
     .mat-date-range-input-inner {
       height: 1rem;
     }
@@ -73,8 +130,8 @@ input.mat-input-element,
       width: 4rem;
     }
 
-    .mat-form-field-prefix,
-    .mat-form-field-suffix {
+    .mat-mdc-form-field-prefix,
+    .mat-mdc-form-field-suffix {
       top: auto;
 
       .mat-icon-button {
@@ -90,57 +147,44 @@ input.mat-input-element,
       }
     }
 
-    .mat-form-field-prefix .mat-icon-button {
+    .mat-mdc-form-field-prefix .mat-icon-button {
       margin-left: calc(2rem - 28px - 0.75em);
     }
 
-    .mat-form-field-suffix .mat-icon-button {
+    .mat-mdc-form-field-suffix .mat-icon-button {
       margin-right: calc(2rem - 28px - 0.75em);
     }
 
-    &.mat-form-field-appearance-legacy {
-      .mat-button-wrapper {
-        line-height: 2;
-      }
-
-      .mat-form-field-prefix,
-      .mat-form-field-suffix {
-        .mat-icon-button .mat-icon {
-          font-size: 150%;
-        }
-      }
-    }
-
-    .mat-form-field-underline {
+    .mat-mdc-form-field-underline {
       bottom: 0;
       visibility: hidden;
     }
 
-    .mat-form-field-outline {
+    .mat-mdc-form-field-outline {
       top: 0;
       color: #F5F5F5 !important;
     }
 
-    &.mat-primary.mat-focused .mat-form-field-outline {
+    &.mat-primary.mat-focused .mat-mdc-form-field-outline {
       color: $primary !important;
     }
 
-    .mat-form-field-outline-start {
+    .mat-mdc-form-field-outline-start {
       min-width: 1rem;
-      border-radius: $mat-input-border-radius 0 0 $mat-input-border-radius;
+      border-radius: $mat-input-border-radius-mini 0 0 $mat-input-border-radius-mini;
       border-width: 1px !important;
     }
 
-    .mat-form-field-outline-gap {
+    .mat-mdc-form-field-outline-gap {
       border-width: 1px !important;
     }
 
-    .mat-form-field-outline-end {
-      border-radius: 0 $mat-input-border-radius $mat-input-border-radius 0;
+    .mat-mdc-form-field-outline-end {
+      border-radius: 0 $mat-input-border-radius-mini $mat-input-border-radius-mini 0;
       border-width: 1px !important;
     }
 
-    .mat-form-field-label {
+    .mat-mdc-form-field-label {
       top: 0.84375em;
       margin-top: auto;
       line-height: 2rem;
@@ -148,28 +192,7 @@ input.mat-input-element,
     }
   }
 
-  &.mat-form-field-type-mat-select {
-    .mat-select-value {
-      line-height: 1rem;
-    }
-
-    .mat-select-trigger {
-      height: 1rem;
-
-      .mat-badge {
-        top: 8px;
-        left: -1.25rem;
-        padding: 0 1rem 0 0.5rem;
-      }
-    }
-
-    .mat-select-arrow {
-      vertical-align: middle;
-      display: inline-block;
-    }
-  }
-
-  &.mat-form-field-type-mat-date-range-input {
+  &.mat-mdc-form-field-type-mat-date-range-input {
     .mat-datepicker-toggle {
       display: flex;
       align-items: center;

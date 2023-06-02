@@ -1,0 +1,113 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@import "./variables";
+
+$dark-primary-text: rgba(black, 0.87);
+$dark-secondary-text: rgba(black, 0.54);
+$dark-disabled-text: rgba(black, 0.38);
+$dark-dividers: rgba(black, 0.12);
+$dark-focused: rgba(black, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba($light-primary-text, 0.7);
+$light-disabled-text: rgba($light-primary-text, 0.5);
+$light-dividers: rgba($light-primary-text, 0.12);
+$light-focused: rgba($light-primary-text, 0.12);
+
+mat.$blue-palette: map.merge(mat.$blue-palette, (
+  50: #E1F4FA,
+  100: #B2E2F3,
+  200: #82CFEC,
+  300: #55BEE4,
+  400: #37B0E0,
+  500: #1DA2DB,
+  600: #1894CD,
+  700: #0F81BA,
+  800: #0E71A7,
+  900: #055285,
+  A100: #B2E2F3,
+  A200: #82CFEC,
+  A400: #37B0E0,
+  A700: #0F81BA,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+));
+
+// Also known as the secondary color
+mat.$grey-palette: map.merge(mat.$grey-palette, (
+  50: #F4F4F4,
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900,
+  A100: $gray-200,
+  A200: $gray-300,
+  A400: $gray-500,
+  A700: $gray-700,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text
+  )
+));
+
+mat.$red-palette:                       map.merge(mat.$red-palette, ("700": #EA4335));
+mat.$green-palette:                     map.merge(mat.$green-palette, ("700": #34A853));
+mat.$light-green-palette:               map.merge(mat.$light-green-palette, ("700": #2ED47A));
+mat.$yellow-palette:                    map.merge(mat.$yellow-palette, ("700": #FFB800));
+mat.$light-theme-foreground-palette:    map.merge(mat.$light-theme-foreground-palette, (
+  // divider: mat.get-color-from-palette(mat.$blue-palette, 700),
+  slider-off: #DEDEDE,
+  slider-off-active: #DEDEDE
+));
+
+$app-primary:                           mat.define-palette(mat.$blue-palette);
+$app-accent:                            mat.define-palette(mat.$grey-palette, 700, 600, 900);
+$app-warn:                              mat.define-palette(mat.$red-palette);
+$app-grey:                              mat.define-palette(mat.$grey-palette);
+
+$typography-typography: mat.define-typography-config(
+  $font-family:   $font-family-base,
+  $subtitle-2:    mat.define-typography-level($font-size-sm, $line-height-base, $font-weight-normal),
+  $body-2:        mat.define-typography-level($font-size-sm, $line-height-lg, $font-weight-normal),
+  $body-1:        mat.define-typography-level($font-size-sm, $line-height-base, $font-weight-normal),
+  $button:        mat.define-typography-level($font-size-sm, $line-height-base, $font-weight-normal)
+);
+$app-theme:       mat.define-light-theme((
+  color: (
+    primary:      $app-primary,
+    accent:       $app-accent,
+    warn:         $app-warn
+  ),
+  typography:      $typography-typography,
+  density:         0
+));

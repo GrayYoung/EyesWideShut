@@ -10,18 +10,14 @@ $input-btn-inner-height:          add($input-line-height * 1em, $input-padding-y
 $icon-shadow:                     0 0 2px $white;
 $button-shadow:                   0 1px 0 1px $white inset !important;
 
-.btn-only-icon {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  width: $input-height;
-  min-width: unset !important;
-  height: $input-height;
-  line-height: $input-btn-inner-height !important;
+.mat-mdc-icon-button.border {
+  --mdc-icon-button-state-layer-size: #{$input-height};
+
+  padding: 0;
   border-radius: 0 !important;
-  border-color: $input-border-color !important;
   box-shadow: $button-shadow;
-  color: mat.get-color-from-palette($app-accent, A400) !important;
-  font-size: $font-size-sm;
+  color: mat.get-color-from-palette($app-accent, A400);
+  font-size: inherit;
 }
 
 .input-square {
@@ -98,37 +94,37 @@ $button-shadow:                   0 1px 0 1px $white inset !important;
     border-right-width: 0;
     font-size: $font-size-sm;
 
-    .mat-form-field {
+    .mat-mdc-form-field {
       max-width: 100%;
       margin-bottom: $padding-field-y;
 
-      + .mat-error {
+      .mat-mdc-form-field-bottom-align::before {
+        content: none;
+      }
+
+      + .mat-mdc-form-field-error {
         display: none;
         margin-top: subtract(0, $padding-field-y);
         margin-bottom: $padding-field-y;
         width: 100%;
       }
 
-      &.mat-form-field-invalid + .mat-error {
+      &.mat-form-field-invalid + .mat-mdc-form-field-error {
         display: block;
       }
     }
 
     .mat-form-field-appearance-outline {
-      .mat-form-field-outline {
-        top: 0;
-      }
-
-      .mat-form-field-outline-start, .mat-form-field-outline-end {
+      .mdc-notched-outline__leading, .mdc-notched-outline__trailing {
         border: none;
       }
 
-      .mat-form-field-wrapper {
-        padding-bottom: 0;
-        margin: 0 !important;
+      .mat-mdc-text-field-wrapper {
+        padding-left: 0;
+        padding-right: 0;
       }
 
-      .mat-form-field-flex {
+      .mat-mdc-form-field-flex {
         align-items: center;
         max-width: 100%;
         padding-left: 0;
@@ -136,35 +132,26 @@ $button-shadow:                   0 1px 0 1px $white inset !important;
         margin-top: 0;
       }
 
-      .mat-form-field-infix {
+      .mat-mdc-form-field-infix {
         width: auto;
         max-width: 100%;
+        min-height: unset;
         padding-top: 0;
         padding-bottom: 0;
         border: solid $input-border-width $input-border-color;
         background-color: $input-bg;
       }
 
-      .mat-form-field-prefix, .mat-form-field-suffix {
-        top: 0 !important;
-
-        .mat-icon-button {
+      .mat-mdc-form-field-prefix, .mat-mdc-form-field-icon-suffix {
+        .mat-mdc-icon-button {
           width: $input-height;
           height: $input-height;
+          padding: 0;
+          font-size: inherit;
+        }
+
+        > .mat-mdc-icon-button {
           box-shadow: $button-shadow;
-        }
-    
-        .mat-icon, .icon {
-          font-size: 24px;
-        }
-      }
-
-      .mat-form-field-prefix .input-square {
-        margin-right: $input-padding-x;
-      }
-
-      .mat-form-field-suffix {
-        > .mat-icon-button {
           background-color: #EDEEF3;
           border: solid $input-border-width $input-border-color;
           border-left-width: 0;
@@ -172,18 +159,28 @@ $button-shadow:                   0 1px 0 1px $white inset !important;
           color: mat.get-color-from-palette($app-accent, A400);
           text-shadow: $icon-shadow;
         }
+
+        .mat-icon {
+          font-size: 24px;
+        }
       }
 
-      .mat-select-value,
-      input.mat-input-element {
-        box-sizing: border-box;
+      .mat-mdc-form-field-prefix .input-square {
+        margin-right: $input-padding-x;
+      }
+
+      .mat-mdc-form-field-icon-suffix {
+        padding-left: 0;
+      }
+
+      .mat-mdc-select-value,
+      input.mat-mdc-input-element {
         height: $input-btn-inner-height;
         padding: $input-padding-y $input-padding-x;
-        line-height: $input-line-height * 1em;
+        line-height: $input-line-height;
       }
 
-      input.mat-input-element {
-        margin-top: 0;
+      input.mat-mdc-input-element {
         background-color: $input-bg;
 
         &:disabled {
@@ -196,11 +193,7 @@ $button-shadow:                   0 1px 0 1px $white inset !important;
         }
       }
 
-      .mat-select-trigger {
-        height: auto;
-      }
-
-      .mat-select-arrow-wrapper {
+      .mat-mdc-select-arrow-wrapper {
         justify-content: center;
         width: $input-btn-inner-height;
         height: $input-btn-inner-height;
@@ -209,55 +202,26 @@ $button-shadow:                   0 1px 0 1px $white inset !important;
         background-color: #EDEEF3;
         box-shadow: $button-shadow;
       }
-
-      .mat-select-arrow {
-        border: none;
-        color: mat.get-color-from-palette(mat.$grey-palette, A400);
-        text-shadow: $icon-shadow;
-        width: 24px;
-        height: 24px;
-        font-family: Marching, "Material Icons Round";
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        font-feature-settings: "liga";
-        -webkit-font-smoothing: antialiased;
-
-        &::before {
-          content: "unfold_more";
-        }
-      }
     }
     
-    .mat-form-field.mat-form-field-invalid .mat-form-field-infix {
+    .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-infix {
       border-color: mat.get-color-from-palette(map.get(mat.get-color-config($app-theme), warn));
     }
 
-    .mat-form-field-type-mat-select {
-      min-width: add($input-padding-x * 3, add($input-line-height * 2em, add($input-padding-y * 4, $input-height-border * 4, false)));
+    .mat-mdc-form-field-type-mat-select {
+      min-width: calc($input-padding-x * 3 + $input-line-height * 4em + $input-padding-y * 4 + $input-height-border * 4);
     }
 
     .search-input, .input-select {
       margin-bottom: $padding-field-y;
 
-      .mat-form-field-appearance-outline .mat-form-field-flex {
+      .mat-mdc-form-field-appearance-outline .mat-mdc-form-field-flex {
         width: 10rem;
       }
     }
 
     .mat-select-language {
       width: 10rem;
-    }
-
-    .mat-checkbox-layout {
-      margin-bottom: 0.4em;
     }
   }
 }

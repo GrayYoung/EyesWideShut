@@ -2,7 +2,7 @@
 
 @import "font";
 @import "bootstrap/scss/functions";
-@import "variables";
+@import "mat-variables";
 @import "table-view";
 @import "grid-form";
 @import "mat_field";
@@ -12,6 +12,7 @@ $scrollbar-color:                 color.adjust($primary, $hue: 1, $saturation: -
 
 *::-webkit-scrollbar {
   width: 7px;
+  height: 7px;
   background-image: $scrollbar-bg;
 }
 
@@ -28,124 +29,6 @@ $scrollbar-color:                 color.adjust($primary, $hue: 1, $saturation: -
 
 button:focus {
   outline: none;
-}
-
-// # Angular Material
-
-.mat-icon > svg {
-  vertical-align: baseline;
-}
-
-body .mat-mini-fab .mat-button-wrapper {
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 1;
-}
-
-.mat-datepicker-toggle-default-icon {
-  font-size: $font-size-base;
-}
-
-.mat-calendar-body-cell.text-white {
-  .mat-calendar-body-cell-content, .mat-date-range-input-separator {
-    color: white;
-  }
-}
-
-body {
-  .mat-dialog-container {
-    border-radius: $modal-content-border-radius;
-  }
-
-  .mat-dialog-title {
-    padding: $modal-header-padding-y $modal-header-padding-x;
-    margin: add(-25px, -$modal-content-border-radius) -24px 0;
-    background-image: linear-gradient(to top, color.adjust($primary, $hue: 0.92766, $lightness: 10.980392%, $saturation: -1.670588%) 0, color.adjust($primary, $hue: 1.743044, $lightness: 21.176471%, $saturation: -6.778947%) 60%, color.adjust($primary, $hue: 1.556231, $lightness: 20.980392%, $saturation: -6.572549%) 100%);
-    border-radius: $modal-content-inner-border-radius $modal-content-inner-border-radius 0 0;
-    box-shadow: 0 1px 3px $gray-300;
-    color: $primary;
-    text-shadow: 0 0 2px $gray-300;
-
-    >h3 {
-      font-size: $font-size-base;
-    }
-  }
-
-  .mat-dialog-content, .mat-dialog-actions {
-    padding: $modal-inner-padding;
-  }
-
-  .mat-mini-fab[mat-dialog-close] {
-    background-color: white;
-    background-image: linear-gradient(to top, #EBEDF7 0%, #FFFFFF 100%);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-
-    &,
-    .mat-icon {
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
-    }
-
-    &:active {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75) !important;
-    }
-
-    .mat-icon {
-      font-size: 20px;
-      vertical-align: 0;
-    }
-  }
-}
-
-.mat-drawer,
-.mat-drawer-inner-container {
-  overflow: visible !important;
-}
-
-.mat-drawer-container {
-  background-color: transparent;
-}
-
-.mat-drawer-content {
-  .mat-tab-header {
-    border-bottom: none;
-  }
-
-  .mat-tab-label {
-    padding: $nav-link-padding-y $nav-link-padding-x !important;
-    min-width: 92px !important;
-    height: auto !important;
-    border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0;
-    border-style: solid;
-    border-color: $nav-tabs-border-color;
-    border-width: $nav-tabs-border-width $nav-tabs-border-width 0 $nav-tabs-border-width;
-    margin-right: 5px;
-    background-image: linear-gradient(to bottom, #FCFCFD 0, #FCFCFD 1px, #F5F6FA 2px, #E6E7EC 100%);
-    color: $black;
-    font-size: $font-size-sm;
-  }
-  
-  .mat-tab-label-active {
-    background-image: $nav-tabs-link-active-bg;
-    border-color: $nav-tabs-link-active-border-color;
-    color: $nav-tabs-link-active-color;
-    text-shadow: 1px 1px 1px $gray-800;
-  }
-  
-  .mat-tab-label-container {
-    padding-left: 3%;
-    border-bottom: solid $border-width $border-color;
-    margin-bottom: 0.25rem;
-  }
-
-  .mat-ink-bar {
-    opacity: 0;
-  }
-}
-
-.mat-tooltip {
-  white-space: pre-line;
 }
 
 .container-content {
@@ -169,17 +52,29 @@ body {
   background-color: color.adjust($primary, $hue: 2, $lightness: 21.18%, $saturation: -6.78%);
   background-image: linear-gradient(90deg, color.adjust($primary, $hue: 1.743044, $lightness: 20%, $saturation: -9.377215%) 0%, color.adjust($primary, $hue: 1.743044, $lightness: 20.784314%, $saturation: -7.667532%) 61.7647%, color.adjust($primary, $hue: 1.743044, $lightness: 21.176471%, $saturation: -6.778947%) 100%);
 
-  .mat-button-base {
-    padding: 2px 3px;
+  .mat-mdc-button-base {
     min-width: 40px;
     height: 40px;
-    color: white;
-    line-height: 1;
+    padding: 2px 3px;
+    border-radius: 0;
+    line-height: 40px;
     text-shadow: 0 2px 2px $gray-800;
 
-    .icon {
+    &:not(:disabled) {
+      color: white;
+    }
+
+    .mat-icon {
+      margin-left: 0;
+      margin-right: 0;
       font-size: 21px;
       line-height: 24px;
+    }
+  }
+
+  .mat-datepicker-toggle {
+    .mdc-icon-button {
+      --mdc-icon-button-state-layer-size: 40px;
     }
   }
 
@@ -198,21 +93,32 @@ body {
     }
   }
 
-  .mat-form-field.mat-mini {
+  .mat-mdc-form-field.mat-form-field-mini {
     margin: 4px;
     flex: 1 1 8rem;
-    max-width: 12rem;
-  }
+    max-width: 13rem;
 
-  .mat-form-field-infix {
-    width: auto;
-  }
-
-  .mat-chip-list-wrapper {
-    flex-wrap: nowrap;
+    .mdc-evolution-chip-set__chips {
+      flex-wrap: nowrap;
+    }
+  
+    .mat-mdc-chip.mat-mdc-standard-chip {
+      height: 24px;
+    }
+  
+    .mdc-evolution-chip-set .mdc-evolution-chip {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
-.mat-progress-spinner circle {
-  stroke-linecap: round;
+.mdc-menu-surface.mat-mdc-select-panel.mat-select-hospital {
+  --mdc-menu-max-width: unset;
+
+  width: 360px;
+
+  .mdc-list-item__primary-text {
+    white-space: nowrap;
+  }
 }
