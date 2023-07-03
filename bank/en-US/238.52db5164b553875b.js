@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbank=self.webpackChunkbank||[]).push([[238],{2238:(s,e,u)=>{u.r(e),u.d(e,{CFEModule:()=>a});var _=u(1180),l=u(6814),o=u(5879);let a=(()=>{class n{}return(0,_.Z)(n,"\u0275fac",function(r){return new(r||n)}),(0,_.Z)(n,"\u0275mod",o.oAB({type:n})),(0,_.Z)(n,"\u0275inj",o.cJS({imports:[l.ez]})),n})()}}]);
