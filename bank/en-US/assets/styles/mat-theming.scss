@@ -102,7 +102,8 @@ body {
   }
 
   .mdc-dialog {
-    .mdc-dialog__content, .mat-mdc-dialog-actions {
+    .mdc-dialog__content,
+    .mat-mdc-dialog-actions {
       padding: $modal-inner-padding;
     }
   }
@@ -219,7 +220,7 @@ body {
     opacity: 0;
   }
 
-  .mat-tooltip {
+  .mat-mdc-tooltip {
     white-space: pre-line;
   }
 }
