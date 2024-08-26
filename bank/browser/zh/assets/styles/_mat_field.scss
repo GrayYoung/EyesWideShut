@@ -1,0 +1,210 @@
+@use "sass:map";
+@use "sass:math";
+@use "@angular/material" as mat;
+
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/mixins";
+
+$mat-input-height-mini: 32px;
+$mat-input-border-radius-mini: math.div($mat-input-height-mini, 2);
+
+
+.mat-mdc-form-field-infix {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mat-mdc-checkbox.mat-checkbox-mini {
+  --mdc-checkbox-state-layer-size: 32px;
+
+  .mdc-checkbox {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    padding: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+
+    + .mdc-label {
+      padding-left: 0;
+    }
+  }
+
+  .mat-mdc-checkbox-touch-target {
+    width: var(--mdc-checkbox-state-layer-size);
+    height: var(--mdc-checkbox-state-layer-size);
+  }
+
+  .mdc-checkbox__background {
+    top: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+    left: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.mat-mdc-select .mat-mdc-select-arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  color: mat.m2-get-color-from-palette(mat.$m2-grey-palette, A400);
+  direction: ltr;
+  font-family: Marching, "Material Icons Round";
+  font-feature-settings: "liga";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-shadow: $icon-shadow;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+
+  &::before {
+    content: "unfold_more";
+  }
+
+  > svg {
+    display: none;
+  }
+}
+
+.mat-form-field-appearance-outline {
+  $config: mat.m2-get-color-config($app-theme);
+  $primary: map.get($config, primary);
+  $accent: map.get($config, accent);
+  $warn: map.get($config, warn);
+  $outline-color-primary: mat.m2-get-color-from-palette($primary);
+  $outline-color-accent: mat.m2-get-color-from-palette($accent);
+  $outline-color-warn: mat.m2-get-color-from-palette($warn);
+
+  .mat-mdc-form-field-outline-thick {
+    color: $outline-color-primary;
+  }
+
+  &.mat-accent .mat-mdc-form-field-outline-thick {
+    color: $outline-color-accent;
+  }
+
+  &.mat-warn .mat-mdc-form-field-outline-thick {
+    color: $outline-color-warn;
+  }
+}
+
+.mat-form-field-mini {
+  &.mat-mdc-form-field {
+    .mdc-line-ripple::before,
+    .mdc-line-ripple::after,
+    .mat-mdc-form-field-bottom-align::before {
+      content: none;
+    }
+
+    .mdc-text-field {
+      border-radius: $mat-input-border-radius-mini;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: $white;
+    }
+
+    .mat-mdc-text-field-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .mat-mdc-form-field-infix {
+      min-height: $mat-input-height-mini;
+      padding: 4px 1em !important;
+    }
+
+    input.mat-mdc-input-element,
+    .mat-date-range-input-inner {
+      height: 1rem;
+    }
+
+    input.mat-chip-input {
+      flex: 1 1 auto;
+      display: inline-flex;
+      width: 4rem;
+    }
+
+    .mat-mdc-form-field-prefix,
+    .mat-mdc-form-field-suffix {
+      top: auto;
+
+      .mat-icon-button {
+        width: fit-content !important;
+        height: fit-content !important;
+        margin: auto 0.25em;
+        vertical-align: middle;
+      }
+
+      .mat-icon {
+        height: 1em;
+        line-height: 1;
+      }
+    }
+
+    .mat-mdc-form-field-prefix .mat-icon-button {
+      margin-left: calc(2rem - 28px - 0.75em);
+    }
+
+    .mat-mdc-form-field-suffix .mat-icon-button {
+      margin-right: calc(2rem - 28px - 0.75em);
+    }
+
+    .mat-mdc-form-field-underline {
+      bottom: 0;
+      visibility: hidden;
+    }
+
+    .mat-mdc-form-field-outline {
+      top: 0;
+      color: #F5F5F5 !important;
+    }
+
+    &.mat-primary.mat-focused .mat-mdc-form-field-outline {
+      color: $primary !important;
+    }
+
+    .mat-mdc-form-field-outline-start {
+      min-width: 1rem;
+      border-radius: $mat-input-border-radius-mini 0 0 $mat-input-border-radius-mini;
+      border-width: 1px !important;
+    }
+
+    .mat-mdc-form-field-outline-gap {
+      border-width: 1px !important;
+    }
+
+    .mat-mdc-form-field-outline-end {
+      border-radius: 0 $mat-input-border-radius-mini $mat-input-border-radius-mini 0;
+      border-width: 1px !important;
+    }
+
+    .mat-mdc-form-field-label {
+      top: 0.84375em;
+      margin-top: auto;
+      line-height: 2rem;
+      color: mat.m2-get-color-from-palette(map.get(mat.m2-get-color-config($app-theme), foreground), primary-text);
+    }
+  }
+
+  &.mat-mdc-form-field-type-mat-date-range-input {
+    .mat-datepicker-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mat-date-range-input-container {
+      line-height: 1rem;
+    }
+  }
+
+  .mat-standard-chip {
+    min-height: 1.5rem;
+  }
+}

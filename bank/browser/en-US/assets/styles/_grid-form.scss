@@ -1,0 +1,229 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/mixins";
+
+$padding-field-y:                 calc(0.6rem + 1px);
+$input-btn-inner-height:          add($input-line-height * 1em, $input-padding-y * 2);
+$icon-shadow:                     0 0 2px $white;
+$button-shadow:                   0 1px 0 1px $white inset !important;
+
+.mat-mdc-icon-button.border {
+  --mdc-icon-button-state-layer-size: #{$input-height};
+
+  padding: 0;
+  border-radius: 0 !important;
+  box-shadow: $button-shadow;
+  color: mat.m2-get-color-from-palette($app-accent, A400);
+  font-size: inherit;
+}
+
+.input-square {
+  width: $input-height;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  border: solid $input-border-width $input-border-color;
+  line-height: $input-line-height;
+  text-align: center;
+  background-color: $input-bg;
+}
+
+
+@mixin field-grid($row, $group, $label, $control) {
+  #{$row} {
+    min-width: 300px;
+    margin-bottom: 0;
+    border-left: solid $border-width $border-color;
+    border-right: solid $border-width $border-color;
+  
+    &:last-child {
+      margin-bottom: 1px;
+    }
+  }
+
+  #{$group} {
+    margin-bottom: 0;
+    background-color: #F5F6FA;
+  
+    + #{$group} {
+      @include media-breakpoint-up(lg) {
+        border-left: solid $border-width $border-color;
+  
+        #{$label} {
+          border-bottom-width: $border-width;
+          border-right-width: $border-width;
+        }
+      }
+  
+      @include media-breakpoint-down(lg) {
+        #{$label} {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+
+  #{$label} {
+    display: flex;
+    align-items: center;
+    padding: $padding-field-y 10px !important;
+    margin-bottom: -$border-width;
+    border: solid $border-color;
+    border-width: $border-width $border-width $border-width 0;
+    background-color: #F1F2F8;
+    line-height: 1.5;
+    font-weight: normal;
+    font-size: $font-size-sm;
+  
+    @include media-breakpoint-down(lg) {
+      border-right-width: 0
+    }
+  }
+
+  #{$control} {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    min-height: 56px;
+    padding: $padding-field-y 10px 0 !important;
+    margin-bottom: -$border-width;
+    border: solid 1px $border-color;
+    border-left-width: 0;
+    border-right-width: 0;
+    font-size: $font-size-sm;
+
+    .mat-mdc-form-field {
+      max-width: 100%;
+      margin-bottom: $padding-field-y;
+
+      .mat-mdc-form-field-bottom-align::before {
+        content: none;
+      }
+
+      + .mat-mdc-form-field-error {
+        display: none;
+        margin-top: subtract(0, $padding-field-y);
+        margin-bottom: $padding-field-y;
+        width: 100%;
+      }
+
+      &.mat-form-field-invalid + .mat-mdc-form-field-error {
+        display: block;
+      }
+    }
+
+    .mat-form-field-appearance-outline {
+      .mdc-notched-outline__leading, .mdc-notched-outline__trailing {
+        border: none;
+      }
+
+      .mat-mdc-text-field-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .mat-mdc-form-field-flex {
+        align-items: center;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+      }
+
+      .mat-mdc-form-field-infix {
+        width: auto;
+        max-width: 100%;
+        min-height: unset;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: solid $input-border-width $input-border-color;
+        background-color: $input-bg;
+      }
+
+      .mat-mdc-form-field-prefix, .mat-mdc-form-field-icon-suffix {
+        .mat-mdc-icon-button {
+          width: $input-height;
+          height: $input-height;
+          padding: 0;
+          font-size: inherit;
+        }
+
+        > .mat-mdc-icon-button {
+          box-shadow: $button-shadow;
+          background-color: #EDEEF3;
+          border: solid $input-border-width $input-border-color;
+          border-left-width: 0;
+          border-radius: 0;
+          color: mat.m2-get-color-from-palette($app-accent, A400);
+          text-shadow: $icon-shadow;
+        }
+
+        .mat-icon {
+          font-size: 24px;
+        }
+      }
+
+      .mat-mdc-form-field-prefix .input-square {
+        margin-right: $input-padding-x;
+      }
+
+      .mat-mdc-form-field-icon-suffix {
+        padding-left: 0;
+      }
+
+      .mat-mdc-select-value,
+      input.mat-mdc-input-element {
+        height: $input-btn-inner-height;
+        padding: $input-padding-y $input-padding-x;
+        line-height: $input-line-height;
+      }
+
+      input.mat-mdc-input-element {
+        background-color: $input-bg;
+
+        &:disabled {
+          background-color: $input-disabled-bg;
+        }
+
+        &:read-only {
+          border-color: transparent;
+          background-color: transparent;
+        }
+      }
+
+      .mat-mdc-select-arrow-wrapper {
+        justify-content: center;
+        width: $input-btn-inner-height;
+        height: $input-btn-inner-height;
+        transform: translateY(0);
+        border-left: solid $input-border-width $input-border-color;
+        background-color: #EDEEF3;
+        box-shadow: $button-shadow;
+      }
+    }
+    
+    .mat-mdc-form-field.mat-mdc-form-field-invalid .mat-mdc-form-field-infix {
+      border-color: mat.m2-get-color-from-palette(map.get(mat.m2-get-color-config($app-theme), warn));
+    }
+
+    .mat-mdc-form-field-type-mat-select {
+      min-width: calc($input-padding-x * 3 + $input-line-height * 4em + $input-padding-y * 4 + $input-height-border * 4);
+    }
+
+    .search-input, .input-select {
+      margin-bottom: $padding-field-y;
+
+      .mat-mdc-form-field-appearance-outline .mat-mdc-form-field-flex {
+        width: 10rem;
+      }
+    }
+
+    .mat-select-language {
+      width: 10rem;
+    }
+  }
+}
+
+@include field-grid(".field-row", ".field-group", ".field-label", ".field-control");
