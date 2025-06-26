@@ -45,8 +45,7 @@ button:focus {
   display: flex;
   flex-flow: row nowrap;
   flex: 0 0 auto;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow: auto hidden;
   background-repeat: repeat-x;
   background-position: center;
   background-color: color.adjust($primary, $hue: 2, $lightness: 21.18%, $saturation: -6.78%);
@@ -74,7 +73,7 @@ button:focus {
 
   .mat-datepicker-toggle {
     .mdc-icon-button {
-      --mdc-icon-button-state-layer-size: 40px;
+      --mat-icon-button-state-layer-size: 40px;
     }
   }
 
@@ -114,7 +113,7 @@ button:focus {
 }
 
 .mdc-menu-surface.mat-mdc-select-panel.mat-select-hospital {
-  --mdc-menu-max-width: unset;
+  --mat-menu-max-width: unset;
 
   width: 360px;
 

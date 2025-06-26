@@ -16,13 +16,13 @@ $mat-input-border-radius-mini: math.div($mat-input-height-mini, 2);
 }
 
 .mat-mdc-checkbox.mat-checkbox-mini {
-  --mdc-checkbox-state-layer-size: 32px;
+  --mat-checkbox-state-layer-size: 32px;
 
   .mdc-checkbox {
     flex: 0 0 14px;
     width: 14px;
     height: 14px;
-    padding: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+    padding: calc((var(--mat-checkbox-state-layer-size) - 14px) / 2);
 
     + .mdc-label {
       padding-left: 0;
@@ -30,13 +30,13 @@ $mat-input-border-radius-mini: math.div($mat-input-height-mini, 2);
   }
 
   .mat-mdc-checkbox-touch-target {
-    width: var(--mdc-checkbox-state-layer-size);
-    height: var(--mdc-checkbox-state-layer-size);
+    width: var(--mat-checkbox-state-layer-size);
+    height: var(--mat-checkbox-state-layer-size);
   }
 
   .mdc-checkbox__background {
-    top: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
-    left: calc((var(--mdc-checkbox-state-layer-size) - 14px) / 2);
+    top: calc((var(--mat-checkbox-state-layer-size) - 14px) / 2);
+    left: calc((var(--mat-checkbox-state-layer-size) - 14px) / 2);
     width: 14px;
     height: 14px;
   }
