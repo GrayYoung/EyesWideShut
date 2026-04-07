@@ -11,7 +11,8 @@ table.mat-mdc-table {
   border-collapse: separate;
   margin-bottom: 0;
 
-  .mdc-data-table__header-row, .mdc-data-table__row {
+  .mdc-data-table__header-row,
+  .mdc-data-table__row {
     height: auto;
   }
 
@@ -19,7 +20,8 @@ table.mat-mdc-table {
     height: auto;
 
     &.text-start {
-      .mat-mdc-header-cell, .mat-mdc-cell {
+      .mat-mdc-header-cell,
+      .mat-mdc-cell {
         text-align: inherit;
       }
     }
@@ -35,12 +37,13 @@ table.mat-mdc-table {
   }
 
   td {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
+    padding: $table-cell-padding-y-sm $table-cell-padding-x;
     border-color: $table-border-color;
     border-width: $table-border-width $table-border-width $table-border-width 0;
   }
 
-  th, td {
+  th,
+  td {
     color: inherit;
     font-size: inherit;
     text-align: center;
@@ -78,7 +81,8 @@ table.mat-mdc-table {
   }
 }
 
-.mat-mdc-header-cell, .mat-mdc-cell {
+.mat-mdc-header-cell,
+.mat-mdc-cell {
   > .mat-icon {
     vertical-align: middle;
   }
@@ -93,7 +97,8 @@ table.mat-mdc-table {
   text-overflow: ellipsis;
   word-wrap: break-word;
   -webkit-display: box;
-  -webkit-line-clamp: attr(line-count number, 1); /* number of lines to show */
+  -webkit-line-clamp: attr(line-count number, 1);
+  /* number of lines to show */
   line-clamp: attr(line-count number, 1);
   -webkit-box-orient: vertical;
 }
